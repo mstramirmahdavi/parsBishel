@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>About</title>
+  <link rel="stylesheet" href="./assets/style/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/style/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="./assets/style/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__buttons">
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/acc.png" alt="account" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>ثبت نام / ورود</p>
+        </div>
+      </a>
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/basket.png" alt="basket" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>سبد خرید</p>
+          <span class="counter">5</span>
+        </div>
+      </a>
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/camion.png" alt="account" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>پیگیری سفارش</p>
+        </div>
+      </a>
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/phone.png" alt="phone" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>2525665 - 021</p>
+        </div>
+      </a>
+    </div>
+    <div class="header__navigation">
+      <div class="header__navigation--search">
+        <input class="header__navigation--search--input" type="text" name="search" id="search" />
+      </div>
+      <div class="header__navigation--nav">
+        <nav class="header__navigation--nav--menu">
+          <ul>
+            <li>
+              <a href="#">خرید لاستیک </a> <span class="arrow down"></span>
+              <div class="dropDown">
+                <ul>
+                  <li><a href="">شماره 1 </a></li>
+                  <li><a href="">شماره 2 </a></li>
+                  <li><a href="">شماره 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">دانستنی های لاستیک</a></li>
+            <li>
+              <span class="icon"><img src="./assets/images/star.png" alt="" /></span>
+              <a href="#"> مشتریان ویژه</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__navigation--logo">
+        <img src="./assets/images/logo.png" alt="logo" />
+      </div>
+    </div>
+  </header>
+
+  <section class="breadcrumbs">
+    <div class="row">
+      <div class="breadcrumbs__items">
+        <a href="#" class="breadcrumbs__items--item"><img src="./assets/images/home-i.png" alt="" /></a>
+        <a href="#" class="breadcrumbs__items--item">تماس با ما</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="row">
+      <div class="contact__modal">
+        <div class="contact__modal--form">
+          <form action="">
+            <div class="input-group">
+              <div class="inputCont">
+                <input type="text" name="fullname" id="fullname" placeholder="نام و نام خانوادگی" />
+                <label for="fullname">نام و نام خانوادگی</label>
+              </div>
+              <div class="inputCont">
+                <input type="text" name="mobile" id="mobile" placeholder="شماره تماس" />
+                <label for="mobile">شماره تماس</label>
+              </div>
+              <div class="inputCont">
+                <input type="text" name="title" id="title" placeholder="عنوان" />
+                <label for="title">عنوان</label>
+              </div>
+              <div class="inputCont">
+                <textarea name="text" id="text" placeholder="متن"></textarea>
+                <label for="text">متن</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="inputCont">
+                <button class="buttons">ارسال</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="contact__modal--map">
+          <div id="mapid"></div>
+        </div>
+      </div>
+      <div class="contact__details">
+        <div class="contact__details--items">
+          <div class="icon">
+            <img src="./assets/images/locationicon.png" alt="" />
+          </div>
+          <div class="text">
+            آدرس آدرس آدرس آدرس آدرس آدرس آدرس آدرس آدرس آدرس آدرس آدرس
+          </div>
+        </div>
+        <div class="contact__details--items">
+          <div class="icon">
+            <img src="./assets/images/phoneicon.png" alt="" />
+          </div>
+          <div class="text">
+            09126598741 - 889965321
+          </div>
+        </div>
+        <div class="contact__details--items">
+          <div class="icon">
+            <img src="./assets/images/mailicon.png" alt="" />
+          </div>
+          <div class="text">
+            youremail@example.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__quickAccess">
+      <div class="footer__quickAccess__list">
+        <div class="footer__quickAccess__list__items">
+          <ul>
+            <li><a href="#">درباره وب تایر</a></li>
+            <li><a href="#">راهنمای خرید</a></li>
+            <li><a href="#">پاسخ به پرسش های متداول</a></li>
+            <li><a href="#">رویه های باز گرداندن کالا</a></li>
+          </ul>
+        </div>
+        <div class="footer__quickAccess__list__items">
+          <ul>
+            <li><a href="#">قوانین و مقررات</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#"> رویه های ارسال سفارش</a></li>
+            <li><a href="#">شیوه های پرداخت</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__quickAccess__copyright">
+        <p>
+          استفاده از مطالب فروشگاه اینترنتی وب تایر فقط برای مقاصد غیر تجاری و
+          با ذکر منبع بلامانع است. کليه حقوق اين سايت متعلق به شرکت وب تایر
+          می‌باشد.
+        </p>
+      </div>
+    </div>
+    <div class="footer__details">
+      <div class="footer__details__namads">
+        <div class="footer__details__namads__namad">
+          <div class="footer__details__namads__namad--samanadehi">
+            <img src="./assets/images/samandehi.png" alt="" />
+          </div>
+          <div class="footer__details__namads__namad--enamad">
+            <img src="./assets/images/onestarenamad.png" alt="" />
+          </div>
+        </div>
+        <div class="footer__details__namads--copyright">
+          <p>Copyright ©2019 webtire.com</p>
+          <p>Powered By Neotis Studio</p>
+        </div>
+      </div>
+      <div class="footer__details__socials">
+        <div class="footer__details__socials--logo">
+          <img src="./assets/images/logo.png" alt="" />
+        </div>
+        <div class="footer__details__socials--socialsIcon">
+          <div class="footer__details__socials--socialsIcon--title">
+            <p>مارا دنبال کنید در :</p>
+          </div>
+          <div class="footer__details__socials--socialsIcon--icons">
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/instagram.svg" alt="" />
+            </a>
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/facebook.svg" alt="" />
+            </a>
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/telegram.svg" alt="" />
+            </a>
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/linkedin.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/custom.js"></script>
+  <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    L.tileLayer(
+      'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox.streets'
+      }
+    ).addTo(mymap);
+  </script>
+</body>
+
+</html>

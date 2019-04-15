@@ -1,0 +1,32 @@
+/* abstratcs */
+
+@import 'abstract/variables';
+@import 'abstract/functions';
+@import 'abstract/mixin';
+
+/* base */
+
+@import 'base/reset';
+@import 'base/typography';
+
+/* layout */
+
+@import 'layout/base';
+@import 'layout/header';
+@import 'layout/footer';
+
+/* components */
+
+@import 'components/megamenu';
+@import 'components/btn';
+@import 'components/inputs';
+@import 'components/heroImage';
+@import 'components/chooseTireModal';
+@import 'components/faveCont';
+@import 'components/productModal';
+@import 'components/rating';
+@import 'components/about';
+@import 'components/brandsCont';
+@import 'components/info';
+@import 'components/news';
+@import 'components/loginCont';

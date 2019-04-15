@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>products list</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="./assets/style/css/style.css" />
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__buttons">
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/acc.png" alt="account" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>ثبت نام / ورود</p>
+        </div>
+      </a>
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/basket.png" alt="basket" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>سبد خرید</p>
+          <span class="counter">5</span>
+        </div>
+      </a>
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/camion.png" alt="account" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>پیگیری سفارش</p>
+        </div>
+      </a>
+      <a href="#" class="header__buttons--button">
+        <div class="header__buttons--button--icon">
+          <img src="./assets/images/phone.png" alt="phone" />
+        </div>
+        <div class="header__buttons--button--text">
+          <p>2525665 - 021</p>
+        </div>
+      </a>
+    </div>
+    <div class="header__navigation">
+      <div class="header__navigation--search">
+        <input class="header__navigation--search--input" type="text" name="search" id="search" />
+      </div>
+      <div class="header__navigation--nav">
+        <nav class="header__navigation--nav--menu">
+          <ul>
+            <li>
+              <a href="#">خرید لاستیک </a> <span class="arrow down"></span>
+              <div class="dropDown">
+                <ul>
+                  <li><a href="">شماره 1 </a></li>
+                  <li><a href="">شماره 2 </a></li>
+                  <li><a href="">شماره 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">دانستنی های لاستیک</a></li>
+            <li>
+              <span class="icon"><img src="./assets/images/star.png" alt="" /></span>
+              <a href="#"> مشتریان ویژه</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__navigation--logo">
+        <img src="./assets/images/logo.png" alt="logo" />
+      </div>
+    </div>
+  </header>
+
+  <section class="breadcrumbs">
+    <div class="row">
+      <div class="breadcrumbs__items">
+        <a href="#" class="breadcrumbs__items--item"><img src="./assets/images/home-i.png" alt="" /></a>
+        <a href="#" class="breadcrumbs__items--item">لیست محصولات</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="productsList">
+    <div class="row">
+      <div class="productsList__content">
+        <div class="productsList__filter">
+          <div class="productsList__filter--title">
+            <img src="./assets/images/filtericon.png" alt="">
+            فیلتر محصولات
+          </div>
+          <div class="productsList__filter--items">
+            <ul>
+              <li class="filteritem">
+                <div class="icon">
+                  <img src="./assets/images/filterArrow.png" alt="">
+                  <div class="tilte">قیمت</div>
+                </div>
+              </li>
+              <div class="dropDown">
+                <input type="text" class="js-range-slider" name="my_range" value="" />
+              </div>
+              <li class="filteritem">
+                <div class="icon">
+                  <img src="./assets/images/filterArrow.png" alt="">
+                  <div class="tilte">نوع خودرو</div>
+                </div>
+              </li>
+              <div class="dropDown">
+                <label class="filterselect__container">
+                  ماشین1
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="filterselect__container">
+                  ماشین2
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="filterselect__container">
+                  ماشین3
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <li class="filteritem">
+                <div class="icon">
+                  <img src="./assets/images/filterArrow.png" alt="">
+                  <div class="tilte">سایز تایر</div>
+                </div>
+              </li>
+              <div class="dropDown">
+                <label class="filterselect__container">
+                  ماشین1
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="filterselect__container">
+                  ماشین2
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="filterselect__container">
+                  ماشین3
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <li class="filteritem">
+                <div class="icon">
+                  <img src="./assets/images/filterArrow.png" alt="">
+                  <div class="tilte">کارایی</div>
+                </div>
+              </li>
+              <div class="dropDown">
+                <label class="filterselect__container">
+                  ماشین1
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="filterselect__container">
+                  ماشین2
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="filterselect__container">
+                  ماشین3
+                  <input type="checkbox" name="factor">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="productsList__list">
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="image">
+              <img src="./assets/images/tiretire.png" alt="">
+            </div>
+            <div class="logo">
+              <img src="./assets/images/tirelogo1.png" alt="">
+            </div>
+            <div class="title">AVENTUS 360</div>
+            <div class="size"> 185/65/15 </div>
+            <div class="price">3,999,000 تومان</div>
+            <div class="button">
+              <button class="buttons">
+                <img src="./assets/images/basket.png" alt="" /> افزودن به سبد خرید
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="footer__quickAccess">
+      <div class="footer__quickAccess__list">
+        <div class="footer__quickAccess__list__items">
+          <ul>
+            <li><a href="#">درباره وب تایر</a></li>
+            <li><a href="#">راهنمای خرید</a></li>
+            <li><a href="#">پاسخ به پرسش های متداول</a></li>
+            <li><a href="#">رویه های باز گرداندن کالا</a></li>
+          </ul>
+        </div>
+        <div class="footer__quickAccess__list__items">
+          <ul>
+            <li><a href="#">قوانین و مقررات</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#"> رویه های ارسال سفارش</a></li>
+            <li><a href="#">شیوه های پرداخت</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__quickAccess__copyright">
+        <p>
+          استفاده از مطالب فروشگاه اینترنتی وب تایر فقط برای مقاصد غیر تجاری و
+          با ذکر منبع بلامانع است. کليه حقوق اين سايت متعلق به شرکت وب تایر
+          می‌باشد.
+        </p>
+      </div>
+    </div>
+    <div class="footer__details">
+      <div class="footer__details__namads">
+        <div class="footer__details__namads__namad">
+          <div class="footer__details__namads__namad--samanadehi">
+            <img src="./assets/images/samandehi.png" alt="" />
+          </div>
+          <div class="footer__details__namads__namad--enamad">
+            <img src="./assets/images/onestarenamad.png" alt="" />
+          </div>
+        </div>
+        <div class="footer__details__namads--copyright">
+          <p>Copyright ©2019 webtire.com</p>
+          <p>Powered By Neotis Studio</p>
+        </div>
+      </div>
+      <div class="footer__details__socials">
+        <div class="footer__details__socials--logo">
+          <img src="./assets/images/logo.png" alt="" />
+        </div>
+        <div class="footer__details__socials--socialsIcon">
+          <div class="footer__details__socials--socialsIcon--title">
+            <p>مارا دنبال کنید در :</p>
+          </div>
+          <div class="footer__details__socials--socialsIcon--icons">
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/instagram.svg" alt="" />
+            </a>
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/facebook.svg" alt="" />
+            </a>
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/telegram.svg" alt="" />
+            </a>
+            <a href="#" class="footer__details__socials--socialsIcon--icons--icon">
+              <img src="./assets/images/linkedin.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(".js-range-slider").ionRangeSlider({
+      skin: "round",
+      type: "double",
+      grid: true,
+      min: 0,
+      max: 1000,
+      from: 200,
+      to: 800,
+      prefix: "تومان"
+    });
+  </script>
+  <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>

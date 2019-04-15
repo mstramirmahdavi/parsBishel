@@ -1,0 +1,29 @@
+{
+  "name": "marvasti",
+  "version": "1.0.0",
+  "description": "E-Commmerce for tire",
+  "main": "index.js",
+  "scripts": {
+    "watch:scss": "node-sass assets/style/scss/style.scss assets/style/css/style.css -w",
+    "compile:scss": "node-sass assets/style/scss/style.scss assets/style/css/style.comp.css",
+    "concat:css": "concat -o assets/style/css/style.concat.css assets/style/css/default.rtl.css assets/style/css/alertify.rtl.css assets/style/css/owl.carousel.min.css assets/style/css/owl.theme.default.min.css assets/style/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/style/css/style.concat.css -o assets/style/css/style.prefix.css",
+    "compress:css": "node-sass assets/style/css/style.prefix.css assets/style/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:scss concat:css prefix:css compress:css"
+  },
+  "browserslist": [
+    "last 10 version",
+    "> .5%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "author": "Seyed Amir Mahdavi",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2"
+  }
+}

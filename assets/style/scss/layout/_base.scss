@@ -1,0 +1,10 @@
+.container {
+  font-size: 1.5rem;
+  background-color: $main_background;
+}
+
+.row {
+  min-width: $max_width_value;
+  max-width: $max_width_value;
+  margin: 0 auto;
+}
