@@ -1,23 +1,6 @@
 @font-face {
-  font-family: 'iransans';
-  src: url("./../../fonts/iransans.eot");
-  /* IE9 Compat Modes */
-  src: url('./../../fonts/iransans.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('./../../fonts/iransans.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('./../../fonts/iransans.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('./../../fonts/iransans.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('./../../fonts/iransans.svg#svgFontName') format('svg');
-  /* Legacy iOS */
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'gibson';
-  src: url("./../../fonts/Gibson-BoldItalic.ttf");
+  font-family: 'Texta';
+  src: url("./../../fonts/TEXTA\ MEDIUM.OTF");
 }
 html {
   font-size: $rem_size;
@@ -31,8 +14,8 @@ html {
 html,
 body,
 * {
-  font-family: 'iransans';
+  font-family: 'Texta';
 }
 .gibson {
-  font-family: 'gibson' !important;
+  font-family: 'Texta' !important;
 }
