@@ -1,0 +1,74 @@
+.descripCont {
+    .head {
+        background-image: url('./../../images/pages-head-bg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-color: $red;
+        text-align: left;
+        width: 100%;
+        color: $white;
+        font-size: 1.9rem;
+        font-weight: bold;
+        padding: 8rem;
+    }
+
+    .description {
+        margin: 5rem auto;
+        padding: 8rem;
+        border: 1px solid $border-color;
+        border-radius: $border_radius;
+        @include flex(row, space-between, center, '', '');
+
+        .images {
+            @include flex(column, center, center, '', '');
+            width: 40%;
+
+            .main-img {
+                img {
+                    width: 23rem;
+                }
+            }
+
+            .sub-img {
+                @include flex(row, space-between, center, '', '');
+                width: 55%;
+                margin: 2rem 0;
+                img {
+                    width: 5rem;
+                }
+            }
+
+
+        }
+
+        .content {
+            @include flex(column, center, left, '', '');
+            text-align: left;
+            width: 60%;
+
+            .title {
+                font-size: 2rem;
+                color: $red;
+            }
+
+            .details {
+                color: $font_color_gray_light;
+                font-size: 1.2rem;
+                text-align: left;
+
+                margin: 2rem 0;
+            }
+
+            .describe {
+                text-align: left;
+                margin-top: 5rem;
+
+                color: $font_color_gray_light;
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}

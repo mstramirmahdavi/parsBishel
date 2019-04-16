@@ -1,0 +1,45 @@
+.productCard {
+    @include flex('', space-between, center, '', '');
+    align-self: center;
+    width: 33.333%;
+    position: relative;
+    &:not(:last-child){
+        margin-left: 2rem;
+
+    }
+    &:before{
+        content: '';
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: $red;
+        position: absolute;
+    }
+
+    img {
+        width: 18rem;
+        z-index: 1;
+        left: -8rem;
+    }
+
+    .description {
+        // @include flex(column, center, center, '', '');
+        color: $white;
+        padding:0 3rem;
+        text-align: left;
+
+        .title {
+            font-size: 2rem;
+        }
+        .content{
+            padding: 4rem 0;
+            font-size: 1.6rem;
+
+            a{
+                color:$readmore-color;
+            }
+        }
+    }
+
+}
