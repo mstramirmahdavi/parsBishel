@@ -3,11 +3,13 @@
     align-self: center;
     width: 33.333%;
     position: relative;
-    &:not(:last-child){
+
+    &:not(:last-child) {
         margin-left: 2rem;
 
     }
-    &:before{
+
+    &:before {
         content: '';
         width: 30rem;
         height: 30rem;
@@ -26,18 +28,19 @@
     .description {
         // @include flex(column, center, center, '', '');
         color: $white;
-        padding:0 3rem;
+        padding: 0 3rem;
         text-align: left;
 
         .title {
             font-size: 2rem;
         }
-        .content{
+
+        .content {
             padding: 4rem 0;
             font-size: 1.6rem;
 
-            a{
-                color:$readmore-color;
+            a {
+                color: $readmore-color;
             }
         }
     }
