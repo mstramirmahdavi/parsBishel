@@ -316,6 +316,9 @@ body,
     font-size: 3rem;
     background-blend-mode: multiply;
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    transition: .2s; }
     .categoriesCont .items:not(:nth-child(3n)) {
       margin-right: 1rem; }
+    .categoriesCont .items:hover {
+      background-blend-mode: normal; }
