@@ -1,5 +1,6 @@
 .categoriesCont {
   @include flex('', center, '', '', wrap);
+  margin-bottom: 2rem;
   .items {
     @include flex('', center, center, 1 0 30%, '');
     height: 25rem;
@@ -10,12 +11,14 @@
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-    transition: .2s;
+    transition: all 1s;
     &:not(:nth-child(3n)){
       margin-right: 1rem;
     }
     &:hover {
-      background-blend-mode: normal;
+      // background-blend-mode: normal;
+      background-color: transparent;
+      color: $red;
     }
   }
 }

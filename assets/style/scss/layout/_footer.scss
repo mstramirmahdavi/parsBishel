@@ -1,0 +1,119 @@
+.footer {
+    border-top: 3px solid $red;
+    background-color: $footer_bg;
+    position: relative;
+    // @include flex(row, space-between, center, '', '');
+
+    >.row {
+        @include flex(row, space-between, center, '', '');
+        color: $footer_text;
+
+        .description {
+            margin: 5rem 0;
+            @include flex(column, '', center, 0 0 20%, '');
+
+            logo {
+
+                >img {
+                    width: 10rem;
+                }
+            }
+        }
+
+        .socialNetworks {
+            @include flex(column, center, center, 0 0 20%, '');
+
+            >.text {
+                color: $white;
+                font-size: 1.8rem;
+            }
+
+            >.icons {
+            @include flex(row, space-between, center, 0 0 20%, '');
+                margin-top: 2rem;
+                > img{
+                    width: 2.5rem;
+
+                    &:not(:last-child){
+                        margin-right: 1rem;
+                    }
+                }
+
+            }
+        }
+
+        .items {
+            @include flex(column, space-around, left, 0 0 20%, '');
+
+            a {
+                color: $footer_text;
+                position: relative;
+                padding-left: 2rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background-color: $red;
+                    top: 50%;
+                    left: 0;
+                    width: .8rem;
+                    height: .8rem;
+                    transform: translate(0, -50%) rotate(-45deg);
+
+                }
+            }
+        }
+
+        .contact {
+            @include flex(column, space-around, left, 0 0 15%, '');
+
+            >.content {
+                @include flex(row, '', left, '', '');
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+
+                >img {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .map {
+            @include flex(column, space-around, '', 0 0 16%, '');
+            clip-path: circle(60%);
+            position: relative;
+            z-index: 10;
+            img {
+                width: 20rem;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -10px;
+                left: -10px;
+                width: 22rem;
+                height: 22rem;
+                border-radius: 50%;
+                background-color: $map-border;
+            }
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $red;
+        top: -21px;
+        left: 50%;
+        width: 2rem;
+        height: 2rem;
+        transform: translate(0, 50%) rotate(-45deg);
+    }
+
+}

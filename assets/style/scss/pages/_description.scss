@@ -19,7 +19,7 @@
         padding: 8rem;
         border: 1px solid $border-color;
         border-radius: $border_radius;
-        @include flex(row, space-between, center, '', '');
+        @include flex(row-reverse, space-between, center, '', '');
 
         .images {
             @include flex(column, center, center, '', '');

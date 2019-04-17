@@ -14,7 +14,7 @@
     }
     .content {
       @include flex(column, center, '', '', '');
-      padding: 5rem 2rem 5rem 0;
+      padding: 5rem 2rem 5rem 2rem;
       .title {
         color: $font_color_gray_light;
         font-size: 3rem;
