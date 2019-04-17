@@ -1,0 +1,28 @@
+.aboutCont {
+  padding: 2rem 0;
+  > .row {
+    @include flex('', '', '', '', '');
+    .cover {
+      @include flex('', '', '', 0 0 50%, '');
+      height: 50rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      > img {
+        width: 100%;
+      }
+    }
+    .content {
+      @include flex(column, center, '', '', '');
+      padding: 5rem 2rem 5rem 0;
+      .title {
+        color: $font_color_gray_light;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+      .text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

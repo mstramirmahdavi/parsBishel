@@ -83,7 +83,7 @@ video {
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  direction: rtl;
+  /* direction: rtl; */
 }
 ul,
 ol {
@@ -95,7 +95,18 @@ a {
 }
 html,
 body,
+header,
+footer,
 div,
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $gray_dark;
 }
