@@ -4,10 +4,13 @@
     @include flex('', '', '', '', '');
     .cover {
       @include flex('', '', '', 0 0 50%, '');
-      height: 40rem;
+      height: 50rem;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      > img {
+        width: 100%;
+      }
     }
     .content {
       @include flex(column, center, '', '', '');
