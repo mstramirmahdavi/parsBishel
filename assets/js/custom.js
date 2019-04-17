@@ -1,33 +1,14 @@
-$(document).ready(function () {
-  $('#owl-carousel').owlCarousel({
-    rtl: true,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      }
-    }
-  });
+$(document).ready(function() {
   $('#sliders').owlCarousel({
-    rtl: true,
-    loop: true,
     slideSpeed: 300,
-    paginationSpeed: 1000,
-    autoplay: true,
-    autoplayTimeout: 4000,
+    navSpeed: 1000,
     singleItem: true,
-    pagination: false,
+    nav: true,
     rewindSpeed: 500,
+    navText: [
+      "<img src='./assets/images/left-arrow.jpg'>",
+      "<img src='./assets/images/right-arrow.jpg'>"
+    ],
     responsive: {
       0: {
         items: 1
@@ -40,63 +21,56 @@ $(document).ready(function () {
       }
     }
   });
-  $('#relatedSlider').owlCarousel({
-    rtl: true,
-    loop: true,
-    margin: 50,
-    center: true,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    dots: true,
-    nav: true,
-    /* navText: ["<img src='myprevimage.png'>", "<img src='mynextimage.png'>"], */
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 4
-      },
-      1000: {
-        items: 5
-      }
-    }
+  $('#sliders').on('changed.owl.carousel', function(e) {
+    $('.overlay').css({
+      backgroundColor:
+        'rgb(' +
+        pallette[e.item.index][0][0] +
+        ',' +
+        pallette[e.item.index][0][1] +
+        ',' +
+        pallette[e.item.index][0][2] +
+        ')'
+    });
+    $('.overlay2').css({
+      backgroundColor:
+        'rgb(' +
+        pallette[e.item.index][1][0] +
+        ',' +
+        pallette[e.item.index][1][1] +
+        ',' +
+        pallette[e.item.index][1][2] +
+        ')'
+    });
   });
-  $('#faveSlider').owlCarousel({
-    // autoWidth:true,
-    // stagePadding:15,
-    rtl: true,
-    loop: true,
-    margin: 0,
-    // center: true, 
-    autoplay: false,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    dots: false,
-    nav: true,
-    navText: ["<img src='assets/images/left-arrow.png'>", "<img src='assets/images/right-arrow.png'>"], 
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 4
-      },
-      1600: {
-        items: 5
-      }
+  var $img = $('.thiefColor');
+  var pallette = [];
+  $img.on('load', function() {
+    for (let index = 0; index < $img.length; index++) {
+      var colorThief = new ColorThief();
+      pallette[index] = colorThief.getPalette($img.get(index), 2);
     }
+    $('.overlay').css({
+      backgroundColor:
+        'rgb(' +
+        pallette[0][0][0] +
+        ',' +
+        pallette[0][0][1] +
+        ',' +
+        pallette[0][0][2] +
+        ')'
+    });
+    $('.overlay2').css({
+      backgroundColor:
+        'rgb(' +
+        pallette[0][1][0] +
+        ',' +
+        pallette[0][1][1] +
+        ',' +
+        pallette[0][1][2] +
+        ')'
+    });
   });
-  if ($('.topRowBanner')[0]) {
-    document.querySelector('.header').classList.add('topBannerExist');
-    document
-      .querySelector('.heroImage')
-      .classList.add('heroImageWithTopBanner');
-  }
 });
 
 /* var stickymenu = document.getElementById("fixedmenu");
