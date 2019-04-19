@@ -158,6 +158,9 @@ body,
   max-width: 120rem;
   margin: 0 auto; }
 
+button {
+  outline: none; }
+
 .header {
   border-bottom: 3px solid #ed1c24; }
   .header > .row {
@@ -370,7 +373,7 @@ body,
     z-index: 10;
     padding: 10rem;
     font-size: 4rem; }
-    .heroCont .content .title p {
+    .heroCont .content .titleCont .title p {
       color: #ffffff; }
   .heroCont .overlay {
     z-index: 2; }
@@ -397,19 +400,38 @@ body,
       .heroCont .slideCont .item > img {
         width: 100%; }
 
-#sliders.owl-drag .owl-item {
-  height: calc(100vh - 7.3rem); }
+#sliders {
+  position: relative; }
+  #sliders.owl-drag .owl-item {
+    height: calc(100vh - 7.3rem); }
+  #sliders .owl-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; }
 
-#sliders .owl-dots {
-  position: absolute;
-  right: 30%;
-  bottom: 0;
-  display: block; }
-
-#sliders .owl-nav {
-  position: absolute;
-  right: 0;
-  bottom: 0; }
+#titleSlider {
+  position: relative; }
+  #titleSlider .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    width: 284%; }
+  #titleSlider .owl-dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    top: 300%; }
+    #titleSlider .owl-dots button {
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      opacity: .6;
+      margin: 1rem; }
 
 .aboutCont {
   padding: 2rem 0; }
