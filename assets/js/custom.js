@@ -3,7 +3,7 @@ $(document).ready(function () {
     slideSpeed: 300,
     navSpeed: 1000,
     singleItem: true,
-    nav: true,
+    nav: false,
     rewindSpeed: 500,
     navText: [
       "<img src='./assets/images/left-arrow.jpg'>",
@@ -29,8 +29,8 @@ $(document).ready(function () {
     dots: true,
     rewindSpeed: 500,
     navText: [
-      "<img class='left-btn' src='./assets/images/left-arrow.jpg'>",
-      "<img class='right-btn' src='./assets/images/right-arrow.jpg'>"
+      "<img src='./assets/images/left-arrow.jpg'>",
+      "<img src='./assets/images/right-arrow.jpg'>"
     ],
     responsive: {
       0: {
