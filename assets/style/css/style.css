@@ -377,7 +377,7 @@ button {
       color: #ffffff; }
   .heroCont .overlay {
     z-index: 2;
-    clip-path: ellipse(63% 110% at 100% 47%); }
+    clip-path: ellipse(69% 110% at 100% 47%); }
   .heroCont .overlay2 {
     left: -5%;
     z-index: 1; }
@@ -392,7 +392,7 @@ button {
     width: 100%;
     height: 100%;
     position: relative;
-    clip-path: ellipse(60% 110% at 100% 50%);
+    clip-path: ellipse(67% 110% at 100% 50%);
     z-index: 3; }
     .heroCont .slideCont .item {
       width: 100%;
@@ -414,8 +414,8 @@ button {
     justify-content: space-between;
     position: absolute;
     top: 50%;
-    left: -12%;
-    width: 270%; }
+    left: -7rem;
+    width: 95vw; }
     #titleSlider .owl-nav button > img {
       width: 3rem; }
   #titleSlider .owl-dots {
@@ -462,26 +462,74 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  position: relative;
+  overflow-x: hidden; }
   .categoriesCont .items {
     display: flex;
     flex: 1 0 30%;
     justify-content: center;
     align-items: center;
     height: 25rem;
+    position: relative;
+    z-index: 2;
     background-color: #ed1c24;
     margin-bottom: 1rem;
-    color: #ffffff;
-    font-size: 3rem;
+    font-size: 3.5rem;
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-    transition: all 1s; }
-    .categoriesCont .items:not(:nth-child(3n)) {
+    transition: all 0.2s; }
+    .categoriesCont .items:not(:nth-child(5n)) {
       margin-right: 1rem; }
+    .categoriesCont .items::after {
+      content: '';
+      width: 90%;
+      height: 10rem;
+      background-color: #ed1c24;
+      position: absolute;
+      outline: 2px solid #ed1c24;
+      outline-offset: 1rem;
+      z-index: 0;
+      transform: scale(0);
+      transition: 0.1s; }
     .categoriesCont .items:hover {
       background-color: transparent;
       color: #ed1c24; }
+      .categoriesCont .items:hover::after {
+        transform: scale(1); }
+    .categoriesCont .items p {
+      position: relative;
+      z-index: 2;
+      color: #ffffff; }
+  .categoriesCont .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    z-index: 5;
+    background-color: #ffffff;
+    border-radius: 50%; }
+    .categoriesCont .icon > img {
+      width: 30%; }
+    .categoriesCont .icon.icon1 {
+      top: 25%;
+      left: 33%;
+      transform: translate(-47%, -52%); }
+    .categoriesCont .icon.icon2 {
+      top: 25%;
+      left: 66%;
+      transform: translate(-41%, -52%); }
+    .categoriesCont .icon.icon3 {
+      top: 75%;
+      left: 33%;
+      transform: translate(-47%, -52%); }
+    .categoriesCont .icon.icon4 {
+      top: 75%;
+      left: 66%;
+      transform: translate(-41%, -52%); }
 
 /* pages */
 .productCont .head {

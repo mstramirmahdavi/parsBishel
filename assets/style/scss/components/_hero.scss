@@ -26,7 +26,7 @@
 
   .overlay {
     z-index: 2;
-    clip-path: ellipse(63% 110% at 100% 47%);
+    clip-path: ellipse(69% 110% at 100% 47%);
   }
 
   .overlay2 {
@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    clip-path: ellipse(60% 110% at 100% 50%);
+    clip-path: ellipse(67% 110% at 100% 50%);
     z-index: 3;
 
     .item {
@@ -111,8 +111,8 @@
     @include flex('', space-between, '', '', '');
     position: absolute;
     top: 50%;
-    left: -12%;
-    width: 270%;
+    left: -7rem;
+    width: 95vw;
 
     button{
 
