@@ -107,6 +107,15 @@ $(document).ready(function() {
         ')'
     });
   });
+
+  $('.header > .row .search > img').on('click',function () {
+    $('.container').addClass('perspective');
+    $('.searchBox').addClass('active');
+  });
+  $('.searchBox .close').on('click',function () {
+    $('.container').removeClass('perspective');
+    $('.searchBox').removeClass('active');
+  });
 });
 
 /* var stickymenu = document.getElementById("fixedmenu");

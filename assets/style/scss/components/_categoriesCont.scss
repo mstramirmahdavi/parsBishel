@@ -23,6 +23,7 @@
       width: 90%;
       height: 10rem;
       background-color: $red;
+      mix-blend-mode: multiply;
       position: absolute;
       outline: 2px solid $red;
       outline-offset: 1rem;

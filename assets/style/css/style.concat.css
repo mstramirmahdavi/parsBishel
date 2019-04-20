@@ -349,6 +349,20 @@ body,
 /* layout */
 .container {
   font-size: 1.5rem; }
+  .container > header,
+  .container section,
+  .container footer {
+    transition: 0.4s; }
+  .container.perspective {
+    transition: 0.4s;
+    perspective: 1300px;
+    overflow: hidden;
+    height: 100vh; }
+    .container.perspective > header,
+    .container.perspective section,
+    .container.perspective footer {
+      transition: 0.4s;
+      transform: translateZ(-30rem) rotateX(21deg) translateY(30rem); }
 
 .row {
   min-width: 120rem;
@@ -414,7 +428,8 @@ button {
       justify-content: flex-end;
       align-items: center; }
       .header > .row .search > img {
-        width: 2rem; }
+        width: 2rem;
+        cursor: pointer; }
 
 .footer {
   border-top: 3px solid #ed1c24;
@@ -458,14 +473,16 @@ button {
       display: flex;
       flex: 0 0 20%;
       justify-content: space-around;
-      flex-direction: column;
-      align-items: left; }
+      flex-direction: column; }
       .footer > .row .items a {
         color: #585858;
         position: relative;
         padding-left: 2rem;
         font-size: 1.5rem;
+        transition: .2s;
         cursor: pointer; }
+        .footer > .row .items a:hover {
+          color: #ffffff; }
         .footer > .row .items a:before {
           content: '';
           position: absolute;
@@ -479,12 +496,11 @@ button {
       display: flex;
       flex: 0 0 15%;
       justify-content: space-around;
-      flex-direction: column;
-      align-items: left; }
+      flex-direction: column; }
       .footer > .row .contact > .content {
         display: flex;
         flex-direction: row;
-        align-items: left; }
+        align-items: center; }
         .footer > .row .contact > .content:not(:last-child) {
           margin-bottom: 2rem; }
         .footer > .row .contact > .content > img {
@@ -520,6 +536,53 @@ button {
     transform: translate(0, 50%) rotate(-45deg); }
 
 /* components */
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  top: -30rem;
+  position: fixed;
+  transition: .4s; }
+  .searchBox.active {
+    z-index: 3;
+    top: 0; }
+  .searchBox .search {
+    display: flex;
+    flex: 0 0 70%;
+    margin-right: 2rem; }
+    .searchBox .search input {
+      width: 100%;
+      height: 15rem;
+      font-size: 5rem;
+      border: none;
+      border-bottom: 2px solid #5f5f5f;
+      color: #5f5f5f;
+      outline: none; }
+  .searchBox .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    border: 2px solid #ed1c24;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer; }
+    .searchBox .close::after, .searchBox .close::before {
+      content: '';
+      position: absolute;
+      background-color: #ed1c24;
+      width: 90%;
+      height: 2px;
+      top: 50%; }
+    .searchBox .close::after {
+      transform: rotate(45deg); }
+    .searchBox .close::before {
+      transform: rotate(-45deg); }
+
 .head {
   background-position: center;
   background-size: cover;
@@ -565,7 +628,28 @@ button {
       padding: 4rem 0;
       font-size: 1.6rem; }
       .productCard .description .content a {
-        color: #ec5a5f; }
+        color: #ec5a5f;
+        position: relative;
+        transition: 0.2s; }
+        .productCard .description .content a::after {
+          content: '';
+          transition: .2s;
+          width: 0%;
+          height: 1px;
+          background-color: #ffffff;
+          position: absolute;
+          left: 0;
+          bottom: 0; }
+        .productCard .description .content a:hover {
+          color: #ffffff; }
+          .productCard .description .content a:hover::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            bottom: 0; }
 
 .heroCont {
   width: 100%;
@@ -697,6 +781,7 @@ button {
       width: 90%;
       height: 10rem;
       background-color: #ed1c24;
+      mix-blend-mode: multiply;
       position: absolute;
       outline: 2px solid #ed1c24;
       outline-offset: 1rem;

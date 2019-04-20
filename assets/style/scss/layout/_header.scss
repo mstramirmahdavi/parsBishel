@@ -53,6 +53,7 @@
       @include flex('', flex-end, center, 0 0 10%, '');
       > img {
         width: 2rem;
+        cursor: pointer;
       }
     }
   }
