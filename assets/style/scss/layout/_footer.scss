@@ -43,7 +43,7 @@
         }
 
         .items {
-            @include flex(column, space-around, left, 0 0 20%, '');
+            @include flex(column, space-around, '', 0 0 20%, '');
 
             a {
                 color: $footer_text;
@@ -67,10 +67,10 @@
         }
 
         .contact {
-            @include flex(column, space-around, left, 0 0 15%, '');
+            @include flex(column, space-around, '', 0 0 15%, '');
 
             >.content {
-                @include flex(row, '', left, '', '');
+                @include flex(row, '', '', '', '');
 
                 &:not(:last-child) {
                     margin-bottom: 2rem;
