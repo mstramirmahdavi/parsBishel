@@ -107,6 +107,25 @@ $(document).ready(function() {
         ')'
     });
   });
+
+  $('.header > .row .search > img').on('click', function() {
+    $('.container').addClass('perspective');
+    $('.searchBox').addClass('active');
+  });
+  $('.searchBox .close').on('click', function() {
+    $('.container').removeClass('perspective');
+    $('.searchBox').removeClass('active');
+  });
+
+  $('.megamenu.megaproduct .link .column').hover(
+    function() {
+      $('.megamenu.megaproduct .heroproduct img').attr(
+        'src',
+        $(this).attr('data-src')
+      );
+    },
+    function() {}
+  );
 });
 
 /* var stickymenu = document.getElementById("fixedmenu");

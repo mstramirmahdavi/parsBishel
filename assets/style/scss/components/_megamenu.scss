@@ -1,0 +1,183 @@
+.megamenu {
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0px 5px 10px 0px $gray_dark;
+  position: absolute;
+  padding: 1rem;
+  left: 0;
+  top: 7.3rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: all 0.3s;
+
+  &.megaproduct {
+    @include flex('', '', '', '', wrap);
+
+    .heroproduct {
+      @include flex(column, center, '', 0 0 39rem, '');
+      background-color: $white;
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid $red;
+
+      img {
+        width: 90%;
+        align-self: center;
+      }
+
+      .title {
+        color: $gray_dark;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .price {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        color: $white;
+      }
+
+      .buttons {
+        font-size: 1.5rem;
+
+        .button {
+          width: 60%;
+          display: block;
+          margin: 0 auto;
+          padding: 0.5rem 0;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    .link {
+      @include flex('', '', '', 0 0 78rem, wrap);
+
+      .column {
+        @include flex(column, flex-start, '', 1 0 25rem, '');
+        padding: 1rem;
+        color: $white;
+
+        &-header {
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid $red;
+        }
+
+        &-content {
+          padding-top: 1rem;
+          font-size: 1.3rem;
+
+          >ul {
+
+            &:first-child{
+              margin-right: 1.5rem;
+            }
+
+            >li {
+              padding: 0.6rem 0;
+
+              >a {
+                color: $gray_dark;
+                padding: 0.5rem 0;
+                position: relative;
+
+                &:hover {
+                  color: $red;
+
+                  &::after {
+                    width: 100%;
+                  }
+                }
+
+                &::after {
+                  content: '';
+                  width: 0%;
+                  height: 2px;
+                  background-color: $red;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+
+          .twoCol {
+            @include flex(row, '', '', '', '');
+
+            >ul {
+              font-size: 1.2rem;
+              &:first-child{
+                margin-right: 1.5rem;
+              }
+
+              >li {
+                padding: 0.6rem 0;
+
+                >a {
+                  color: $gray_dark;
+                  padding: 0.5rem 0;
+                  position: relative;
+
+                  &:hover {
+                    color: $red;
+
+                    &::after {
+                      width: 100%;
+                    }
+                  }
+
+                  &::after {
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    background-color: $red;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: 0.3s;
+                  }
+                }
+              }
+            }
+
+            >li {
+              padding: 0.6rem 0;
+
+              >a {
+                color: $gray_dark;
+                padding: 0.5rem 0;
+                position: relative;
+
+                &:hover {
+                  color: $red;
+
+                  &::after {
+                    width: 100%;
+                  }
+                }
+
+                &::after {
+                  content: '';
+                  width: 0%;
+                  height: 2px;
+                  background-color: $red;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,24 @@
 .container {
   font-size: 1.5rem;
+  transition: 0.4s;
+
+  > header,
+  section,
+  footer {
+    transition: 0.4s;
+  }
+  &.perspective {
+    transition: 0.4s;
+    perspective: 1300px;
+    overflow: hidden;
+    height: 100vh;
+    > header,
+    section,
+    footer {
+      transition: 0.4s;
+      transform: translateZ(-30rem) rotateX(21deg) translateY(30rem);
+    }
+  }
 }
 
 .row {
@@ -8,6 +27,6 @@
   margin: 0 auto;
 }
 
-button{
+button {
   outline: none;
 }
