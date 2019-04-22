@@ -116,6 +116,14 @@ $(document).ready(function() {
     $('.container').removeClass('perspective');
     $('.searchBox').removeClass('active');
   });
+
+  $('.header > .row > .nav > .menu > .menuItem > .megaproduct > .link > .column').hover(function(){
+    var img = $('.categoriesCont > .items').css("backgound-image");
+    console.log(img);
+  $('.header > .row > .nav > .menu > .menuItem > .megaproduct > .heroproduct > img').attr("src", )
+
+  });
+
 });
 
 /* var stickymenu = document.getElementById("fixedmenu");

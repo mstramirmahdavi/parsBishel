@@ -1,20 +1,26 @@
 .header {
   border-bottom: 3px solid $red;
-  > .row {
+
+  >.row {
     @include flex('', '', '', '', '');
     height: 7rem;
+
     .logo {
       @include flex('', '', center, 0 0 20%, '');
-      > img {
+
+      >img {
         width: 10rem;
       }
     }
+
     .nav {
       @include flex('', '', center, 1 0 auto, '');
+
       .menu {
         @include flex('', center, center, '', '');
         height: 100%;
         font-size: 1.5rem;
+
         .menuItem {
           @include flex('', center, center, '', '');
           height: 100%;
@@ -28,7 +34,7 @@
             transition: 0.2s;
             position: relative;
 
-            &::after {
+            > &::after {
               content: '';
               z-index: -1;
               width: 100%;
@@ -37,21 +43,34 @@
               top: 0;
               left: 0;
               background-color: $red;
-              transition: .2s;
+              transition: .3s;
             }
+
             &:hover {
               color: $white;
+
+
               &::after {
                 height: 100%;
               }
             }
           }
+
+          &:hover {
+            .megamenu {
+              visibility: visible;
+              opacity: 1;
+              z-index: 20;
+            }
+          }
         }
       }
     }
+
     .search {
       @include flex('', flex-end, center, 0 0 10%, '');
-      > img {
+
+      >img {
         width: 2rem;
         cursor: pointer;
       }
