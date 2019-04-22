@@ -25,6 +25,18 @@
   min-width: $max_width_value;
   max-width: $max_width_value;
   margin: 0 auto;
+
+  @include responsive(tablet, ''){
+    min-width: auto;
+  max-width: auto;
+  width: 100%;
+  }
+  @include responsive(phone, ''){
+    min-width: auto;
+  max-width: auto;
+  width: 100%;
+  transform: scale(.8);
+  }
 }
 
 button {

@@ -8,10 +8,49 @@
             .productList {
                 @include flex(column, space-between, center, '', '');
 
+
                 .productCards {
                     @include flex(row, space-evenly, center, '', '');
                     margin: 8rem 0;
                     width: 100%;
+
+                    @include responsive(tablet, '') {
+                        @include flex(column, '', '', '', '');
+
+                        margin: 0;
+
+                        .productCard{
+                            margin: 2rem auto;
+                        }
+
+                    }
+                }
+            }
+        }
+        @include responsive(tablet, ''){
+            .contents {
+                // padding: 5rem 0;
+    
+                .productList {
+                    @include flex(column, space-between, center, '', '');
+    
+    
+                    .productCards {
+                        @include flex(column, space-evenly, center, '', '');
+                        // margin: 8rem 0;
+                        width: 100%;
+    
+                        @include responsive(tablet, '') {
+                            @include flex(column, '', '', '', '');
+    
+                            margin: 0;
+    
+                            .productCard{
+                                margin: 2rem auto;
+                            }
+    
+                        }
+                    }
                 }
             }
         }

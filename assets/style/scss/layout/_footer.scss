@@ -29,12 +29,13 @@
             }
 
             >.icons {
-            @include flex(row, space-between, center, 0 0 20%, '');
+                @include flex(row, space-between, center, 0 0 20%, '');
                 margin-top: 2rem;
-                > img{
+
+                >img {
                     width: 2.5rem;
 
-                    &:not(:last-child){
+                    &:not(:last-child) {
                         margin-right: 1rem;
                     }
                 }
@@ -56,6 +57,7 @@
                 &:hover {
                     color: $white;
                 }
+
                 &:before {
                     content: '';
                     position: absolute;
@@ -71,7 +73,7 @@
         }
 
         .contact {
-            @include flex(column, space-around, '', 0 0 15%, '');
+            @include flex(column, space-around, '', 0 0 20%, '');
 
             >.content {
                 @include flex(row, '', center, '', '');
@@ -87,10 +89,11 @@
         }
 
         .map {
-            @include flex(column, space-around, '', 0 0 16%, '');
+            @include flex(column, space-around, '', 0 0 20%, '');
             clip-path: circle(60%);
             position: relative;
             z-index: 10;
+
             img {
                 width: 20rem;
             }
@@ -119,5 +122,4 @@
         height: 2rem;
         transform: translate(0, 50%) rotate(-45deg);
     }
-
 }

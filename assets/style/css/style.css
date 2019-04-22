@@ -185,6 +185,17 @@ body,
   min-width: 120rem;
   max-width: 120rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 1200px) {
+    .row {
+      min-width: auto;
+      max-width: auto;
+      width: 100%; } }
+  @media only screen and (max-width: 600px) {
+    .row {
+      min-width: auto;
+      max-width: auto;
+      width: 100%;
+      transform: scale(0.8); } }
 
 button {
   outline: none; }
@@ -248,7 +259,8 @@ button {
 .footer {
   border-top: 3px solid #ed1c24;
   background-color: #2c2b2b;
-  position: relative; }
+  position: relative;
+  width: 100vw; }
   .footer > .row {
     display: flex;
     justify-content: space-between;
@@ -308,7 +320,7 @@ button {
           transform: translate(0, -50%) rotate(-45deg); }
     .footer > .row .contact {
       display: flex;
-      flex: 0 0 15%;
+      flex: 0 0 20%;
       justify-content: space-around;
       flex-direction: column; }
       .footer > .row .contact > .content {
@@ -321,7 +333,7 @@ button {
           margin-right: 1rem; }
     .footer > .row .map {
       display: flex;
-      flex: 0 0 16%;
+      flex: 0 0 20%;
       justify-content: space-around;
       flex-direction: column;
       clip-path: circle(60%);
@@ -466,6 +478,26 @@ button {
             position: absolute;
             left: 0;
             bottom: 0; }
+  @media only screen and (max-width: 1200px) {
+    .productCard {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 80%;
+      margin: 5rem auto;
+      position: relative; }
+      .productCard .productCard:before {
+        content: '';
+        width: 70%;
+        height: 80%;
+        display: flex;
+        position: absolute;
+        left: 20%;
+        border-radius: 5%;
+        z-index: -1;
+        background-color: #ed1c24;
+        position: absolute; } }
 
 .heroCont {
   width: 100%;
@@ -788,6 +820,33 @@ button {
       align-items: center;
       margin: 8rem 0;
       width: 100%; }
+      @media only screen and (max-width: 1200px) {
+        .productCont .row .contents .productList .productCards {
+          display: flex;
+          flex-direction: column;
+          margin: 0; }
+          .productCont .row .contents .productList .productCards .productCard {
+            margin: 2rem auto; } }
+
+@media only screen and (max-width: 1200px) {
+  .productCont .row .contents .productList {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; }
+    .productCont .row .contents .productList .productCards {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; } }
+    @media only screen and (max-width: 1200px) and (max-width: 1200px) {
+      .productCont .row .contents .productList .productCards {
+        display: flex;
+        flex-direction: column;
+        margin: 0; }
+        .productCont .row .contents .productList .productCards .productCard {
+          margin: 2rem auto; } }
 
 .descripCont .head {
   background-position: center;
@@ -796,7 +855,7 @@ button {
   background-blend-mode: multiply;
   background-color: #ed1c24;
   text-align: left;
-  width: 100%;
+  width: 100vw;
   color: #ffffff;
   font-size: 1.9rem;
   font-weight: bold;
