@@ -2,18 +2,21 @@
     border-top: 3px solid $red;
     background-color: $footer_bg;
     position: relative;
-    // @include flex(row, space-between, center, '', '');
 
     >.row {
         @include flex(row, space-between, center, '', '');
         color: $footer_text;
 
+        @include responsive(tablet, '') {
+            @include flex(column, '', '', '', '');
+            padding: 2rem;
+        }
+
         .description {
             margin: 5rem 0;
             @include flex(column, '', center, 0 0 20%, '');
 
-            logo {
-
+            .logo {
                 >img {
                     width: 10rem;
                 }
@@ -22,6 +25,10 @@
 
         .socialNetworks {
             @include flex(column, center, center, 0 0 20%, '');
+
+            @include responsive(tablet, '') {
+                margin: 2rem 0;
+            }
 
             >.text {
                 color: $white;
@@ -39,19 +46,22 @@
                         margin-right: 1rem;
                     }
                 }
-
             }
         }
 
         .items {
             @include flex(column, space-around, '', 0 0 20%, '');
 
+            @include responsive(tablet, '') {
+                margin: 2rem 0;
+            }
+
             a {
                 color: $footer_text;
                 position: relative;
                 padding-left: 2rem;
                 font-size: 1.5rem;
-                transition: .2s;
+                transition: 0.2s;
                 cursor: pointer;
 
                 &:hover {
@@ -64,16 +74,19 @@
                     background-color: $red;
                     top: 50%;
                     left: 0;
-                    width: .8rem;
-                    height: .8rem;
+                    width: 0.8rem;
+                    height: 0.8rem;
                     transform: translate(0, -50%) rotate(-45deg);
-
                 }
             }
         }
 
         .contact {
-            @include flex(column, space-around, '', 0 0 20%, '');
+            @include flex(column, space-around, '', 0 0 15%, '');
+
+            @include responsive(tablet, '') {
+                margin: 2rem 0;
+            }
 
             >.content {
                 @include flex(row, '', center, '', '');
@@ -89,10 +102,14 @@
         }
 
         .map {
-            @include flex(column, space-around, '', 0 0 20%, '');
+            @include flex(column, space-around, '', 0 0 16%, '');
             clip-path: circle(60%);
             position: relative;
             z-index: 10;
+
+            @include responsive(tablet, '') {
+                margin: 2rem 0;
+            }
 
             img {
                 width: 20rem;

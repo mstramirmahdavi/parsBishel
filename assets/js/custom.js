@@ -126,6 +126,10 @@ $(document).ready(function() {
     },
     function() {}
   );
+  $('.header > .row .logo .menuIcon__button').on('click' , function() {
+    $('.header > .row .nav').toggleClass('active');
+    $('.header > .row .search').toggleClass('active');
+  });
 });
 
 /* var stickymenu = document.getElementById("fixedmenu");
