@@ -11,6 +11,18 @@
         font-size: 1.9rem;
         font-weight: bold;
         padding: 8rem;
+
+        .row {
+            p {
+                color: $white;
+
+                @include responsive(tablet, '') {
+                    @include flex('', center, center, '', '');
+
+                }
+            }
+        }
+
     }
 
     .description {
@@ -20,9 +32,29 @@
         border-radius: $border_radius;
         @include flex(row-reverse, space-between, center, '', '');
 
+        @include responsive(tablet, '') {
+            @include flex(column, '', center, '', '');
+            padding: 0;
+
+            .content {
+                margin: 8rem auto;
+            }
+
+        }
+
         .images {
             @include flex(column, center, center, '', '');
             width: 40%;
+
+            @include responsive(phone, '') {
+                width: 100%;
+
+                .sub-img {
+                    // width: 80%;
+                    @include flex(row, center, center, '', '');
+
+                }
+            }
 
             .main-img {
                 img {
@@ -34,6 +66,7 @@
                 @include flex(row, space-between, center, '', '');
                 width: 55%;
                 margin: 2rem 0;
+
                 img {
                     width: 5rem;
                 }

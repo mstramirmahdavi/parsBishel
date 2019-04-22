@@ -1,5 +1,16 @@
 .productCont {
+
     // @include flex(column, center, flex-end, '', '');
+    .head {
+        .row {
+            p {
+                color: $white;
+                @include responsive(tablet, '') {
+                    @include flex('', center, center, '', '');
+                }
+            }
+        }
+    }
 
     .row {
         .contents {
@@ -10,45 +21,30 @@
 
 
                 .productCards {
-                    @include flex(row, space-evenly, center, '', '');
+                    @include flex(row, space-evenly, center, '', wrap);
                     margin: 8rem 0;
                     width: 100%;
 
-                    @include responsive(tablet, '') {
-                        @include flex(column, '', '', '', '');
-
-                        margin: 0;
-
-                        .productCard{
-                            margin: 2rem auto;
-                        }
-
+                    .productCard {
+                        margin: 1rem;
                     }
-                }
-            }
-        }
-        @include responsive(tablet, ''){
-            .contents {
-                // padding: 5rem 0;
-    
-                .productList {
-                    @include flex(column, space-between, center, '', '');
-    
-    
-                    .productCards {
-                        @include flex(column, space-evenly, center, '', '');
-                        // margin: 8rem 0;
-                        width: 100%;
-    
-                        @include responsive(tablet, '') {
-                            @include flex(column, '', '', '', '');
-    
-                            margin: 0;
-    
-                            .productCard{
-                                margin: 2rem auto;
-                            }
-    
+
+                    @include responsive(tablet, '') {
+                        .productCard {
+                            @include flex(row-reverse, '', center, '', '');
+
+                            width: 40rem;
+                            // margin: 1rem;
+                            height: 30rem;
+                        }
+                    }
+
+                    @include responsive(phone, '') {
+                        .productCard {
+                            @include flex('', space-between, center, '', '');
+                            margin: 3rem 0;
+                            margin: 2rem auto;
+                            height: 30rem;
                         }
                     }
                 }
