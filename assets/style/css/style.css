@@ -193,7 +193,8 @@ button {
   border-bottom: 3px solid #ed1c24; }
   .header > .row {
     display: flex;
-    height: 7rem; }
+    height: 7rem;
+    position: relative; }
     .header > .row .logo {
       display: flex;
       flex: 0 0 20%;
@@ -214,35 +215,27 @@ button {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100%; }
-          .header > .row .nav .menu .menuItem .link {
+          height: 100%;
+          margin-right: 1rem;
+          transition: background-color 0.2s; }
+          .header > .row .nav .menu .menuItem > .link {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
-            margin-right: 1rem;
             z-index: 2;
             padding: 1rem 1rem 0;
             transition: 0.2s;
             position: relative; }
-            > .header > .row .nav .menu .menuItem .link::after {
-              content: '';
-              z-index: -1;
-              width: 100%;
-              height: 0%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              background-color: #ed1c24;
-              transition: .3s; }
-            .header > .row .nav .menu .menuItem .link:hover {
+          .header > .row .nav .menu .menuItem:hover {
+            background-color: #ed1c24;
+            color: #ffffff; }
+            .header > .row .nav .menu .menuItem:hover .link {
               color: #ffffff; }
-              .header > .row .nav .menu .menuItem .link:hover::after {
-                height: 100%; }
-          .header > .row .nav .menu .menuItem:hover .megamenu {
-            visibility: visible;
-            opacity: 1;
-            z-index: 20; }
+            .header > .row .nav .menu .menuItem:hover .megamenu {
+              visibility: visible;
+              opacity: 1;
+              z-index: 20; }
     .header > .row .search {
       display: flex;
       flex: 0 0 10%;
@@ -350,7 +343,7 @@ button {
     content: '';
     position: absolute;
     background-color: #ed1c24;
-    top: -21px;
+    top: -2.1rem;
     left: 50%;
     width: 2rem;
     height: 2rem;
@@ -630,6 +623,8 @@ button {
     z-index: 5;
     background-color: #ffffff;
     border-radius: 50%; }
+    .categoriesCont .icon:hover {
+      transform: rotate(45deg); }
     .categoriesCont .icon > img {
       width: 30%; }
     .categoriesCont .icon.icon1 {
@@ -652,10 +647,11 @@ button {
 .megamenu {
   width: 100%;
   background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px #5f5f5f;
   position: absolute;
   padding: 1rem;
   left: 0;
-  top: 7.5rem;
+  top: 7.3rem;
   opacity: 0;
   visibility: hidden;
   z-index: 0;
@@ -665,7 +661,7 @@ button {
     flex-wrap: wrap; }
     .megamenu.megaproduct .heroproduct {
       display: flex;
-      flex: 0 0 40rem;
+      flex: 0 0 39rem;
       justify-content: center;
       flex-direction: column;
       background-color: #ffffff;
@@ -673,7 +669,7 @@ button {
       padding: 1rem;
       border: 1px solid #ed1c24; }
       .megamenu.megaproduct .heroproduct img {
-        width: 20rem;
+        width: 90%;
         align-self: center; }
       .megamenu.megaproduct .heroproduct .title {
         color: #5f5f5f;
@@ -699,6 +695,7 @@ button {
       .megamenu.megaproduct .link .column {
         display: flex;
         flex: 1 0 25rem;
+        justify-content: flex-start;
         flex-direction: column;
         padding: 1rem;
         color: #ffffff; }

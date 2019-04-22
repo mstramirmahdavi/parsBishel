@@ -1,10 +1,11 @@
 .megamenu {
   width: 100%;
   background-color: $white;
+  box-shadow: 0px 5px 10px 0px $gray_dark;
   position: absolute;
   padding: 1rem;
   left: 0;
-  top: 7.5rem;
+  top: 7.3rem;
   opacity: 0;
   visibility: hidden;
   z-index: 0;
@@ -14,14 +15,14 @@
     @include flex('', '', '', '', wrap);
 
     .heroproduct {
-      @include flex(column, center, '', 0 0 40rem, '');
+      @include flex(column, center, '', 0 0 39rem, '');
       background-color: $white;
       text-align: center;
       padding: 1rem;
       border: 1px solid $red;
 
       img {
-        width: 20rem;
+        width: 90%;
         align-self: center;
       }
 
@@ -57,7 +58,7 @@
       @include flex('', '', '', 0 0 78rem, wrap);
 
       .column {
-        @include flex(column, '', '', 1 0 25rem, '');
+        @include flex(column, flex-start, '', 1 0 25rem, '');
         padding: 1rem;
         color: $white;
 
