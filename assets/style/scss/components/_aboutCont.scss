@@ -2,12 +2,19 @@
   padding: 2rem 0;
   > .row {
     @include flex('', '', '', '', '');
+    @include responsive(tablet, '') {
+      @include flex(column-reverse, '', '', '', '');
+    }
     .cover {
       @include flex('', '', '', 0 0 50%, '');
       height: 50rem;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      @include responsive(tablet, '') {
+        @include flex('', '', center, 0 0 50%, '');
+        height: auto;
+      }
       > img {
         width: 100%;
       }

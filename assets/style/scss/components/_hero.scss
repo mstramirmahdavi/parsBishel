@@ -15,7 +15,19 @@
     padding: 10rem;
     font-size: 4rem;
 
+    @include responsive(tablet, '') {
+      align-items: flex-end;
+      width: 100%;
+      height: auto;
+      padding: 0rem;
+      top: 100%;
+      transform: translateY(-100%);
+    }
     .titleCont {
+      @include responsive(tablet, '') {
+        padding: 2rem 4rem;
+        background-color: $red;
+      }
       .title {
         p {
           color: $white;
@@ -41,6 +53,9 @@
     position: absolute;
     transition: 0.5s;
     top: 0;
+    @include responsive(tablet, '') {
+      display: none;
+    }
   }
 
   .slideCont {
@@ -49,6 +64,9 @@
     position: relative;
     clip-path: ellipse(67% 110% at 100% 50%);
     z-index: 3;
+    @include responsive(tablet, '') {
+      clip-path: none;
+    }
 
     .item {
       width: 100%;
@@ -64,7 +82,14 @@
 
 #sliders {
   position: relative;
-
+  .owl-item {
+    img {
+      @include responsive(tablet, '') {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
   &.owl-drag .owl-item {
     height: calc(100vh - 7.3rem);
   }
@@ -73,6 +98,9 @@
 #titleSlider {
   position: relative;
   padding-top: 25rem;
+  @include responsive(tablet, '') {
+    padding-top: 2rem;
+  }
 
   .owl-nav {
     @include flex('', space-between, '', '', '');
@@ -80,7 +108,12 @@
     top: 50%;
     left: -7rem;
     width: 95vw;
-
+    @include responsive(tablet, '') {
+      width: 100vw;
+      left: 0rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
     button {
       > img {
         width: 3rem;

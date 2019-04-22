@@ -3,6 +3,9 @@
   margin-bottom: 2rem;
   position: relative;
   overflow-x: hidden;
+  @include responsive(tablet, '') {
+    @include flex(column, '', '', '', '');
+  }
 
   .items {
     @include flex('', center, center, 1 0 30%, '');
@@ -19,6 +22,9 @@
 
     &:not(:nth-child(5n)) {
       margin-right: 1rem;
+      @include responsive(tablet, '') {
+        margin-right: 0rem;
+      }
     }
 
     &::after {
@@ -60,12 +66,11 @@
     z-index: 5;
     background-color: $white;
     border-radius: 50%;
-
-    &:hover {
-      transform: rotate(45deg);
+    @include responsive(tablet, '') {
+      display: none;
     }
 
-    >img {
+    > img {
       width: 30%;
     }
 

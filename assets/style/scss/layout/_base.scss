@@ -1,6 +1,7 @@
 .container {
   font-size: 1.5rem;
   transition: 0.4s;
+  overflow-x: hidden;
 
   > header,
   section,
@@ -25,6 +26,11 @@
   min-width: $max_width_value;
   max-width: $max_width_value;
   margin: 0 auto;
+  @include responsive(tablet, '') {
+    min-width: auto;
+    max-width: auto;
+    width: 100%;
+  }
 }
 
 button {
