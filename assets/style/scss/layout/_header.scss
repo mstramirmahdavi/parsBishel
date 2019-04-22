@@ -48,14 +48,14 @@
 
             &:hover {
               color: $white;
-
-
+              
+              
               &::after {
                 height: 100%;
               }
             }
           }
-
+          
           &:hover {
             .megamenu {
               visibility: visible;
