@@ -5,6 +5,9 @@
   top: -30rem;
   position: fixed;
   transition: .4s;
+  @include responsive(phone, '') {
+    @include flex(column, '', '', 0 0 100%, '');
+  }
   &.active {
     z-index: 3;
     top: 0;
@@ -12,6 +15,11 @@
   .search {
     @include flex('', '', '', 0 0 70%, '');
     margin-right: 2rem;
+    @include responsive(phone, '') {
+      @include flex('', '', center, 0 0 60%, '');
+      margin-right: 0rem;
+      padding: 1rem;
+    }
     input {
       width: 100%;
       height: 15rem;
@@ -22,6 +30,15 @@
       padding: 2rem;
       color: $gray_dark;
       outline: none;
+      @include responsive(tablet, '') {
+        height: 10rem;
+        font-size: 4rem;
+      }
+      @include responsive(phone, '') {
+        height: 7rem;
+        font-size: 3rem;
+      }
+      
     }
   }
   .close {

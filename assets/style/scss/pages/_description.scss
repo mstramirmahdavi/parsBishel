@@ -1,107 +1,102 @@
 .descripCont {
-    .head {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-blend-mode: multiply;
-        background-color: $red;
-        text-align: left;
-        width: 100vw;
+  .head {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: $red;
+    text-align: left;
+    width: 100vw;
+    color: $white;
+    font-size: 1.9rem;
+    font-weight: bold;
+    padding: 8rem;
+
+    .row {
+      p {
         color: $white;
-        font-size: 1.9rem;
-        font-weight: bold;
-        padding: 8rem;
-
-        .row {
-            p {
-                color: $white;
-
-                @include responsive(tablet, '') {
-                    @include flex('', center, center, '', '');
-
-                }
-            }
-        }
-
-    }
-
-    .description {
-        margin: 5rem auto;
-        padding: 8rem;
-        border: 1px solid $border-color;
-        border-radius: $border_radius;
-        @include flex(row-reverse, space-between, center, '', '');
 
         @include responsive(tablet, '') {
-            @include flex(column, '', center, '', '');
-            padding: 2rem 0;
-            width: 95%;
-
-            .content {
-                width: 100%;
-            }
-
+          @include flex('', center, center, '', '');
         }
-
-        .images {
-            @include flex(column, center, center, '', '');
-            width: 40%;
-
-            @include responsive(phone, '') {
-                width: 100%;
-
-                .sub-img {
-                    // width: 80%;
-                    @include flex(row, center, center, '', '');
-
-                }
-            }
-
-            .main-img {
-                img {
-                    width: 23rem;
-                }
-            }
-
-            .sub-img {
-                @include flex(row, space-between, center, '', '');
-                width: 55%;
-                margin: 2rem 0;
-
-                img {
-                    width: 5rem;
-                }
-            }
-
-
-        }
-
-        .content {
-            @include flex(column, center, '', '', '');
-            text-align: left;
-            width: 60%;
-
-            .title {
-                font-size: 2rem;
-                color: $red;
-            }
-
-            .details {
-                color: $font_color_gray_light;
-                font-size: 1.2rem;
-                text-align: left;
-
-                margin: 2rem 0;
-            }
-
-            .describe {
-                text-align: left;
-                margin-top: 5rem;
-
-                color: $font_color_gray_light;
-                font-size: 1.2rem;
-            }
-        }
-
+      }
     }
+  }
+
+  .description {
+    margin: 5rem auto;
+    padding: 8rem;
+    border: 1px solid $border-color;
+    border-radius: $border_radius;
+    @include flex(row-reverse, space-between, center, '', '');
+
+    @include responsive(tablet, '') {
+      @include flex(column, '', center, '', '');
+      padding: 2rem 0;
+      width: 95%;
+      .content {
+        width: 100%;
+      }
+    }
+
+    .images {
+      @include flex(column, center, center, '', '');
+      width: 40%;
+
+      @include responsive(phone, '') {
+        width: 100%;
+
+        .sub-img {
+          // width: 80%;
+          @include flex(row, center, center, '', '');
+        }
+      }
+
+      .main-img {
+        img {
+          width: 23rem;
+        }
+      }
+
+      .sub-img {
+        @include flex(row, space-between, center, '', '');
+        width: 55%;
+        margin: 2rem 0;
+
+        img {
+          width: 5rem;
+        }
+      }
+    }
+
+    .content {
+      @include flex(column, center, '', '', '');
+      width: 60%;
+      @include responsive(tablet, '') {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .title {
+        font-size: 2rem;
+        color: $red;
+      }
+
+      .details {
+        color: $font_color_gray_light;
+        font-size: 1.2rem;
+        text-align: left;
+
+        margin: 2rem 0;
+      }
+
+      .describe {
+        text-align: left;
+        margin-top: 5rem;
+
+        color: $font_color_gray_light;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
