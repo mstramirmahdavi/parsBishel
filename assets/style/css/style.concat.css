@@ -710,6 +710,11 @@ button {
   top: -30rem;
   position: fixed;
   transition: .4s; }
+  @media only screen and (max-width: 600px) {
+    .searchBox {
+      display: flex;
+      flex: 0 0 100%;
+      flex-direction: column; } }
   .searchBox.active {
     z-index: 3;
     top: 0; }
@@ -717,6 +722,13 @@ button {
     display: flex;
     flex: 0 0 70%;
     margin-right: 2rem; }
+    @media only screen and (max-width: 600px) {
+      .searchBox .search {
+        display: flex;
+        flex: 0 0 60%;
+        align-items: center;
+        margin-right: 0rem;
+        padding: 1rem; } }
     .searchBox .search input {
       width: 100%;
       height: 15rem;
@@ -727,6 +739,14 @@ button {
       padding: 2rem;
       color: #5f5f5f;
       outline: none; }
+      @media only screen and (max-width: 1200px) {
+        .searchBox .search input {
+          height: 10rem;
+          font-size: 4rem; } }
+      @media only screen and (max-width: 600px) {
+        .searchBox .search input {
+          height: 7rem;
+          font-size: 3rem; } }
   .searchBox .close {
     display: flex;
     justify-content: center;
@@ -769,26 +789,25 @@ button {
   flex-direction: row-reverse;
   align-items: center;
   align-self: center;
-  width: 33.333%;
-  position: relative; }
-  .productCard:not(:last-child) {
-    margin-right: 2rem; }
+  position: relative;
+  height: 30rem;
+  width: 38rem; }
   .productCard:before {
     content: '';
-    width: 30rem;
-    height: 30rem;
+    width: 28rem;
+    height: 28rem;
     border-radius: 50%;
     z-index: -1;
     background-color: #ed1c24;
-    position: absolute; }
+    position: absolute;
+    left: 10rem; }
   .productCard img {
     width: 18rem;
     z-index: 1;
     left: -8rem; }
   .productCard .description {
     color: #ffffff;
-    padding: 0 3rem;
-    text-align: left; }
+    padding: 0 3rem; }
     .productCard .description .title {
       font-size: 2rem; }
     .productCard .description .content {
@@ -817,6 +836,26 @@ button {
             position: absolute;
             left: 0;
             bottom: 0; }
+  @media only screen and (max-width: 1200px) {
+    .productCard {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 80%;
+      margin: 5rem auto;
+      position: relative; }
+      .productCard .productCard:before {
+        content: '';
+        width: 70%;
+        height: 80%;
+        display: flex;
+        position: absolute;
+        left: 20%;
+        border-radius: 5%;
+        z-index: 2;
+        background-color: #ed1c24;
+        position: absolute; } }
 
 .heroCont {
   width: 100%;
@@ -1179,20 +1218,85 @@ button {
                   transition: 0.3s; }
 
 /* pages */
-.productCont .row .contents {
+.productCont .head .row p {
+  color: #ffffff; }
+  @media only screen and (max-width: 1200px) {
+    .productCont .head .row p {
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
+.row .contents {
   padding: 5rem 0; }
-  .productCont .row .contents .productList {
+  .row .contents .productList {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center; }
-    .productCont .row .contents .productList .productCards {
+    .row .contents .productList .productCards {
       display: flex;
       justify-content: space-evenly;
       flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
       margin: 8rem 0;
       width: 100%; }
+      .row .contents .productList .productCards .productCard {
+        margin: 1rem; }
+      @media only screen and (max-width: 1200px) {
+        .row .contents .productList .productCards .productCard {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          width: 40rem;
+          height: 30rem; } }
+      @media only screen and (max-width: 600px) {
+        .row .contents .productList .productCards .productCard {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 3rem 0;
+          padding: 1rem;
+          margin: 2rem auto;
+          height: 30rem;
+          width: 40rem;
+          height: 30rem; }
+          .row .contents .productList .productCards .productCard:before {
+            border-radius: 2rem; } }
+      @media only screen and (max-width: 600px) {
+        .row .contents .productList .productCards .productCard {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 3rem 0;
+          padding: 1rem;
+          margin: 2rem auto;
+          height: 30rem;
+          width: 37rem; }
+          .row .contents .productList .productCards .productCard .description {
+            padding: 0 0 0 1rem; }
+          .row .contents .productList .productCards .productCard:before {
+            left: 7rem;
+            border-radius: 2rem; } }
+      @media only screen and (max-width: 400px) {
+        .row .contents .productList .productCards {
+          position: relative; }
+          .row .contents .productList .productCards .productCard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3rem 0;
+            padding: 1rem;
+            margin: 2rem auto;
+            height: 30rem;
+            width: 100%;
+            position: relative; }
+            .row .contents .productList .productCards .productCard .description {
+              padding: 0 0 0 1rem; }
+            .row .contents .productList .productCards .productCard:before {
+              width: 80%;
+              left: 19%;
+              border-radius: 2rem; } }
 
 .descripCont .head {
   background-position: center;
@@ -1201,11 +1305,18 @@ button {
   background-blend-mode: multiply;
   background-color: #ed1c24;
   text-align: left;
-  width: 100%;
+  width: 100vw;
   color: #ffffff;
   font-size: 1.9rem;
   font-weight: bold;
   padding: 8rem; }
+  .descripCont .head .row p {
+    color: #ffffff; }
+    @media only screen and (max-width: 1200px) {
+      .descripCont .head .row p {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
 
 .descripCont .description {
   margin: 5rem auto;
@@ -1216,12 +1327,29 @@ button {
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center; }
+  @media only screen and (max-width: 1200px) {
+    .descripCont .description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      width: 95%; }
+      .descripCont .description .content {
+        width: 100%; } }
   .descripCont .description .images {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 40%; }
+    @media only screen and (max-width: 600px) {
+      .descripCont .description .images {
+        width: 100%; }
+        .descripCont .description .images .sub-img {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          align-items: center; } }
     .descripCont .description .images .main-img img {
       width: 23rem; }
     .descripCont .description .images .sub-img {
@@ -1237,9 +1365,11 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: left;
-    text-align: left;
     width: 60%; }
+    @media only screen and (max-width: 1200px) {
+      .descripCont .description .content {
+        width: 100%;
+        padding: 1rem; } }
     .descripCont .description .content .title {
       font-size: 2rem;
       color: #ed1c24; }
