@@ -540,8 +540,7 @@ button {
     left: -8rem; }
   .productCard .description {
     color: #ffffff;
-    padding: 0 3rem;
-    text-align: left; }
+    padding: 0 3rem; }
     .productCard .description .title {
       font-size: 2rem; }
     .productCard .description .content {
@@ -587,7 +586,7 @@ button {
         position: absolute;
         left: 20%;
         border-radius: 5%;
-        z-index: -1;
+        z-index: 2;
         background-color: #ed1c24;
         position: absolute; } }
 
@@ -983,7 +982,9 @@ button {
           flex-direction: row-reverse;
           align-items: center;
           width: 40rem;
-          height: 30rem; } }
+          height: 30rem; }
+          .productCont .row .contents .productList .productCards .productCard:before {
+            border-radius: 2rem; } }
       @media only screen and (max-width: 600px) {
         .productCont .row .contents .productList .productCards .productCard {
           display: flex;
@@ -992,7 +993,32 @@ button {
           margin: 3rem 0;
           padding: 1rem;
           margin: 2rem auto;
-          height: 30rem; } }
+          height: 30rem;
+          width: 37rem; }
+          .productCont .row .contents .productList .productCards .productCard .description {
+            padding: 0 0 0 1rem; }
+          .productCont .row .contents .productList .productCards .productCard:before {
+            left: 7rem;
+            border-radius: 2rem; } }
+      @media only screen and (max-width: 400px) {
+        .productCont .row .contents .productList .productCards {
+          position: relative; }
+          .productCont .row .contents .productList .productCards .productCard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3rem 0;
+            padding: 1rem;
+            margin: 2rem auto;
+            height: 30rem;
+            width: 100%;
+            position: relative; }
+            .productCont .row .contents .productList .productCards .productCard .description {
+              padding: 0 0 0 1rem; }
+            .productCont .row .contents .productList .productCards .productCard:before {
+              width: 80%;
+              left: 19%;
+              border-radius: 2rem; } }
 
 .descripCont .head {
   background-position: center;
@@ -1061,7 +1087,6 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: left;
     text-align: left;
     width: 60%; }
     .descripCont .description .content .title {

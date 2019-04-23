@@ -36,6 +36,7 @@
             @include flex(column, '', center, '', '');
             padding: 2rem 0;
             width: 95%;
+
             .content {
                 width: 100%;
             }
@@ -76,7 +77,7 @@
         }
 
         .content {
-            @include flex(column, center, left, '', '');
+            @include flex(column, center, '', '', '');
             text-align: left;
             width: 60%;
 
