@@ -1,26 +1,32 @@
 .header {
   border-bottom: 3px solid $red;
 
-  > .row {
+  >.row {
     @include flex('', '', '', '', '');
     height: 7rem;
     position: relative;
+
     @include responsive(tablet, '') {
       @include flex(column, '', '', '', '');
       height: auto;
       padding: 2rem;
     }
+
     .logo {
       @include flex('', '', center, 0 0 20%, '');
+
       .menuIcon {
         display: none;
       }
+
       @include responsive(tablet, '') {
         @include flex('', space-between, center, '', '');
+
         .menuIcon {
           @include responsive(tablet, '') {
             display: flex;
           }
+
           &__checkbox {
             display: none;
           }
@@ -40,6 +46,7 @@
               top: 1rem;
             }
           }
+
           &__icon {
             position: relative;
 
@@ -69,15 +76,18 @@
           }
         }
       }
-      > img {
+
+      >img {
         width: 10rem;
       }
     }
 
     .nav {
       @include flex('', '', center, 1 0 auto, '');
+
       @include responsive(tablet, '') {
         display: none;
+
         &.active {
           display: flex;
         }
@@ -86,7 +96,8 @@
       .menu {
         @include flex('', center, center, '', '');
         height: 100%;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+
         @include responsive(tablet, '') {
           @include flex(column, '', '', '', '');
           width: 100%;
@@ -97,18 +108,20 @@
           height: 100%;
           margin-right: 1rem;
           transition: background-color 0.2s;
+
           @include responsive(tablet, '') {
             @include flex(column, '', '', '', '');
             width: 100%;
           }
 
-          > .link {
+          >.link {
             @include flex('', center, center, '', '');
             height: 100%;
             z-index: 2;
             padding: 1rem 1rem 0;
             transition: 0.2s;
             position: relative;
+
             @include responsive(tablet, '') {
               padding: 1rem;
             }
@@ -117,13 +130,16 @@
           &:hover {
             background-color: $red;
             color: $white;
+
             .link {
               color: $white;
             }
+
             .megamenu {
               visibility: visible;
               opacity: 1;
               z-index: 20;
+
               @include responsive(tablet, '') {
                 display: none;
               }
@@ -135,16 +151,18 @@
 
     .search {
       @include flex('', flex-end, center, 0 0 10%, '');
+
       @include responsive(tablet, '') {
         @include flex('', center, center, 0 0 10%, '');
         padding: 1rem;
         display: none;
+
         &.active {
           display: flex;
         }
       }
 
-      > img {
+      >img {
         width: 2rem;
         cursor: pointer;
       }

@@ -2,6 +2,7 @@
     border-top: 3px solid $red;
     background-color: $footer_bg;
     position: relative;
+    font-size: 1.7rem;
 
     >.row {
         @include flex(row, space-between, center, '', '');
@@ -60,7 +61,6 @@
                 color: $footer_text;
                 position: relative;
                 padding-left: 2rem;
-                font-size: 1.5rem;
                 transition: 0.2s;
                 cursor: pointer;
 

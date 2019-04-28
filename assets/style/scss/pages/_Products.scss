@@ -26,6 +26,24 @@
 
         .productCard {
           margin: 1rem;
+
+          img {
+            transition: all .5s;
+          }
+
+          &:before {
+            transition: all 0.5s;
+          }
+
+          &:hover {
+            img {
+              transform: scale(.9);
+            }
+
+            &::before {
+              transform: scale(1.1);
+            }
+          }
         }
 
         @include responsive(tablet, '') {

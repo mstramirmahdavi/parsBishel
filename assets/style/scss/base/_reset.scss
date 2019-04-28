@@ -110,3 +110,7 @@ h6,
 p {
   color: $gray_dark;
 }
+
+.blur{
+  filter:blur(2px);
+}
