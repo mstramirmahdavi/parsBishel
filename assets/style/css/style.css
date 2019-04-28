@@ -1114,8 +1114,16 @@ button {
           justify-content: center;
           flex-direction: row;
           align-items: center; } }
-    .descripCont .description .images .main-img img {
-      width: 23rem; }
+    .descripCont .description .images .main-img {
+      position: relative; }
+      .descripCont .description .images .main-img img {
+        width: 23rem; }
+      .descripCont .description .images .main-img .mag-glass {
+        position: absolute;
+        cursor: none;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%; }
     .descripCont .description .images .sub-img {
       display: flex;
       justify-content: space-between;
