@@ -3,10 +3,14 @@
   position: fixed;
   width: 100%;
   background-color: $white;
-  top:0;
+  top: 0;
   z-index: 903;
 
-  >.row {
+  &.sticky {
+    background-color: rgba($color: $white, $alpha: 0.9);
+  }
+
+  > .row {
     @include flex('', '', '', '', '');
     height: 7rem;
     position: relative;
@@ -82,7 +86,7 @@
         }
       }
 
-      >img {
+      > img {
         width: 10rem;
       }
     }
@@ -119,7 +123,7 @@
             width: 100%;
           }
 
-          >.link {
+          > .link {
             @include flex('', center, center, '', '');
             height: 100%;
             z-index: 2;
@@ -167,7 +171,7 @@
         }
       }
 
-      >img {
+      > img {
         width: 2rem;
         cursor: pointer;
       }
