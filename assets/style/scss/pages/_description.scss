@@ -20,6 +20,12 @@
       @include flex(column, center, center, '', '');
       width: 40%;
 
+      #zoom_01{
+        &:hover{
+          position: absolute;
+        }
+      }
+
       @include responsive(phone, '') {
         width: 100%;
 

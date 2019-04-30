@@ -5,9 +5,7 @@
     margin: 1rem 0;
   }
 
-  @include responsive (tablet, ''){
-
-  }
+  @include responsive (tablet, '') {}
 
   .news {
     @include flex(row, space-between, center, '', '');
@@ -65,7 +63,7 @@
       @include flex(column, '', '', '', '');
       align-self: stretch;
 
-      > .newsCont {
+      >.newsCont {
         @include flex(column, center, '', 1 0 auto, '');
         min-height: 20rem;
         background-position: center;

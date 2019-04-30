@@ -137,8 +137,12 @@ $(document).ready(function () {
     $("#zoom_01").attr('src', a);
     $("#zoom_01").attr('data-zoom-image', a);
     $("#zoom_01").attr('data-image', a);
+    $(".zoomLens").css({
+      backgroundImage: "url('" + a + "')",
+      backgroundPosition: "fixed"
+    });
     $(".zoomWindowContainer div").css({
-      backgroundImage: "url('" + a + "')"
+      backgroundImage: "url('" + a + "')",
     });
   });
   var stickymenu = document.getElementById("fixedmenu");
@@ -153,4 +157,11 @@ $(document).ready(function () {
       }
     })
   });
+  $("#zoom_01").elevateZoom({
+    zoomType: 'inner',
+    scrollZoom: 'true',
+    constrainType: 'height',
+    constrainSize: 300,
+    zoomType: 'lens'
+  });;
 });
