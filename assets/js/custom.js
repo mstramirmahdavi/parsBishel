@@ -127,67 +127,32 @@ $(document).ready(function () {
     $('.header > .row .search').toggleClass('active');
   });
 
-  $('#image').mousemove(function () {
-    var img, glass, w, h, bw;
+  $(".descripCont .description .images .sub-img img").click(function () {
+    var a = $(this).attr('src');
+    var b = $("#zoom_01").attr('src');
+    $(this).attr('src', b);
+    $(this).parent().attr('data-zoom-image', b);
+    $(this).parent().attr('data-image', b);
+    $(this).parent().attr('href', b);
+    $("#zoom_01").attr('src', a);
+    $("#zoom_01").attr('data-zoom-image', a);
+    $("#zoom_01").attr('data-image', a);
+    $(".zoomWindowContainer div").css({
+      backgroundImage: "url('" + a + "')"
+    });
+  });
+  var stickymenu = document.getElementById("fixedmenu");
+  var stickymenuoffset = stickymenu.offsetTop;
 
-    img = $('#image');
-
-    glass = document.createElement('div');
-    glass.setAttribute('class', 'mag-glass');
-    img.parentElement.insertBefore(glass, img);
-    glass.style.backgroundImage = 'url("' + img.src + '")';
-    glass.style.backgroundRepeat = "no-repeat";
-    glass.style.backgroundSize = (img.width * zoom) + 'px' + (img.height * zoom) + 'px';
-
-    bw = 3;
-    w = glass.offsetWidth / 2;
-    h = glass.offsetHeight / 2;
-
-    glass.addEventListener('mousemove', moveMag);
-    img.addEventListener('mousemove', moveMag);
-
-    glass.addEventListener('touchmove', moveMag);
-    img.addEventListener('touchmove', moveMag);
-
-    function moveMag(el) {
-      var x, y, pos;
-      el.preventDefault();
-      pos = getCursorPos(el);
-      x = pos.x;
-      y = pos.y;
-
-      if (x > img.width - (w / zoom)) {
-        x = img.width - (w / zoom);
+  window.addEventListener("scroll", function (e) {
+    requestAnimationFrame(function () {
+      if (window.pageYOffset > stickymenuoffset) {
+        stickymenu.classList.add('sticky');
+        // stickymenu.style.position = "fixed";
+      } else {
+        stickymenu.classList.remove('sticky');
+        // stickymenu.style.position = "relative";
       }
-      if (x < img.width) {
-        x = w / zoom;
-      }
-      if (y > img.height - (h / zoom)) {
-        y = img.height - (h / zoom);
-      }
-      if (y < img.height) {
-        y = h / zoom;
-      }
-
-      glass.style.left = (x - w) + 'px';
-      glass.style.top = (y - h) + 'px';
-      glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-    }
+    })
   });
 });
-
-/* var stickymenu = document.getElementById("fixedmenu");
-    var stickymenuoffset = stickymenu.offsetTop;
-    
-    window.addEventListener("scroll", function(e){
-        requestAnimationFrame(function(){
-            if (window.pageYOffset > stickymenuoffset){
-                //stickymenu.classList.add('sticky');
-                stickymenu.style.position = "fixed";
-            }
-            else{
-                //stickymenu.classList.remove('sticky')
-                stickymenu.style.position = "relative";
-            }
-        })
-    }) */
