@@ -3,6 +3,7 @@
   height: calc(100vh - 7.3rem);
   position: relative;
   overflow: hidden;
+  margin-top: 7.3rem;
 
   .content {
     @include flex('', '', center, '', '');

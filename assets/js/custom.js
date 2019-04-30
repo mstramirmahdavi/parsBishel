@@ -141,18 +141,4 @@ $(document).ready(function () {
       backgroundImage: "url('" + a + "')"
     });
   });
-  var stickymenu = document.getElementById("fixedmenu");
-  var stickymenuoffset = stickymenu.offsetTop;
-
-  window.addEventListener("scroll", function (e) {
-    requestAnimationFrame(function () {
-      if (window.pageYOffset > stickymenuoffset) {
-        stickymenu.classList.add('sticky');
-        // stickymenu.style.position = "fixed";
-      } else {
-        stickymenu.classList.remove('sticky');
-        // stickymenu.style.position = "relative";
-      }
-    })
-  });
 });
