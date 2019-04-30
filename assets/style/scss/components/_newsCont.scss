@@ -1,0 +1,241 @@
+.newsCont {
+  @include flex(column, '', '', '', '');
+
+  &.margin {
+    margin: 1rem 0;
+  }
+
+  @include responsive (tablet, ''){
+
+  }
+
+  .news {
+    @include flex(row, space-between, center, '', '');
+    color: $white;
+
+    &.reverse {
+      flex-direction: row;
+    }
+
+    .right {
+      @include flex(column, flex-end, center, '', '');
+      width: 31.6%;
+      color: $white;
+      align-self: stretch;
+      position: relative;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: $border_radius;
+
+      .content {
+        padding: 1rem;
+        background-image: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 20%,
+          rgba(0, 0, 0, 1) 100%);
+
+        .title {
+          font-size: 1.9rem;
+        }
+      }
+
+      &:after {
+        content: '';
+        background: $white;
+        height: 400%;
+        left: -500%;
+        opacity: 0.2;
+        position: absolute;
+        top: -50%;
+        transform: rotate(35deg);
+        width: 20rem;
+        transition: left 3s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:hover {
+        &:after {
+          left: 190%;
+        }
+      }
+    }
+
+    .left {
+      width: 67.5%;
+      @include flex(column, '', '', '', '');
+      align-self: stretch;
+
+      > .newsCont {
+        @include flex(column, center, '', 1 0 auto, '');
+        min-height: 20rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: $border_radius;
+        color: $white;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          background: $white;
+          height: 100rem;
+          left: -30rem;
+          opacity: 0.2;
+          position: absolute;
+          top: -50rem;
+          transform: rotate(35deg);
+          width: 20rem;
+          transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        &:hover {
+          &:after {
+            left: 190%;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        .content {
+          @include flex(column, center, center, 1 0 auto, '');
+          background-image: linear-gradient(to left,
+            transparent 10%,
+            rgba(0, 0, 0, 0.7) 40%,
+            rgba(0, 0, 0, 0.8) 100%);
+          width: 40%;
+          padding: 1rem;
+
+          .title {
+            text-align: center;
+            font-size: 1.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .link {
+    /* @include flex('', center, center, '', ''); */
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+
+    a {
+      color: $gray_dark;
+      transition: all 0.3s;
+      border: 1px solid transparent;
+
+      &:hover {
+        border: 1px solid $red;
+        border-radius: $border_radius;
+        padding: 0.3rem 1rem;
+        color: $red;
+      }
+    }
+  }
+}
+
+.newCont {
+  @include flex('', space-between, '', '', '');
+  margin: 1rem 0;
+
+  >.content {
+    width: 67.5%;
+
+    .title {
+      @include flex('', space-between, center, '', '');
+      padding: 1rem 0;
+      color: $gray_dark;
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .details {
+        @include flex('', space-between, center, '', '');
+
+        .share {
+          height: 2rem;
+          margin-right: 2rem;
+
+          img {
+            width: 2rem;
+          }
+        }
+      }
+    }
+
+    .newContent {
+      padding: 1rem 3rem;
+      background-color: $white;
+      border-radius: $border_radius;
+
+      .cover {
+        width: 100%;
+        height: 20rem;
+        background-position: center;
+        background-size: cover;
+        border-radius: $border_radius;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .moreNews {
+    width: 31.6%;
+    align-self: flex-start;
+    position: sticky;
+    top: 1rem;
+
+    .newsCont {
+      @include flex(column, flex-end, center, '', '');
+      width: 31.6%;
+      height: 30rem;
+      color: $white;
+      align-self: stretch;
+      position: relative;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: $border_radius;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      .content {
+        padding: 1rem;
+        background-image: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 20%,
+          rgba(0, 0, 0, 1) 100%);
+
+        .title {
+          font-size: 1.9rem;
+        }
+      }
+
+      &:after {
+        content: '';
+        background: $white;
+        height: 100rem;
+        left: -30rem;
+        opacity: 0.2;
+        position: absolute;
+        top: -50rem;
+        transform: rotate(35deg);
+        width: 20rem;
+        transition: left 3s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:hover {
+        &:after {
+          left: 190%;
+        }
+      }
+    }
+  }
+}

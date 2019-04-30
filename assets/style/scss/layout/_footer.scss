@@ -3,6 +3,7 @@
     background-color: $footer_bg;
     position: relative;
     font-size: 1.7rem;
+    margin-top: 2rem;
 
     >.row {
         @include flex(row, space-between, center, '', '');
