@@ -200,6 +200,12 @@ button {
 
 .header {
   border-bottom: 3px solid #ed1c24; }
+  .header.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 903; }
   .header > .row {
     display: flex;
     height: 7rem;
@@ -533,11 +539,18 @@ button {
   background-blend-mode: multiply;
   background-color: #ed1c24;
   text-align: left;
-  width: 100%;
+  width: 100vw;
   color: #ffffff;
-  font-size: 5rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  padding: 6rem 0; }
+  padding: 8rem; }
+  .head .row p {
+    color: #ffffff; }
+    @media only screen and (max-width: 1200px) {
+      .head .row p {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
 
 .productCard {
   display: flex;
@@ -974,22 +987,14 @@ button {
                   transition: 0.3s; }
 
 /* pages */
-.productCont .head .row p {
-  color: #ffffff; }
-  @media only screen and (max-width: 1200px) {
-    .productCont .head .row p {
-      display: flex;
-      justify-content: center;
-      align-items: center; } }
-
-.row .contents {
+.productCont .row .contents {
   padding: 5rem 0; }
-  .row .contents .productList {
+  .productCont .row .contents .productList {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center; }
-    .row .contents .productList .productCards {
+    .productCont .row .contents .productList .productCards {
       display: flex;
       justify-content: space-evenly;
       flex-direction: row;
@@ -997,25 +1002,25 @@ button {
       flex-wrap: wrap;
       margin: 8rem 0;
       width: 100%; }
-      .row .contents .productList .productCards .productCard {
+      .productCont .row .contents .productList .productCards .productCard {
         margin: 1rem; }
-        .row .contents .productList .productCards .productCard img {
+        .productCont .row .contents .productList .productCards .productCard img {
           transition: all .5s; }
-        .row .contents .productList .productCards .productCard:before {
+        .productCont .row .contents .productList .productCards .productCard:before {
           transition: all 0.5s; }
-        .row .contents .productList .productCards .productCard:hover img {
+        .productCont .row .contents .productList .productCards .productCard:hover img {
           transform: scale(0.9); }
-        .row .contents .productList .productCards .productCard:hover::before {
+        .productCont .row .contents .productList .productCards .productCard:hover::before {
           transform: scale(1.1); }
       @media only screen and (max-width: 1200px) {
-        .row .contents .productList .productCards .productCard {
+        .productCont .row .contents .productList .productCards .productCard {
           display: flex;
           flex-direction: row-reverse;
           align-items: center;
           width: 40rem;
           height: 30rem; } }
       @media only screen and (max-width: 600px) {
-        .row .contents .productList .productCards .productCard {
+        .productCont .row .contents .productList .productCards .productCard {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -1025,10 +1030,10 @@ button {
           height: 30rem;
           width: 40rem;
           height: 30rem; }
-          .row .contents .productList .productCards .productCard:before {
+          .productCont .row .contents .productList .productCards .productCard:before {
             border-radius: 2rem; } }
       @media only screen and (max-width: 600px) {
-        .row .contents .productList .productCards .productCard {
+        .productCont .row .contents .productList .productCards .productCard {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -1037,15 +1042,15 @@ button {
           margin: 2rem auto;
           height: 30rem;
           width: 37rem; }
-          .row .contents .productList .productCards .productCard .description {
+          .productCont .row .contents .productList .productCards .productCard .description {
             padding: 0 0 0 1rem; }
-          .row .contents .productList .productCards .productCard:before {
+          .productCont .row .contents .productList .productCards .productCard:before {
             left: 7rem;
             border-radius: 2rem; } }
       @media only screen and (max-width: 400px) {
-        .row .contents .productList .productCards {
+        .productCont .row .contents .productList .productCards {
           position: relative; }
-          .row .contents .productList .productCards .productCard {
+          .productCont .row .contents .productList .productCards .productCard {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1055,32 +1060,12 @@ button {
             height: 30rem;
             width: 100%;
             position: relative; }
-            .row .contents .productList .productCards .productCard .description {
+            .productCont .row .contents .productList .productCards .productCard .description {
               padding: 0 0 0 1rem; }
-            .row .contents .productList .productCards .productCard:before {
+            .productCont .row .contents .productList .productCards .productCard:before {
               width: 80%;
               left: 19%;
               border-radius: 2rem; } }
-
-.descripCont .head {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-color: #ed1c24;
-  text-align: left;
-  width: 100vw;
-  color: #ffffff;
-  font-size: 1.9rem;
-  font-weight: bold;
-  padding: 8rem; }
-  .descripCont .head .row p {
-    color: #ffffff; }
-    @media only screen and (max-width: 1200px) {
-      .descripCont .head .row p {
-        display: flex;
-        justify-content: center;
-        align-items: center; } }
 
 .descripCont .description {
   margin: 5rem auto;
@@ -1143,15 +1128,13 @@ button {
         width: 100%;
         padding: 1rem; } }
     .descripCont .description .content .title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #ed1c24; }
     .descripCont .description .content .details {
       color: #9f9f9f;
-      font-size: 1.2rem;
       text-align: left;
       margin: 2rem 0; }
     .descripCont .description .content .describe {
       text-align: left;
       margin-top: 5rem;
-      color: #9f9f9f;
-      font-size: 1.2rem; }
+      color: #9f9f9f; }

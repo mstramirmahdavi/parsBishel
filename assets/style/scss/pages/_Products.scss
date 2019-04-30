@@ -1,115 +1,103 @@
 .productCont {
-  .head {
-    .row {
-      p {
-        color: $white;
+  .row {
+    .contents {
+      padding: 5rem 0;
 
-        @include responsive(tablet, '') {
-          @include flex('', center, center, '', '');
-        }
-      }
-    }
-  }
-}
+      .productList {
+        @include flex(column, space-between, center, '', '');
 
-.row {
-  .contents {
-    padding: 5rem 0;
+        .productCards {
+          @include flex(row, space-evenly, center, '', wrap);
+          margin: 8rem 0;
+          width: 100%;
 
-    .productList {
-      @include flex(column, space-between, center, '', '');
+          .productCard {
+            margin: 1rem;
 
-      .productCards {
-        @include flex(row, space-evenly, center, '', wrap);
-        margin: 8rem 0;
-        width: 100%;
-
-        .productCard {
-          margin: 1rem;
-
-          img {
-            transition: all .5s;
-          }
-
-          &:before {
-            transition: all 0.5s;
-          }
-
-          &:hover {
             img {
-              transform: scale(.9);
-            }
-
-            &::before {
-              transform: scale(1.1);
-            }
-          }
-        }
-
-        @include responsive(tablet, '') {
-          .productCard {
-            @include flex(row-reverse, '', center, '', '');
-            width: 40rem;
-            height: 30rem;
-          }
-        }
-
-        @include responsive(phone, '') {
-          .productCard {
-            @include flex('', space-between, center, '', '');
-            margin: 3rem 0;
-            padding: 1rem;
-            margin: 2rem auto;
-            height: 30rem;
-            width: 40rem;
-            height: 30rem;
-
-            &:before {
-              border-radius: 2rem;
-            }
-          }
-        }
-
-        @include responsive(phone, '') {
-          .productCard {
-            @include flex('', space-between, center, '', '');
-            margin: 3rem 0;
-            padding: 1rem;
-            margin: 2rem auto;
-            height: 30rem;
-            width: 37rem;
-
-            .description {
-              padding: 0 0 0 1rem;
+              transition: all .5s;
             }
 
             &:before {
-              left: 7rem;
-              border-radius: 2rem;
+              transition: all 0.5s;
+            }
+
+            &:hover {
+              img {
+                transform: scale(.9);
+              }
+
+              &::before {
+                transform: scale(1.1);
+              }
             }
           }
-        }
 
-        @include responsive(phone, '400px') {
-          position: relative;
+          @include responsive(tablet, '') {
+            .productCard {
+              @include flex(row-reverse, '', center, '', '');
+              width: 40rem;
+              height: 30rem;
+            }
+          }
 
-          .productCard {
-            @include flex('', space-between, center, '', '');
-            margin: 3rem 0;
-            padding: 1rem;
-            margin: 2rem auto;
-            height: 30rem;
-            width: 100%;
+          @include responsive(phone, '') {
+            .productCard {
+              @include flex('', space-between, center, '', '');
+              margin: 3rem 0;
+              padding: 1rem;
+              margin: 2rem auto;
+              height: 30rem;
+              width: 40rem;
+              height: 30rem;
+
+              &:before {
+                border-radius: 2rem;
+              }
+            }
+          }
+
+          @include responsive(phone, '') {
+            .productCard {
+              @include flex('', space-between, center, '', '');
+              margin: 3rem 0;
+              padding: 1rem;
+              margin: 2rem auto;
+              height: 30rem;
+              width: 37rem;
+
+              .description {
+                padding: 0 0 0 1rem;
+              }
+
+              &:before {
+                left: 7rem;
+                border-radius: 2rem;
+              }
+            }
+          }
+
+          @include responsive(phone, '400px') {
             position: relative;
 
-            .description {
-              padding: 0 0 0 1rem;
-            }
+            .productCard {
+              @include flex('', space-between, center, '', '');
+              margin: 3rem 0;
+              padding: 1rem;
+              margin: 2rem auto;
+              height: 30rem;
+              width: 100%;
+              position: relative;
 
-            &:before {
-              width: 80%;
-              left: 19%;
-              border-radius: 2rem;
+              .description {
+                padding: 0 0 0 1rem;
+              }
+
+              &:before {
+                width: 80%;
+                left: 19%;
+                border-radius: 2rem;
+              }
             }
           }
         }

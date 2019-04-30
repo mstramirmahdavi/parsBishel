@@ -1,6 +1,14 @@
 .header {
   border-bottom: 3px solid $red;
 
+  &.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    top:0;
+    z-index: 903;
+  }
+
   >.row {
     @include flex('', '', '', '', '');
     height: 7rem;
