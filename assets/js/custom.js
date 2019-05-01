@@ -139,10 +139,7 @@ $(document).ready(function () {
     $("#zoom_01").attr('data-image', a);
     $(".zoomLens").css({
       backgroundImage: "url('" + a + "')",
-      backgroundPosition: "fixed"
-    });
-    $(".zoomWindowContainer div").css({
-      backgroundImage: "url('" + a + "')",
+      backgroundColor: '#fff'
     });
   });
   var stickymenu = document.getElementById("fixedmenu");
@@ -158,10 +155,10 @@ $(document).ready(function () {
     })
   });
   $("#zoom_01").elevateZoom({
-    zoomType: 'inner',
-    scrollZoom: 'true',
     constrainType: 'height',
-    constrainSize: 300,
-    zoomType: 'lens'
-  });;
+    constrainSize: 280,
+    zoomType: 'lens',
+    containLensZoom: true,
+    lensColour: 'white'
+  });
 });

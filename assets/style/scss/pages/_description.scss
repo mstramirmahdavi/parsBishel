@@ -20,8 +20,8 @@
       @include flex(column, center, center, '', '');
       width: 40%;
 
-      #zoom_01{
-        &:hover{
+      #zoom_01 {
+        &:hover {
           position: absolute;
         }
       }

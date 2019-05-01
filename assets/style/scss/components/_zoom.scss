@@ -1,0 +1,14 @@
+.zoomContainer {
+    background-color: transparent;
+    position: absolute;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left:0;
+    height: 400px !important ;
+
+    .zoomLens{
+        background-color: $white;
+    }
+
+}
