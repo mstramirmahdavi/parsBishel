@@ -20,9 +20,10 @@
       @include flex(column, center, center, '', '');
       width: 40%;
 
+
       #zoom_01 {
         &:hover {
-          position: absolute;
+          // position: absolute;
         }
       }
 
@@ -36,18 +37,8 @@
       }
 
       .main-img {
-        position: relative;
-
         img {
-          width: 23rem;
-        }
-
-        .mag-glass {
-          position: absolute;
-          cursor: none;
-          width: 10rem;
-          height: 10rem;
-          border-radius: 50%;
+          width: 22rem;
         }
       }
 

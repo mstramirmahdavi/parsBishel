@@ -15,6 +15,7 @@
   .row {
     p {
       color: $white;
+      font-size: 3rem;
 
       @include responsive(tablet, '') {
         @include flex('', center, center, '', '');

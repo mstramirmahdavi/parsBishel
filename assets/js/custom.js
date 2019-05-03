@@ -142,23 +142,26 @@ $(document).ready(function () {
       backgroundColor: '#fff'
     });
   });
-  var stickymenu = document.getElementById("fixedmenu");
-  var stickymenuoffset = stickymenu.offsetTop;
 
-  window.addEventListener("scroll", function (e) {
-    requestAnimationFrame(function () {
-      if (window.pageYOffset > stickymenuoffset) {
-        stickymenu.classList.add('sticky');
-      } else {
-        stickymenu.classList.remove('sticky');
-      }
-    })
+  document.addEventListener('DOMContentLoaded', function () {
+    var stickymenu = document.getElementById("fixedmenu");
+    var stickymenuoffset = stickymenu.offsetTop;
+
+    window.addEventListener("scroll", function (e) {
+      requestAnimationFrame(function () {
+        if (window.pageYOffset > stickymenuoffset) {
+          stickymenu.classList.add('sticky');
+        } else {
+          stickymenu.classList.remove('sticky');
+        }
+      })
+    });
   });
-  $("#zoom_01").elevateZoom({
-    constrainType: 'height',
-    constrainSize: 280,
-    zoomType: 'lens',
-    containLensZoom: true,
-    lensColour: 'white'
+  $('#zoom_01').ezPlus({
+    zoomType: "lens",
+    lensShape: "round",
+    lensSize: 200,
+    containLensZoom: false,
+    scrollZoom: true
   });
 });
