@@ -795,7 +795,8 @@ body {
   padding: 8rem;
   margin-top: 7rem; }
   .head .row p {
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 3rem; }
     @media only screen and (max-width: 1200px) {
       .head .row p {
         display: flex;
@@ -826,11 +827,11 @@ body {
     left: -8rem; }
   .productCard .description {
     color: #ffffff;
-    padding: 0 3rem; }
+    padding: 0 2rem; }
     .productCard .description .title {
       font-size: 2rem; }
     .productCard .description .content {
-      padding: 4rem 0;
+      padding: 2rem 0;
       font-size: 1.6rem; }
       .productCard .description .content a {
         color: #ec5a5f;
@@ -1471,20 +1472,9 @@ body {
           flex-direction: row-reverse;
           align-items: center;
           width: 40rem;
-          height: 30rem; } }
-      @media only screen and (max-width: 600px) {
-        .productCont .row .contents .productList .productCards .productCard {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin: 3rem 0;
-          padding: 1rem;
-          margin: 2rem auto;
-          height: 30rem;
-          width: 40rem;
           height: 30rem; }
-          .productCont .row .contents .productList .productCards .productCard:before {
-            border-radius: 2rem; } }
+          .productCont .row .contents .productList .productCards .productCard .description {
+            padding: 0 1rem; } }
       @media only screen and (max-width: 600px) {
         .productCont .row .contents .productList .productCards .productCard {
           display: flex;
@@ -1514,7 +1504,7 @@ body {
             width: 100%;
             position: relative; }
             .productCont .row .contents .productList .productCards .productCard .description {
-              padding: 0 0 0 1rem; }
+              padding: 1rem 0 0 1rem; }
             .productCont .row .contents .productList .productCards .productCard:before {
               width: 80%;
               left: 19%;
