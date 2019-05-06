@@ -65,8 +65,9 @@
             .content {
                 width: 80%;
                 position: relative;
-                @include flex(row, center, center, 1 0 50%, wrap);
+                @include flex(row, flex-end, center, 1 0 50%, wrap);
                 margin-bottom: 2rem;
+                margin-left: 5rem;
 
                 .title {
                     border-bottom: 1px solid $border-color;
@@ -85,7 +86,7 @@
                 }
 
                 .inputs {
-                    width: 90%;
+                    width: 100%;
                     margin: 2rem 0;
                     @include flex(row, space-between, center, '', wrap);
                     border-bottom: 1px solid $border-color;
@@ -147,6 +148,8 @@
                         font-size: 1.7rem;
                         border-radius: 0;
                         color: $gray_dark;
+                        background-image: url(../../../images/chevron-down-solid.svg);
+                        fill: $gray_dark;
 
                         &:focus {
                             outline: none;
