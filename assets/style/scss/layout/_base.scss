@@ -1,19 +1,21 @@
 .container {
   font-size: 1.5rem;
   transition: 0.4s;
-  overflow-x: hidden;
+  overflow: hidden;
 
-  > header,
+  >header,
   section,
   footer {
     transition: 0.4s;
   }
+
   &.perspective {
     transition: 0.4s;
     perspective: 1300px;
     overflow: hidden;
     height: 100vh;
-    > header,
+
+    >header,
     section,
     footer {
       transition: 0.4s;
@@ -26,6 +28,7 @@
   min-width: $max_width_value;
   max-width: $max_width_value;
   margin: 0 auto;
+
   @include responsive(tablet, '') {
     min-width: auto;
     max-width: auto;
@@ -37,6 +40,6 @@ button {
   outline: none;
 }
 
-body{
+body {
   position: relative;
 }

@@ -92,7 +92,6 @@
     img {
       @include responsive(tablet, '') {
         height: 100%;
-        width: auto;
       }
     }
   }

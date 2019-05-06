@@ -21,6 +21,7 @@
         <div class="close"></div>
     </div>
     <div class="container">
+        <!-- HEADER CONTAINER -->
         <header class="header" id="fixedmenu">
             <div class="row">
                 <div class="logo">
@@ -195,49 +196,84 @@
                 </div>
             </div>
         </header>
-        <section class="descripCont">
+        <!-- END HEADER CONTAINER -->
+        <!-- DESCRIPTION CONTAINER -->
+        <section class="registerCont">
             <div class="head" style="background-image: url('./assets/images/pages-head-bg.png')">
                 <div class="row">
-                    <p>Cooking / Gas Cooker - B</p>
+                    <p>Register Form</p>
                 </div>
             </div>
             <div class="row">
-                <div class="description-title">Gas Cooker - B</div>
-                <div class="description">
-                    <div class="images">
-                    <div class="main-img">
-                            <img id="zoom_01" src="./assets/images/products1.png" />
-                        </div>
-                        <div class="sub-img">
-                            <img src="./assets/images/product1.png" alt="" />
-                            <img src="./assets/images/product3.png" alt="" />
-                            <img src="./assets/images/product2.png" alt="" />
-                        </div>
-                    </div>
+                <div class="register">
                     <div class="content">
-                        <div class="details">
-                            More details and more specs <br />More details and more specs
+                        <div class="title">
+                            Basic Details
                         </div>
-                        <div class="describe">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Accusamus maxime cupiditate quidem natus aspernatur? Labore eum
-                            sapiente cum totam veniam. Consequuntur maiores aliquam deserunt
-                            obcaecati rem aperiam, animi laudantium ratione nam non dicta
-                            totam quae asperiores? Suscipit vel necessitatibus quisquam
-                            laborum ipsam, temporibus aliquam dolore corporis, illum animi
-                            sit. Dicta commodi molestiae exercitationem unde officia
-                            voluptatum ab quaerat, aut, at sunt fuga ex consequatur minima
-                            aliquam! Voluptatem distinctio debitis iste possimus amet
-                            pariatur fugit delectus blanditiis non officiis sunt, minima
-                            nesciunt facilis. Fugit dolorem ex facilis eligendi, in maxime
-                            impedit totam voluptatum ut. Iure perferendis neque quibusdam
-                            aliquid obcaecati in?
-                        </div>
+
+                        <form class="inputs">
+                            <!-- FIRST NAME -->
+                            <div class="input-container">
+                                <input type="text" id="fname" name="fname" placeholder="First Name">
+                                <label for="fname">First Name</label>
+                            </div>
+                            <!-- LAST NAME -->
+                            <div class="input-container">
+                                <input type="text" id="lname" name="lname" placeholder="Last Name">
+                                <label for="fname">Last Name</label>
+
+                            </div>
+
+                            <!-- EMAIL ID -->
+                            <div class="input-container">
+                                <input type="text" id="eid" name="eid" placeholder="Email ID">
+                                <label class="eid-icon"></label>
+                                <span class="inplace"></span>
+                            </div>
+                            <!-- USER ID -->
+                            <div class="input-container">
+                                <input type="text" id="uid" name="uid" placeholder="Your User ID">
+                                <label for="uid-icon"></label>
+                                <span class="inplace"></span>
+                            </div>
+
+
+                            <!-- COUNTRY -->
+                            <select name="country" id="country">
+                                <option value="Iran">Iran</option>
+                                <option value="USA">United States</option>
+                                <option value="UAE">United Arab Emairates</option>
+                            </select>
+                            <!-- STATE -->
+                            <select name="state" id="state">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <!-- CITY -->
+                            <select name="city" id="city">
+                                <option value="Tehran">Tehran</option>
+                                <option value="Newyork">Newyork</option>
+                                <option value="Abu dhabi">Abu dhabi</option>
+                            </select>
+                            <!-- PHONE NUMBER -->
+                            <div class="input-container">
+                                <input type="text" id="phoneNo" name="phoneNo" placeholder="Phone Number">
+                                <span class="inplace"></span>
+                            </div>
+                            <!-- REFRENCE CODE -->
+                            <div class="input-container">
+                                <input type="text" name="refCode" id="refCode" placeholder="Refrence Code">
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- END DESCRIPTION CONTAINER -->
+        <!-- FOOTER CONTAINER -->
         <footer class="footer">
             <div class="row">
                 <div class="description">
@@ -285,6 +321,8 @@
                 </div>
             </div>
         </footer>
+        <!-- END FOOTER CONTAINER -->
+
     </div>
     <script src="./assets/js/custom.js"></script>
 </body>

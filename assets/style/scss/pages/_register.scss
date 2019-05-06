@@ -1,0 +1,128 @@
+.registerCont {
+    >.row {
+        @include flex('', center, center, '', '');
+
+        .register {
+            @include flex(column, center, center, '', '');
+            width: 70%;
+            border: 1px solid $border-color;
+            border-radius: $border_radius;
+            position: relative;
+            margin: 5rem 0;
+
+            &:before {
+                content: '';
+                border-left: 5rem solid $red;
+                border-top-left-radius: $border_radius;
+                border-bottom-left-radius: $border_radius;
+                height: 100%;
+                position: absolute;
+                left: 0;
+            }
+
+
+            .content {
+                width: 80%;
+                position: relative;
+                @include flex(row, center, center, 1 0 50%, wrap);
+
+                .title {
+                    border-bottom: 1px solid $border-color;
+                    font-size: 2rem;
+                    width: 90%;
+                    color: $red;
+                    padding: 2rem 0;
+                }
+
+                span {
+                    position: absolute;
+                }
+
+                .inputs {
+                    width: 90%;
+                    margin: 3rem 0;
+                    @include flex(row, space-between, center, '', wrap);
+
+
+                    .input-container {
+                        position: relative;
+                        width: 48%;
+                        margin: 2rem 0;
+                    }
+
+                    label {
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        top: -1.5rem;
+                        -webkit-transform: translate(50%, -50%);
+                        transform: translate(0, -50%);
+                        opacity: 0;
+                        transition: all .3s;
+                    }
+
+                    select {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        position: relative;
+
+                        border: none;
+                        background-color: $white;
+                        line-height: 3rem;
+                        font-size: 1.7rem;
+                        border-radius: 0;
+                        color: $gray_dark;
+
+                        &:focus{
+                            outline: none;
+                        }
+
+                        &:after{
+                            content:'';
+                            width: 3px;
+                            height: 3px;
+                            position: absolute;
+                            border-right: 2px solid $gray_dark;
+                            border-bottom: 2px solid $gray_dark;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    #country {
+                        width: 48%;
+                        border-bottom: 1px solid $border-color;
+
+                    }
+
+                    #city {
+                        width: 25%;
+                        border-bottom: 1px solid $border-color;
+                    }
+
+                    #state {
+                        width: 25%;
+                        border-bottom: 1px solid $border-color;
+                    }
+
+                    input {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid $border-color;
+                    }
+
+                    input[type=text] {
+                        line-height: 3rem;
+                        font-size: 1.7rem;
+
+                        &:focus{
+                            outline: none;
+                        }
+
+                      
+                    }
+                }
+
+            }
+        }
+    }
+}
