@@ -2,13 +2,22 @@
     >.row {
         @include flex('', center, center, '', '');
 
+        @include responsive(tablet, '') {
+            padding: 2rem;
+        }
+
+        @include responsive(phone, '') {
+            padding: 1rem;
+        }
+
         .register {
             @include flex(column, center, center, '', '');
             width: 70%;
-            border: 1px solid $border-color;
             border-radius: $border_radius;
+            box-shadow: .2rem .4rem 2rem $border-color;
             position: relative;
             margin: 5rem 0;
+
 
             &:before {
                 content: '';
@@ -20,18 +29,55 @@
                 left: 0;
             }
 
+            @include responsive(tablet, '') {
+                @include flex(column, center, center, '', '');
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    border-left: 3rem solid $red;
+                    border-top-left-radius: $border_radius;
+                    border-bottom-left-radius: $border_radius;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                }
+
+            }
+
+            @include responsive(phone, '') {
+                @include flex(column, center, center, '', '');
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    border-left: 1rem solid $red;
+                    border-top-left-radius: $border_radius;
+                    border-bottom-left-radius: $border_radius;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                }
+
+            }
+
 
             .content {
                 width: 80%;
                 position: relative;
                 @include flex(row, center, center, 1 0 50%, wrap);
+                margin-bottom: 2rem;
 
                 .title {
                     border-bottom: 1px solid $border-color;
                     font-size: 2rem;
-                    width: 90%;
+                    width: 100%;
                     color: $red;
                     padding: 2rem 0;
+
+                    @include responsive(tablet, '') {
+                        @include flex(column, space-between, center, '', '');
+                    }
                 }
 
                 span {
@@ -40,14 +86,42 @@
 
                 .inputs {
                     width: 90%;
-                    margin: 3rem 0;
+                    margin: 2rem 0;
                     @include flex(row, space-between, center, '', wrap);
+                    border-bottom: 1px solid $border-color;
+
+                    @include responsive(tablet, '') {
+                        @include flex(column, space-between, center, '', '');
+                        border-bottom: none;
+
+
+                    }
+
+                    @include responsive(phone, '') {
+                        @include flex(column, space-between, center, '', '');
+                        width: 100%;
+                        border-bottom: none;
+
+
+                    }
 
 
                     .input-container {
                         position: relative;
                         width: 48%;
                         margin: 2rem 0;
+
+                        @include responsive(tablet, '') {
+                            @include flex(column, space-between, center, '', '');
+                            width: 90%;
+
+                        }
+
+                        @include responsive(phone, '') {
+                            @include flex(column, space-between, center, '', '');
+                            width: 100%;
+
+                        }
                     }
 
                     label {
@@ -59,13 +133,14 @@
                         transform: translate(0, -50%);
                         opacity: 0;
                         transition: all .3s;
+                        color: $font_color_gray_light;
                     }
 
                     select {
                         appearance: none;
                         -webkit-appearance: none;
                         position: relative;
-
+                        margin: 2rem 0;
                         border: none;
                         background-color: $white;
                         line-height: 3rem;
@@ -73,12 +148,12 @@
                         border-radius: 0;
                         color: $gray_dark;
 
-                        &:focus{
+                        &:focus {
                             outline: none;
                         }
 
-                        &:after{
-                            content:'';
+                        &::before {
+                            content: '';
                             width: 3px;
                             height: 3px;
                             position: absolute;
@@ -92,37 +167,92 @@
                         width: 48%;
                         border-bottom: 1px solid $border-color;
 
+                        @include responsive(tablet, '') {
+                            width: 90%;
+                        }
+
+                        @include responsive(phone, '') {
+                            width: 100%;
+                        }
+
                     }
 
                     #city {
                         width: 25%;
                         border-bottom: 1px solid $border-color;
+
+                        @include responsive(tablet, '') {
+                            width: 90%;
+                        }
+
+                        @include responsive(phone, '') {
+                            width: 100%;
+                        }
                     }
 
                     #state {
                         width: 25%;
                         border-bottom: 1px solid $border-color;
+
+                        @include responsive(tablet, '') {
+                            width: 90%;
+                        }
+
+                        @include responsive(phone, '') {
+                            width: 100%;
+                        }
                     }
 
                     input {
                         width: 100%;
                         border: none;
                         border-bottom: 1px solid $border-color;
+
+                        &.wrong {
+                            border-bottom: 1px solid $red;
+
+                            &:not(:placeholder-shown)+label {
+                                transform: translate(0%, -50%);
+                                opacity: 1;
+                                color: $red;
+                            }
+                        }
+
+                        &:not(:placeholder-shown)+label {
+                            transform: translate(0%, -50%);
+                            opacity: 1;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
                     }
 
                     input[type=text] {
                         line-height: 3rem;
                         font-size: 1.7rem;
 
-                        &:focus{
+                        &:focus {
                             outline: none;
                         }
-
-                      
                     }
                 }
 
+                button {
+                    outline: none;
+                    cursor: pointer;
+                    margin: 1rem;
+                    padding: 1rem;
+                    background-color: $red;
+                    border-radius: 30px;
+                    font-size: 1.7rem;
+                    line-height: 3rem;
+                    color: $white;
+                    box-shadow: 2px 4px 5px $border-color;
+                    width: 13rem;
+                }
             }
+
         }
     }
 }

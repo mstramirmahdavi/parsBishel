@@ -413,7 +413,7 @@ body,
 .container {
   font-size: 1.5rem;
   transition: 0.4s;
-  overflow-x: hidden; }
+  overflow: hidden; }
   .container > header,
   .container section,
   .container footer {
@@ -464,6 +464,12 @@ body {
         flex-direction: column;
         height: auto;
         padding: 2rem; } }
+    @media only screen and (max-width: 600px) {
+      .header > .row {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 1rem; } }
     .header > .row .logo {
       display: flex;
       flex: 0 0 20%;
@@ -709,7 +715,7 @@ body {
     left: 50%;
     width: 2rem;
     height: 2rem;
-    transform: translate(0, 50%) rotate(-45deg); }
+    transform: translate(-50%, 50%) rotate(-45deg); }
 
 /* components */
 .searchBox {
@@ -945,8 +951,7 @@ body {
   position: relative; }
   @media only screen and (max-width: 1200px) {
     #sliders .owl-item img {
-      height: 100%;
-      width: auto; } }
+      height: 100%; } }
   #sliders.owl-drag .owl-item {
     height: calc(100vh - 7.3rem); }
 
@@ -1511,14 +1516,26 @@ body {
               border-radius: 2rem; } }
 
 .descripCont .description {
-  margin: 5rem auto;
+  margin: 0 auto 5rem auto;
   padding: 8rem;
   border: 1px solid #e8e8e8;
   border-radius: 1rem;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center; }
+  .descripCont .description-title {
+    margin: 5rem auto 0 auto;
+    font-size: 2.2rem;
+    padding: 2rem 3rem 6rem 8rem;
+    background-color: #ed1c24;
+    color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 1rem;
+    position: relative;
+    top: 5rem;
+    z-index: -1; }
   @media only screen and (max-width: 1200px) {
     .descripCont .description {
       display: flex;
@@ -1526,6 +1543,8 @@ body {
       align-items: center;
       padding: 2rem 0;
       width: 95%; }
+      .descripCont .description-title {
+        width: 95%; }
       .descripCont .description .content {
         width: 100%; } }
   .descripCont .description .images {
@@ -1561,15 +1580,226 @@ body {
     @media only screen and (max-width: 1200px) {
       .descripCont .description .content {
         width: 100%;
-        padding: 1rem; } }
-    .descripCont .description .content .title {
-      font-size: 2.2rem;
-      color: #ed1c24; }
+        padding: 1rem 5rem; } }
     .descripCont .description .content .details {
-      color: #9f9f9f;
-      text-align: left;
+      color: #5f5f5f;
       margin: 2rem 0; }
     .descripCont .description .content .describe {
       text-align: left;
       margin-top: 5rem;
       color: #9f9f9f; }
+
+.registerCont > .row {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 1200px) {
+    .registerCont > .row {
+      padding: 2rem; } }
+  @media only screen and (max-width: 600px) {
+    .registerCont > .row {
+      padding: 1rem; } }
+  .registerCont > .row .register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.4rem 2rem #e8e8e8;
+    position: relative;
+    margin: 5rem 0; }
+    .registerCont > .row .register:before {
+      content: '';
+      border-left: 5rem solid #ed1c24;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      height: 100%;
+      position: absolute;
+      left: 0; }
+    @media only screen and (max-width: 1200px) {
+      .registerCont > .row .register {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; }
+        .registerCont > .row .register::before {
+          content: '';
+          border-left: 3rem solid #ed1c24;
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+          height: 100%;
+          position: absolute;
+          left: 0; } }
+    @media only screen and (max-width: 600px) {
+      .registerCont > .row .register {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; }
+        .registerCont > .row .register::before {
+          content: '';
+          border-left: 1rem solid #ed1c24;
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+          height: 100%;
+          position: absolute;
+          left: 0; } }
+    .registerCont > .row .register .content {
+      width: 80%;
+      position: relative;
+      display: flex;
+      flex: 1 0 50%;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem; }
+      .registerCont > .row .register .content .title {
+        border-bottom: 1px solid #e8e8e8;
+        font-size: 2rem;
+        width: 100%;
+        color: #ed1c24;
+        padding: 2rem 0; }
+        @media only screen and (max-width: 1200px) {
+          .registerCont > .row .register .content .title {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center; } }
+      .registerCont > .row .register .content span {
+        position: absolute; }
+      .registerCont > .row .register .content .inputs {
+        width: 90%;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #e8e8e8; }
+        @media only screen and (max-width: 1200px) {
+          .registerCont > .row .register .content .inputs {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: none; } }
+        @media only screen and (max-width: 600px) {
+          .registerCont > .row .register .content .inputs {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            border-bottom: none; } }
+        .registerCont > .row .register .content .inputs .input-container {
+          position: relative;
+          width: 48%;
+          margin: 2rem 0; }
+          @media only screen and (max-width: 1200px) {
+            .registerCont > .row .register .content .inputs .input-container {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              align-items: center;
+              width: 90%; } }
+          @media only screen and (max-width: 600px) {
+            .registerCont > .row .register .content .inputs .input-container {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              align-items: center;
+              width: 100%; } }
+        .registerCont > .row .register .content .inputs label {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: -1.5rem;
+          -webkit-transform: translate(50%, -50%);
+          transform: translate(0, -50%);
+          opacity: 0;
+          transition: all .3s;
+          color: #9f9f9f; }
+        .registerCont > .row .register .content .inputs select {
+          appearance: none;
+          -webkit-appearance: none;
+          position: relative;
+          margin: 2rem 0;
+          border: none;
+          background-color: #ffffff;
+          line-height: 3rem;
+          font-size: 1.7rem;
+          border-radius: 0;
+          color: #5f5f5f; }
+          .registerCont > .row .register .content .inputs select:focus {
+            outline: none; }
+          .registerCont > .row .register .content .inputs select::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            position: absolute;
+            border-right: 2px solid #5f5f5f;
+            border-bottom: 2px solid #5f5f5f;
+            transform: rotate(45deg); }
+        .registerCont > .row .register .content .inputs #country {
+          width: 48%;
+          border-bottom: 1px solid #e8e8e8; }
+          @media only screen and (max-width: 1200px) {
+            .registerCont > .row .register .content .inputs #country {
+              width: 90%; } }
+          @media only screen and (max-width: 600px) {
+            .registerCont > .row .register .content .inputs #country {
+              width: 100%; } }
+        .registerCont > .row .register .content .inputs #city {
+          width: 25%;
+          border-bottom: 1px solid #e8e8e8; }
+          @media only screen and (max-width: 1200px) {
+            .registerCont > .row .register .content .inputs #city {
+              width: 90%; } }
+          @media only screen and (max-width: 600px) {
+            .registerCont > .row .register .content .inputs #city {
+              width: 100%; } }
+        .registerCont > .row .register .content .inputs #state {
+          width: 25%;
+          border-bottom: 1px solid #e8e8e8; }
+          @media only screen and (max-width: 1200px) {
+            .registerCont > .row .register .content .inputs #state {
+              width: 90%; } }
+          @media only screen and (max-width: 600px) {
+            .registerCont > .row .register .content .inputs #state {
+              width: 100%; } }
+        .registerCont > .row .register .content .inputs input {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #e8e8e8; }
+          .registerCont > .row .register .content .inputs input.wrong {
+            border-bottom: 1px solid #ed1c24; }
+            .registerCont > .row .register .content .inputs input.wrong:not(:placeholder-shown) + label {
+              transform: translate(0%, -50%);
+              opacity: 1;
+              color: #ed1c24; }
+          .registerCont > .row .register .content .inputs input:not(:placeholder-shown) + label {
+            transform: translate(0%, -50%);
+            opacity: 1; }
+          .registerCont > .row .register .content .inputs input:focus {
+            outline: none; }
+        .registerCont > .row .register .content .inputs input[type=text] {
+          line-height: 3rem;
+          font-size: 1.7rem; }
+          .registerCont > .row .register .content .inputs input[type=text]:focus {
+            outline: none; }
+      .registerCont > .row .register .content button {
+        outline: none;
+        cursor: pointer;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #ed1c24;
+        border-radius: 30px;
+        font-size: 1.7rem;
+        line-height: 3rem;
+        color: #ffffff;
+        box-shadow: 2px 4px 5px #e8e8e8;
+        width: 13rem; }

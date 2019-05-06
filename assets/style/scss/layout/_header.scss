@@ -10,7 +10,7 @@
     background-color: rgba($color: $white, $alpha: 0.9);
   }
 
-  > .row {
+  >.row {
     @include flex('', '', '', '', '');
     height: 7rem;
     position: relative;
@@ -19,6 +19,12 @@
       @include flex(column, '', '', '', '');
       height: auto;
       padding: 2rem;
+    }
+
+    @include responsive(phone, '') {
+      @include flex(column, '', '', '', '');
+      height: auto;
+      padding: 1rem;
     }
 
     .logo {
@@ -86,7 +92,7 @@
         }
       }
 
-      > img {
+      >img {
         width: 10rem;
       }
     }
@@ -123,7 +129,7 @@
             width: 100%;
           }
 
-          > .link {
+          >.link {
             @include flex('', center, center, '', '');
             height: 100%;
             z-index: 2;
@@ -171,7 +177,7 @@
         }
       }
 
-      > img {
+      >img {
         width: 2rem;
         cursor: pointer;
       }
