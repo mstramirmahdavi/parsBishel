@@ -1,22 +1,25 @@
-.registerCont {
-    >.row {
-        @include flex('', center, center, '', '');
+    .form {
+        @include flex('', space-between, '', '', '');
+        align-self: stretch;
 
         @include responsive(tablet, '') {
             padding: 2rem;
+            @include flex(column, center, center, '', '');
+
         }
 
         @include responsive(phone, '') {
             padding: 1rem;
         }
 
-        .register {
-            @include flex(column, center, center, '', '');
-            width: 70%;
+        &-panel {
+            @include flex(column, space-around, center, '', '');
+            width: 80%;
             border-radius: $border_radius;
             box-shadow: .2rem .4rem 2rem $border-color;
-            position: relative;
+            position: absolute;
             margin: 5rem 0;
+            padding-left: 5rem;
 
 
             &:before {
@@ -35,14 +38,13 @@
 
                 &::before {
                     content: '';
-                    border-left: 3rem solid $red;
+                    border-left: 5rem solid $red;
                     border-top-left-radius: $border_radius;
                     border-bottom-left-radius: $border_radius;
                     height: 100%;
                     position: absolute;
                     left: 0;
                 }
-
             }
 
             @include responsive(phone, '') {
@@ -51,25 +53,27 @@
 
                 &::before {
                     content: '';
-                    border-left: 1rem solid $red;
+                    border-left: 3rem solid $red;
                     border-top-left-radius: $border_radius;
                     border-bottom-left-radius: $border_radius;
                     height: 100%;
                     position: absolute;
                     left: 0;
                 }
-
             }
 
 
-            .content {
-                width: 80%;
+            &__content {
                 position: relative;
-                @include flex(row, flex-end, center, 1 0 50%, wrap);
+                @include flex(row, flex-end, center, '', wrap);
                 margin-bottom: 2rem;
-                margin-left: 5rem;
+                width: 80%;
 
-                .title {
+                @include responsive(phone, '') {
+                    @include flex('', center, '', '', '');
+                }
+
+                &--header {
                     border-bottom: 1px solid $border-color;
                     font-size: 2rem;
                     width: 100%;
@@ -85,7 +89,7 @@
                     position: absolute;
                 }
 
-                .inputs {
+                &--details {
                     width: 100%;
                     margin: 2rem 0;
                     @include flex(row, space-between, center, '', wrap);
@@ -94,8 +98,6 @@
                     @include responsive(tablet, '') {
                         @include flex(column, space-between, center, '', '');
                         border-bottom: none;
-
-
                     }
 
                     @include responsive(phone, '') {
@@ -107,7 +109,7 @@
                     }
 
 
-                    .input-container {
+                    .form-group {
                         position: relative;
                         width: 48%;
                         margin: 2rem 0;
@@ -148,22 +150,25 @@
                         font-size: 1.7rem;
                         border-radius: 0;
                         color: $gray_dark;
-                        background-image: url(../../../images/chevron-down-solid.svg);
+                        background-image: url('../../../images/chevron-down-solid.svg');
+                        background-position: 100% 0;
+                        background-size: contain;
+                        background-repeat: no-repeat;
                         fill: $gray_dark;
 
                         &:focus {
                             outline: none;
                         }
 
-                        &::before {
-                            content: '';
-                            width: 3px;
-                            height: 3px;
-                            position: absolute;
-                            border-right: 2px solid $gray_dark;
-                            border-bottom: 2px solid $gray_dark;
-                            transform: rotate(45deg);
-                        }
+                        // &::before {
+                        //     content: '';
+                        //     width: 3px;
+                        //     height: 3px;
+                        //     position: absolute;
+                        //     border-right: 2px solid $gray_dark;
+                        //     border-bottom: 2px solid $gray_dark;
+                        //     transform: rotate(45deg);
+                        // }
                     }
 
                     #country {
@@ -214,6 +219,10 @@
                         &.wrong {
                             border-bottom: 1px solid $red;
 
+                            &::placeholder {
+                                color: $red;
+                            }
+
                             &:not(:placeholder-shown)+label {
                                 transform: translate(0%, -50%);
                                 opacity: 1;
@@ -256,6 +265,57 @@
                 }
             }
 
+            &.one {
+                position: relative;
+                background-color: $white;
+                overflow: hidden;
+                width: 49%;
+
+                @include responsive(tablet, '') {
+                    width: 100%;
+                }
+
+                .title {
+                    position: absolute;
+                    align-self: center;
+                    font-size: 1.5rem;
+                    transform: translate(1.7rem, -50%) rotate(-90deg);
+                    left: -5rem;
+                    color: $white;
+                    z-index: 3;
+                    top: 50%;
+
+                    @include responsive(phone, '') {
+                        left: -6rem;
+                    }
+    
+
+                }
+            }
+
+            &.two {
+                position: relative;
+                background-color: $white;
+                overflow: hidden;
+                width: 49%;
+
+                @include responsive(tablet, '') {
+                    width: 100%;
+                }
+
+                .title {
+                    position: absolute;
+                    transform: translate(1rem, -50%) rotate(-90deg);
+                    left: -.9rem;
+                    line-height: 1rem;
+                    color: $white;
+                    z-index: 3;
+                    top: 50%;
+
+                    @include responsive(phone, '') {
+                        left: -1.8rem;
+                    }
+                }
+            }
         }
     }
-}

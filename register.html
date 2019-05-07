@@ -197,45 +197,41 @@
             </div>
         </header>
         <!-- END HEADER CONTAINER -->
-        <!-- DESCRIPTION CONTAINER -->
-        <section class="registerCont">
-            <div class="head" style="background-image: url('./assets/images/pages-head-bg.png')">
-                <div class="row">
-                    <p>Register Form</p>
-                </div>
-            </div>
+        <!-- REGISTER CONTAINER -->
+        <div class="head" style="background-image: url('./assets/images/pages-head-bg.png')">
             <div class="row">
-                <div class="register">
-                    <div class="content">
-                        <div class="title">
-                            Basic Details
+                <p>Register Form</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form">
+                <div class="form-panel one">
+                    <span class="title">Register an account</span>
+                    <div class="form-panel__content">
+                        <div class="form-panel__content--header">
+                            Register an acount
                         </div>
-
-                        <form class="inputs">
+                        <form class="form-panel__content--details">
                             <!-- FIRST NAME -->
-                            <div class="input-container">
+                            <div class="form-group">
                                 <input type="text" id="fname" name="fname" placeholder="First Name">
                                 <label for="fname">First Name</label>
                             </div>
                             <!-- LAST NAME -->
-                            <div class="input-container">
+                            <div class="form-group">
                                 <input type="text" id="lname" name="lname" placeholder="Last Name">
                                 <label>Last Name</label>
-
                             </div>
-
                             <!-- EMAIL ID -->
-                            <div class="input-container">
+                            <div class="form-group">
                                 <input type="text" id="eid" name="eid" placeholder="Email ID">
                                 <label>Email ID</label>
                             </div>
                             <!-- USER ID -->
-                            <div class="input-container">
+                            <div class="form-group">
                                 <input type="text" id="uid" name="uid" placeholder="Your User ID">
                                 <label>Your User ID</label>
                             </div>
-
-
                             <!-- COUNTRY -->
                             <select name="country" id="country">
                                 <option value="Iran">Iran</option>
@@ -255,7 +251,7 @@
                                 <option value="Abu dhabi">Abu dhabi</option>
                             </select>
                             <!-- PHONE NUMBER -->
-                            <div class="input-container">
+                            <div class="form-group">
                                 <input type="text" id="phoneNo" class="wrong" name="phoneNo" placeholder="Phone Number">
                                 <label>Phone Number</label>
                             </div>
@@ -263,16 +259,41 @@
                             <div class="input-container">
                                 <input type="text" name="refCode" id="refCode" placeholder="Refrence Code">
                             </div>
-
-                            <!-- CONTINUE BUTTON -->
                         </form>
+                        <!-- CONTINUE BUTTON -->
+                        <button class="submit">Continue</button>
+                    </div>
+                </div>
+
+                <div class="form-panel two">
+                    <span class="title">Replace</span>
+                    <div class="form-panel__content">
+                        <div class="form-panel__content--header">Replacement</div>
+                        <form class="form-panel__content--details">
+                            <!-- GOODS TYPE -->
+                            <div class="form-group">
+                                <input type="text" id="gType" name="goodsType" placeholder="Goods Type">
+                                <label>Goods Type</label>
+                            </div>
+                            <!-- CODE -->
+                            <div class="form-group">
+                                <input type="text" id="code" name="code" placeholder="code">
+                                <label>Code</label>
+                            </div>
+                            <!-- DETAILS -->
+                            <div class="form-group">
+                                <input type="text" id="details" name="details" placeholder="details">
+                                <label>details</label>
+                            </div>
+                        </form>
+                        <!-- CONTINUE BUTTON -->
                         <button class="submit">Continue</button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- END DESCRIPTION CONTAINER -->
+        <!-- END REGISTER CONTAINER -->
         <!-- FOOTER CONTAINER -->
         <footer class="footer">
             <div class="row">

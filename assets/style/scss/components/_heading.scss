@@ -12,6 +12,9 @@
   padding: 8rem;
   margin-top: 7rem;
 
+  @include responsive(phone, '') {
+    padding: 4rem;
+  }
   .row {
     p {
       color: $white;

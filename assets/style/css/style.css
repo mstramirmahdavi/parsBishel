@@ -553,6 +553,9 @@ body {
   font-weight: bold;
   padding: 8rem;
   margin-top: 7rem; }
+  @media only screen and (max-width: 600px) {
+    .head {
+      padding: 4rem; } }
   .head .row p {
     color: #ffffff;
     font-size: 3rem; }
@@ -1342,27 +1345,32 @@ body {
       margin-top: 5rem;
       color: #9f9f9f; }
 
-.registerCont > .row {
+.form {
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-between;
+  align-self: stretch; }
   @media only screen and (max-width: 1200px) {
-    .registerCont > .row {
-      padding: 2rem; } }
+    .form {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; } }
   @media only screen and (max-width: 600px) {
-    .registerCont > .row {
+    .form {
       padding: 1rem; } }
-  .registerCont > .row .register {
+  .form-panel {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 80%;
     border-radius: 1rem;
     box-shadow: 0.2rem 0.4rem 2rem #e8e8e8;
-    position: relative;
-    margin: 5rem 0; }
-    .registerCont > .row .register:before {
+    position: absolute;
+    margin: 5rem 0;
+    padding-left: 5rem; }
+    .form-panel:before {
       content: '';
       border-left: 5rem solid #ed1c24;
       border-top-left-radius: 1rem;
@@ -1371,13 +1379,28 @@ body {
       position: absolute;
       left: 0; }
     @media only screen and (max-width: 1200px) {
-      .registerCont > .row .register {
+      .form-panel {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         width: 100%; }
-        .registerCont > .row .register::before {
+        .form-panel::before {
+          content: '';
+          border-left: 5rem solid #ed1c24;
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+          height: 100%;
+          position: absolute;
+          left: 0; } }
+    @media only screen and (max-width: 600px) {
+      .form-panel {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; }
+        .form-panel::before {
           content: '';
           border-left: 3rem solid #ed1c24;
           border-top-left-radius: 1rem;
@@ -1385,47 +1408,34 @@ body {
           height: 100%;
           position: absolute;
           left: 0; } }
-    @media only screen and (max-width: 600px) {
-      .registerCont > .row .register {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 100%; }
-        .registerCont > .row .register::before {
-          content: '';
-          border-left: 1rem solid #ed1c24;
-          border-top-left-radius: 1rem;
-          border-bottom-left-radius: 1rem;
-          height: 100%;
-          position: absolute;
-          left: 0; } }
-    .registerCont > .row .register .content {
-      width: 80%;
+    .form-panel__content {
       position: relative;
       display: flex;
-      flex: 1 0 50%;
       justify-content: flex-end;
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
       margin-bottom: 2rem;
-      margin-left: 5rem; }
-      .registerCont > .row .register .content .title {
+      width: 80%; }
+      @media only screen and (max-width: 600px) {
+        .form-panel__content {
+          display: flex;
+          justify-content: center; } }
+      .form-panel__content--header {
         border-bottom: 1px solid #e8e8e8;
         font-size: 2rem;
         width: 100%;
         color: #ed1c24;
         padding: 2rem 0; }
         @media only screen and (max-width: 1200px) {
-          .registerCont > .row .register .content .title {
+          .form-panel__content--header {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             align-items: center; } }
-      .registerCont > .row .register .content span {
+      .form-panel__content span {
         position: absolute; }
-      .registerCont > .row .register .content .inputs {
+      .form-panel__content--details {
         width: 100%;
         margin: 2rem 0;
         display: flex;
@@ -1435,39 +1445,39 @@ body {
         flex-wrap: wrap;
         border-bottom: 1px solid #e8e8e8; }
         @media only screen and (max-width: 1200px) {
-          .registerCont > .row .register .content .inputs {
+          .form-panel__content--details {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             align-items: center;
             border-bottom: none; } }
         @media only screen and (max-width: 600px) {
-          .registerCont > .row .register .content .inputs {
+          .form-panel__content--details {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             align-items: center;
             width: 100%;
             border-bottom: none; } }
-        .registerCont > .row .register .content .inputs .input-container {
+        .form-panel__content--details .form-group {
           position: relative;
           width: 48%;
           margin: 2rem 0; }
           @media only screen and (max-width: 1200px) {
-            .registerCont > .row .register .content .inputs .input-container {
+            .form-panel__content--details .form-group {
               display: flex;
               justify-content: space-between;
               flex-direction: column;
               align-items: center;
               width: 90%; } }
           @media only screen and (max-width: 600px) {
-            .registerCont > .row .register .content .inputs .input-container {
+            .form-panel__content--details .form-group {
               display: flex;
               justify-content: space-between;
               flex-direction: column;
               align-items: center;
               width: 100%; } }
-        .registerCont > .row .register .content .inputs label {
+        .form-panel__content--details label {
           position: absolute;
           width: 100%;
           left: 0;
@@ -1477,7 +1487,7 @@ body {
           opacity: 0;
           transition: all .3s;
           color: #9f9f9f; }
-        .registerCont > .row .register .content .inputs select {
+        .form-panel__content--details select {
           appearance: none;
           -webkit-appearance: none;
           position: relative;
@@ -1488,66 +1498,63 @@ body {
           font-size: 1.7rem;
           border-radius: 0;
           color: #5f5f5f;
-          background-image: url(../../../images/chevron-down-solid.svg);
+          background-image: url("../../../images/chevron-down-solid.svg");
+          background-position: 100% 0;
+          background-size: contain;
+          background-repeat: no-repeat;
           fill: #5f5f5f; }
-          .registerCont > .row .register .content .inputs select:focus {
+          .form-panel__content--details select:focus {
             outline: none; }
-          .registerCont > .row .register .content .inputs select::before {
-            content: '';
-            width: 3px;
-            height: 3px;
-            position: absolute;
-            border-right: 2px solid #5f5f5f;
-            border-bottom: 2px solid #5f5f5f;
-            transform: rotate(45deg); }
-        .registerCont > .row .register .content .inputs #country {
+        .form-panel__content--details #country {
           width: 48%;
           border-bottom: 1px solid #e8e8e8; }
           @media only screen and (max-width: 1200px) {
-            .registerCont > .row .register .content .inputs #country {
+            .form-panel__content--details #country {
               width: 90%; } }
           @media only screen and (max-width: 600px) {
-            .registerCont > .row .register .content .inputs #country {
+            .form-panel__content--details #country {
               width: 100%; } }
-        .registerCont > .row .register .content .inputs #city {
+        .form-panel__content--details #city {
           width: 25%;
           border-bottom: 1px solid #e8e8e8; }
           @media only screen and (max-width: 1200px) {
-            .registerCont > .row .register .content .inputs #city {
+            .form-panel__content--details #city {
               width: 90%; } }
           @media only screen and (max-width: 600px) {
-            .registerCont > .row .register .content .inputs #city {
+            .form-panel__content--details #city {
               width: 100%; } }
-        .registerCont > .row .register .content .inputs #state {
+        .form-panel__content--details #state {
           width: 25%;
           border-bottom: 1px solid #e8e8e8; }
           @media only screen and (max-width: 1200px) {
-            .registerCont > .row .register .content .inputs #state {
+            .form-panel__content--details #state {
               width: 90%; } }
           @media only screen and (max-width: 600px) {
-            .registerCont > .row .register .content .inputs #state {
+            .form-panel__content--details #state {
               width: 100%; } }
-        .registerCont > .row .register .content .inputs input {
+        .form-panel__content--details input {
           width: 100%;
           border: none;
           border-bottom: 1px solid #e8e8e8; }
-          .registerCont > .row .register .content .inputs input.wrong {
+          .form-panel__content--details input.wrong {
             border-bottom: 1px solid #ed1c24; }
-            .registerCont > .row .register .content .inputs input.wrong:not(:placeholder-shown) + label {
+            .form-panel__content--details input.wrong::placeholder {
+              color: #ed1c24; }
+            .form-panel__content--details input.wrong:not(:placeholder-shown) + label {
               transform: translate(0%, -50%);
               opacity: 1;
               color: #ed1c24; }
-          .registerCont > .row .register .content .inputs input:not(:placeholder-shown) + label {
+          .form-panel__content--details input:not(:placeholder-shown) + label {
             transform: translate(0%, -50%);
             opacity: 1; }
-          .registerCont > .row .register .content .inputs input:focus {
+          .form-panel__content--details input:focus {
             outline: none; }
-        .registerCont > .row .register .content .inputs input[type=text] {
+        .form-panel__content--details input[type=text] {
           line-height: 3rem;
           font-size: 1.7rem; }
-          .registerCont > .row .register .content .inputs input[type=text]:focus {
+          .form-panel__content--details input[type=text]:focus {
             outline: none; }
-      .registerCont > .row .register .content button {
+      .form-panel__content button {
         outline: none;
         cursor: pointer;
         margin: 1rem;
@@ -1559,3 +1566,42 @@ body {
         color: #ffffff;
         box-shadow: 2px 4px 5px #e8e8e8;
         width: 13rem; }
+    .form-panel.one {
+      position: relative;
+      background-color: #ffffff;
+      overflow: hidden;
+      width: 49%; }
+      @media only screen and (max-width: 1200px) {
+        .form-panel.one {
+          width: 100%; } }
+      .form-panel.one .title {
+        position: absolute;
+        align-self: center;
+        font-size: 1.5rem;
+        transform: translate(1.7rem, -50%) rotate(-90deg);
+        left: -5rem;
+        color: #ffffff;
+        z-index: 3;
+        top: 50%; }
+        @media only screen and (max-width: 600px) {
+          .form-panel.one .title {
+            left: -6rem; } }
+    .form-panel.two {
+      position: relative;
+      background-color: #ffffff;
+      overflow: hidden;
+      width: 49%; }
+      @media only screen and (max-width: 1200px) {
+        .form-panel.two {
+          width: 100%; } }
+      .form-panel.two .title {
+        position: absolute;
+        transform: translate(1rem, -50%) rotate(-90deg);
+        left: -.9rem;
+        line-height: 1rem;
+        color: #ffffff;
+        z-index: 3;
+        top: 50%; }
+        @media only screen and (max-width: 600px) {
+          .form-panel.two .title {
+            left: -1.8rem; } }
