@@ -205,87 +205,71 @@
         </div>
         <div class="row">
             <div class="form">
-                <div class="form-panel one">
-                    <span class="title">Register an account</span>
+                <div class="form-panel">
+                    <span class="titles">
+                        <div class="title Register active" data-src="Register"><p>Register an acount</p></div>
+                        <div class="title Replacement" data-src="Replacement"><p>Replacement</p></div>
+                    </span>
                     <div class="form-panel__content">
-                        <div class="form-panel__content--header">
-                            Register an acount
+                        <!-- REGISTER SECTION -->
+                        <div id="Register">
+                            <div class="form-panel__content--header">
+                                <div class="register">Register an acount</div>
+                            </div>
+                            <form class="form-panel__content--details">
+                                <!-- FULL NAME -->
+                                <div class="form-group">
+                                    <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                                    <label>Full Name</label>
+                                </div>
+                                <!-- EMAIL ID -->
+                                <div class="form-group">
+                                    <input type="text" id="eid" name="eid" placeholder="Email ID">
+                                    <label>Email ID</label>
+                                </div>
+                                <!-- PHONE NUMBER -->
+                                <div class="form-group">
+                                    <input type="text" id="phoneNo" class="wrong" name="phoneNo"
+                                        placeholder="Phone Number">
+                                    <label>Phone Number</label>
+                                </div>
+                                <!-- POST CODE -->
+                                <div class="form-group">
+                                    <input type="text" name="postCode" id="postCode" placeholder="Post Code">
+                                    <label>Important Info</label>
+                                </div>
+                                <!-- IMP INFO -->
+                                <div class="form-group">
+                                    <input type="text" id="impInfo" name="impInfo" placeholder="Important Info">
+                                    <label>Important Info</label>
+                                </div>
+                            </form>
                         </div>
-                        <form class="form-panel__content--details">
-                            <!-- FIRST NAME -->
-                            <div class="form-group">
-                                <input type="text" id="fname" name="fname" placeholder="First Name">
-                                <label for="fname">First Name</label>
-                            </div>
-                            <!-- LAST NAME -->
-                            <div class="form-group">
-                                <input type="text" id="lname" name="lname" placeholder="Last Name">
-                                <label>Last Name</label>
-                            </div>
-                            <!-- EMAIL ID -->
-                            <div class="form-group">
-                                <input type="text" id="eid" name="eid" placeholder="Email ID">
-                                <label>Email ID</label>
-                            </div>
-                            <!-- USER ID -->
-                            <div class="form-group">
-                                <input type="text" id="uid" name="uid" placeholder="Your User ID">
-                                <label>Your User ID</label>
-                            </div>
-                            <!-- COUNTRY -->
-                            <select name="country" id="country">
-                                <option value="Iran">Iran</option>
-                                <option value="USA">United States</option>
-                                <option value="UAE">United Arab Emairates</option>
-                            </select>
-                            <!-- STATE -->
-                            <select name="state" id="state">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                            <!-- CITY -->
-                            <select name="city" id="city">
-                                <option value="Tehran">Tehran</option>
-                                <option value="Newyork">Newyork</option>
-                                <option value="Abu dhabi">Abu dhabi</option>
-                            </select>
-                            <!-- PHONE NUMBER -->
-                            <div class="form-group">
-                                <input type="text" id="phoneNo" class="wrong" name="phoneNo" placeholder="Phone Number">
-                                <label>Phone Number</label>
-                            </div>
-                            <!-- REFRENCE CODE -->
-                            <div class="input-container">
-                                <input type="text" name="refCode" id="refCode" placeholder="Refrence Code">
-                            </div>
-                        </form>
-                        <!-- CONTINUE BUTTON -->
-                        <button class="submit">Continue</button>
-                    </div>
-                </div>
+                        <!-- END REGISTER SECTION -->
 
-                <div class="form-panel two">
-                    <span class="title">Replace</span>
-                    <div class="form-panel__content">
-                        <div class="form-panel__content--header">Replacement</div>
-                        <form class="form-panel__content--details">
-                            <!-- GOODS TYPE -->
-                            <div class="form-group">
-                                <input type="text" id="gType" name="goodsType" placeholder="Goods Type">
-                                <label>Goods Type</label>
-                            </div>
-                            <!-- CODE -->
-                            <div class="form-group">
-                                <input type="text" id="code" name="code" placeholder="code">
-                                <label>Code</label>
-                            </div>
-                            <!-- DETAILS -->
-                            <div class="form-group">
-                                <input type="text" id="details" name="details" placeholder="details">
-                                <label>details</label>
-                            </div>
-                        </form>
+                        <!-- REPLACE SECTION -->
+                        <div id="Replacement">
+                            <div class="form-panel__content--header">Replacement</div>
+                            <form class="form-panel__content--details">
+                                <!-- GOODS TYPE -->
+                                <div class="form-group">
+                                    <input type="text" id="gType" name="goodsType" placeholder="Goods Type">
+                                    <label>Goods Type</label>
+                                </div>
+                                <!-- CODE -->
+                                <div class="form-group">
+                                    <input type="text" id="code" name="code" placeholder="code">
+                                    <label>Code</label>
+                                </div>
+                                <!-- DETAILS -->
+                                <div class="form-group">
+                                    <input type="text" id="details" name="details" placeholder="details">
+                                    <label>details</label>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- END REPLACE SECTION -->
+
                         <!-- CONTINUE BUTTON -->
                         <button class="submit">Continue</button>
                     </div>
@@ -318,8 +302,8 @@
                 </div>
                 <div class="items">
                     <a href="#">Company</a>
-                    <a href="#">Support</a>
-                    <a href="#">Product</a>
+                    <a href="Support.html">Support</a>
+                    <a href="products.html">Product</a>
                     <a href="#">Press</a>
                     <a href="#">Blog</a>
                     <a href="#">Tutorials & Tips</a>

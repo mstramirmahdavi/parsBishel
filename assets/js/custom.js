@@ -168,4 +168,23 @@ $(document).ready(function () {
     containLensZoom: false,
     scrollZoom: true
   });
+
+  $('.container > .row .form .form-panel .titles .title').on('click', function () {
+
+    if ($('.container > .row .form .form-panel .titles .title').has('active')) {
+      $('.container > .row .form .form-panel .titles .title').removeClass('active');
+      $('.' + $(this).attr('data-src')).addClass('active');
+    }
+    $('.container .head >.row p').html($(this).attr('data-src') + ' Form');
+    $('#Register').css({
+      display: 'none'
+    });
+    $('#Replacement').css({
+      display: 'none'
+    });
+    $('#' + $(this).attr('data-src')).css({
+      display: 'block',
+      boxShadow: 'none'
+    });
+  });
 });

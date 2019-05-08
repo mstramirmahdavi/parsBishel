@@ -15,7 +15,7 @@
   @include responsive(phone, '') {
     padding: 4rem;
   }
-  .row {
+  >.row {
     p {
       color: $white;
       font-size: 3rem;
