@@ -1,143 +1,150 @@
-    .form {
+.container {
+    >.row {
         @include flex('', center, center, '', '');
-        margin: 5rem 0;
 
-        &-panel {
-            @include flex(row, '', center, '', '');
-            width: 80%;
-            background-color: $white;
-            border-radius: $border_radius;
-            box-shadow: .2rem .4rem 3rem $box-shadow;
-            overflow: hidden;
+        .form {
+            @include flex('', center, center, '', '');
+            margin: 5rem 0;
+            width: 100%;
 
-            .titles {
-                @include flex(column, center, center, '', '');
-                width: 6%;
-                background-color: $red;
-                align-self: stretch;
-                color: $white;
-                transition: active .3s;
+            &-panel {
+                @include flex(row, '', center, '', '');
+                width: 80%;
+                background-color: $white;
+                border-radius: $border_radius;
+                box-shadow: .2rem .4rem 3rem $box-shadow;
+                overflow: hidden;
 
-                .title {
-                    @include flex('', center, center, '', '');
-                    width: 100%;
-                    height: 100%;
-                    transition: all .3s;
-                    cursor: pointer;
-                    box-shadow: inset 0 1px 4px #333;
+                .titles {
+                    @include flex(column, center, center, '', '');
+                    width: 6%;
+                    background-color: $red;
+                    align-self: stretch;
+                    color: $white;
+                    transition: active .3s;
 
-                    >p {
-                        color: $white;
-                        font-size: 1.5rem;
-                        transform: rotate(-90deg);
-                        white-space: nowrap;
+                    .title {
+                        @include flex('', center, center, '', '');
+                        width: 100%;
+                        height: 100%;
+                        transition: all .3s;
+                        cursor: pointer;
+                        box-shadow: inset 0 1px 4px #333;
+
+                        >p {
+                            color: $white;
+                            font-size: 1.5rem;
+                            transform: rotate(-90deg);
+                            white-space: nowrap;
+                        }
                     }
                 }
-            }
 
-            .active {
-                background-color: $white;
-                color: $red;
-                box-shadow: none !important;
-
-                >p {
-                    color: $red !important;
-                }
-            }
-
-            &__content {
-                width: 94%;
-                @include flex(column, center, flex-end, '', '');
-
-                &--header {
+                .active {
+                    background-color: $white;
                     color: $red;
-                    font-size: 2rem;
-                    border-bottom: 1px solid $border-color;
-                    padding: 2rem 0;
+                    box-shadow: none !important;
+
+                    >p {
+                        color: $red !important;
+                    }
                 }
 
-                &--details {
-                    padding: 2rem 0;
-                    @include flex(row, space-between, center, '', wrap);
-                    border-bottom: 1px solid $border-color;
+                &__content {
+                    width: 94%;
+                    @include flex(column, center, flex-end, '', '');
 
-                    .form-group {
-                        position: relative;
-                        width: 48%;
+                    &--header {
+                        color: $red;
+                        font-size: 2rem;
+                        border-bottom: 1px solid $border-color;
                         padding: 2rem 0;
                     }
 
-                    input {
-                        width: 100%;
-                        border: none;
+                    &--details {
+                        padding: 2rem 0;
+                        @include flex(row, space-between, center, '', wrap);
                         border-bottom: 1px solid $border-color;
-                        font-size: 1.7rem;
 
-                        &.wrong {
-                            border-bottom: 1px solid $red;
+                        .form-group {
+                            position: relative;
+                            width: 48%;
+                            padding: 2rem 0;
+                        }
 
-                            &::placeholder {
-                                color: $red;
+                        input {
+                            width: 100%;
+                            border: none;
+                            border-bottom: 1px solid $border-color;
+                            font-size: 1.7rem;
+
+                            &.wrong {
+                                border-bottom: 1px solid $red;
+
+                                &::placeholder {
+                                    color: $red;
+                                }
+
+                                &:not(:placeholder-shown)+label {
+                                    transform: translate(0%, -50%);
+                                    opacity: 1;
+                                    color: $red;
+                                }
                             }
 
                             &:not(:placeholder-shown)+label {
                                 transform: translate(0%, -50%);
                                 opacity: 1;
-                                color: $red;
+                                transition: all .3s;
+                            }
+
+                            &:focus {
+                                outline: none;
                             }
                         }
 
-                        &:not(:placeholder-shown)+label {
-                            transform: translate(0%, -50%);
-                            opacity: 1;
+                        label {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            -webkit-transform: translate(50%, -50%);
+                            transform: translate(50%, -50%);
+                            opacity: 0;
+                            transition: color .2s;
+                            color: $font_color_gray_light;
                             transition: all .3s;
+
                         }
 
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-
-                    label {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        -webkit-transform: translate(50%, -50%);
-                        transform: translate(50%, -50%);
-                        opacity: 0;
-                        transition: color .2s;
-                        color: $font_color_gray_light;
-                        transition: all .3s;
 
                     }
 
+                    #Register {
+                        width: 100%;
+                        padding: 0 5rem;
+                    }
 
-                }
+                    #Replacement {
+                        width: 100%;
+                        padding: 0 5rem;
+                        display: none;
+                    }
 
-                #Register {
-                    width: 100%;
-                    padding: 0 5rem;
-                }
-
-                #Replacement {
-                    width: 100%;
-                    padding: 0 5rem;
-                    display: none;
-                }
-
-                button {
-                    outline: none;
-                    cursor: pointer;
-                    margin: 2rem 5rem;
-                    padding: 1rem;
-                    background-color: $red;
-                    border-radius: 30px;
-                    font-size: 1.7rem;
-                    line-height: 3rem;
-                    color: $white;
-                    box-shadow: 2px 4px 10px $box-shadow;
-                    width: 13rem;
+                    button {
+                        outline: none;
+                        cursor: pointer;
+                        margin: 2rem 5rem;
+                        padding: 1rem;
+                        background-color: $red;
+                        border-radius: 30px;
+                        font-size: 1.7rem;
+                        line-height: 3rem;
+                        color: $white;
+                        box-shadow: 2px 4px 10px $box-shadow;
+                        width: 13rem;
+                    }
                 }
             }
         }
     }
+}

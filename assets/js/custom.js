@@ -187,4 +187,11 @@ $(document).ready(function () {
       boxShadow: 'none'
     });
   });
+
+  $('.container > .row .offersCont .title').on('click', function(){
+    if ($('.container > .row .offersCont').has('active')){
+      $('.container > .row .offersCont ').removeClass('active').addClass('deactive');
+    }
+    $('.' + $(this).attr('data-src')).removeClass('deactive').addClass('active');
+  });
 });

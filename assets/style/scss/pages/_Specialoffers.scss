@@ -1,6 +1,39 @@
+@keyframes go-out {
+    0% {
+        z-index: 1;
+    }
+
+    50% {
+        left: 15rem;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
+
+@keyframes come-in {
+    0% {
+        z-index: 2;
+    }
+
+    50% {
+        left: 5rem;
+    }
+
+    100% {
+        z-index: 2;
+    }
+}
+
 .container {
     >.row {
+        @include flex(row, '', '', '', '');
+
         .gold {
+            z-index: 1;
+            background-color: $white;
+
             .title {
                 background-color: $golden-package;
             }
@@ -8,10 +41,12 @@
             .offers .offer {
                 background-color: $golden-light;
             }
-
         }
 
         .silver {
+            z-index: 1;
+            background-color: $white;
+
             .title {
                 background-color: $silver-package;
             }
@@ -22,20 +57,43 @@
                 }
             }
         }
-        
+
+        .deactive {
+            position: absolute;
+            left: 5rem;
+            top: 30rem;
+            width: 83.9%;
+            animation: go-out .5s;
+            // transition: all .2s;
+
+
+            .offers {
+                background-color: $gray_dark;
+                opacity: 0.2;
+                transition: all 1s;
+            }
+        }
+
+        .active {
+            animation: come-in .5s;
+            // transition: all .2s;
+            z-index: 2;
+        }
+
         .offersCont {
             @include flex(row, center, center, '', '');
             border-radius: $border_radius;
-            box-shadow: .2rem .4rem 3rem $box-shadow;
+            box-shadow: .2rem .4rem 3rem $gray_dark;
             margin: 5rem 0;
+            transition: all .3s;
             overflow: hidden;
 
 
             .title {
                 @include flex('', center, center, '', '');
-                // background-color: $golden-package;
                 width: 6%;
                 align-self: stretch;
+                cursor: pointer;
 
                 >p {
                     color: $white;
