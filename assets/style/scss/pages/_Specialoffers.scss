@@ -11,6 +11,19 @@
         z-index: 1;
     }
 }
+@keyframes go-out1 {
+    0% {
+        z-index: 1;
+    }
+
+    50% {
+        top: 25rem;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
 
 @keyframes come-in {
     0% {
@@ -19,6 +32,19 @@
 
     50% {
         left: 5rem;
+    }
+
+    100% {
+        z-index: 2;
+    }
+}
+@keyframes come-in1 {
+    0% {
+        z-index: 2;
+    }
+
+    50% {
+        top: 15rem;
     }
 
     100% {
@@ -64,7 +90,19 @@
             top: 30rem;
             width: 83.9%;
             animation: go-out .5s;
-            // transition: all .2s;
+
+            @include responsive (tablet, '') {
+                left: 7rem;
+            }
+
+            @include responsive(phone,''){
+                left: 0.5rem;
+
+                top: 15rem;
+            animation: go-out1 .5s;
+
+            }
+
 
 
             .offers {
@@ -74,10 +112,15 @@
             }
         }
 
-        .active {
+        > .active {
             animation: come-in .5s;
-            // transition: all .2s;
             z-index: 2;
+            margin: 5rem 0;
+
+            @include responsive(phone,''){
+                animation: come-in1 .5s;
+
+            }
         }
 
         .offersCont {
@@ -88,39 +131,76 @@
             transition: all .3s;
             overflow: hidden;
 
+            @include responsive (tablet, '') {
+                @include flex(row, center, center, '', '');
+                width: 70%;
+            }
 
-            .title {
+            @include responsive (phone,''){
+                width: 90%;
+                @include flex(row,center,center,'', wrap);
+            margin: 10rem 0;
+
+            }
+
+
+            > .title {
                 @include flex('', center, center, '', '');
                 width: 6%;
                 align-self: stretch;
                 cursor: pointer;
+
+                @include responsive (phone, '') {
+                    height: 5rem;
+                    width: 100%;
+                }
 
                 >p {
                     color: $white;
                     font-size: 2rem;
                     transform: rotate(-90deg);
                     white-space: nowrap;
+
+                    @include responsive (phone, '') {
+                        transform: rotate(0deg);
+                    }
                 }
 
             }
 
             .offers {
-                @include flex(row, space-around, center, '', '');
+                @include flex(row, space-evenly, center, '', wrap);
                 width: 94%;
                 height: 100%;
 
+                @include responsive (tablet, '') {
+                    width: 100%;
+                    @include flex(row, center, center, '', wrap);
+                }
+
+
                 .offer {
                     margin: 5rem 0;
+                    margin-left: 2rem;
                     border-radius: $border_radius;
-                    position: relative;
                     width: 20%;
+                    position: relative;
                     overflow: hidden;
                     transition: all .3s;
+
+                    @include responsive (tablet, '') {
+                        width: 80%;
+                        @include flex(row, space-between, center, '', '');
+                    }
+                    @include responsive (phone, '') {
+                        @include flex(column, space-between, center, '', '');
+                    }
 
                     &-image {
                         @include flex('', center, center, '', '');
                         padding: 2rem;
                         transition: all .3s;
+                        transform: scale(1);
 
                         img {
                             position: relative;
@@ -130,15 +210,26 @@
 
                         &:before {
                             content: '';
-                            width: 40rem;
-                            height: 40rem;
+                            width: 60rem;
+                            height: 60rem;
                             border-radius: 50%;
                             z-index: 0;
                             background-color: $white;
                             position: absolute;
                             left: 50%;
-                            top: 9rem;
+                            top: -3rem;
                             transform: translate(-50%, -50%);
+
+                            @include responsive (tablet, '') {
+                                left: -5rem;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            @include responsive(phone,''){
+                                left: 50%;
+                                top: 0;
+                            }
                         }
                     }
 
@@ -146,6 +237,14 @@
                         @include flex(column, center, center, '', '');
                         padding: 0 2rem;
                         transition: all .3s;
+
+                        @include responsive(tablet, '') {
+                            padding: 0 2rem 0 7rem;
+                        }
+
+                        @include responsive(phone,''){
+                            padding: 0 2rem;
+                        }
 
                         &--title {
                             font-size: 2rem;
@@ -160,17 +259,36 @@
                     }
 
                     &:hover {
-                        // box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-                        transform: translateY(-0.25em);
+                        transform: translateY(-0.25rem);
                         box-shadow: 0rem 1rem 2rem -0.4rem #5f5f5f;
                         transition: all .3s;
 
+                        @include responsive(tablet, '') {
+                            transform: translateX(-0.25rem);
+                        }
+
                         .offer-image {
                             transform: scale(0.8) translateY(-1rem);
+
+                            @include responsive(tablet, '') {
+                                transform: scale(0.8) translateX(-1rem);
+                            }
+
+                            @include responsive(phone, ''){
+                                transform: scale(0.8) translateY(-1rem);
+                            }
                         }
 
                         .offer__content {
                             transform: translateY(-4rem);
+
+                            @include responsive(tablet, '') {
+                                transform: translateX(-4rem);
+                            }
+
+                            @include responsive(phone,''){
+                                transform: translateY(-4rem);
+                            }
                         }
                     }
                 }

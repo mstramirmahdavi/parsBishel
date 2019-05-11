@@ -92,6 +92,10 @@
             >.content {
                 @include flex(row, '', center, '', '');
 
+                @include responsive(tablet, '') {
+                    @include flex(column, center, center, '', '');
+                }
+
                 &:not(:last-child) {
                     margin-bottom: 2rem;
                 }

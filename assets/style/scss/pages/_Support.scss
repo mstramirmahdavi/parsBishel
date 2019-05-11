@@ -15,6 +15,11 @@
                 box-shadow: .2rem .4rem 3rem $box-shadow;
                 overflow: hidden;
 
+                @include responsive(phone, '') {
+                    @include flex(column, '', center, '', '');
+                    width: 95%;
+                }
+
                 .titles {
                     @include flex(column, center, center, '', '');
                     width: 6%;
@@ -22,6 +27,13 @@
                     align-self: stretch;
                     color: $white;
                     transition: active .3s;
+
+                    @include responsive(phone, '') {
+                        @include flex(row, '', center, '', '');
+                        width: 100%;
+                        height: 5rem;
+                    }
+
 
                     .title {
                         @include flex('', center, center, '', '');
@@ -31,11 +43,22 @@
                         cursor: pointer;
                         box-shadow: inset 0 1px 4px #333;
 
+                        @include responsive(phone, '') {
+                            @include flex(row, '', center, '', '');
+                            width: 100%;
+                        }
+
                         >p {
                             color: $white;
                             font-size: 1.5rem;
                             transform: rotate(-90deg);
                             white-space: nowrap;
+                        }
+
+                        @include responsive(phone, '') {
+                            p {
+                                transform: rotate(0deg);
+                            }
                         }
                     }
                 }
@@ -43,7 +66,8 @@
                 .active {
                     background-color: $white;
                     color: $red;
-                    box-shadow: none !important;
+                    box-shadow: inset 1px 4px 2rem $title-shadow !important;
+
 
                     >p {
                         color: $red !important;
@@ -54,11 +78,21 @@
                     width: 94%;
                     @include flex(column, center, flex-end, '', '');
 
+                    @include responsive(phone, '') {
+                        @include flex('', center, center, '', '');
+                        width: 100%;
+                    }
+
                     &--header {
                         color: $red;
                         font-size: 2rem;
                         border-bottom: 1px solid $border-color;
                         padding: 2rem 0;
+
+                        @include responsive(tablet, '') {
+                            width: 100%;
+                            border-bottom: none;
+                        }
                     }
 
                     &--details {
@@ -66,10 +100,20 @@
                         @include flex(row, space-between, center, '', wrap);
                         border-bottom: 1px solid $border-color;
 
+                        @include responsive(tablet, '') {
+                            width: 100%;
+                            border-bottom: none;
+                        }
+
                         .form-group {
                             position: relative;
                             width: 48%;
                             padding: 2rem 0;
+
+                            @include responsive(phone, '') {
+                                @include flex(column, '', center, '', '');
+                                width: 100%;
+                            }
                         }
 
                         input {
