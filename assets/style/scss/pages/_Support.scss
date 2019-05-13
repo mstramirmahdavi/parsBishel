@@ -41,7 +41,8 @@
                         height: 100%;
                         transition: all .3s;
                         cursor: pointer;
-                        box-shadow: inset 1px 4px 2rem $title-shadow;
+                        box-shadow: inset 2px 4px 2rem $title-shadow;
+
                         @include responsive(phone, '') {
                             @include flex(row, '', center, '', '');
                             width: 100%;

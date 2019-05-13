@@ -161,13 +161,6 @@ $(document).ready(function () {
       })
     });
   });
-  $('#zoom_01').ezPlus({
-    zoomType: "lens",
-    lensShape: "round",
-    lensSize: 200,
-    containLensZoom: false,
-    scrollZoom: true
-  });
 
   $('.container > .row .form .form-panel .titles .title').on('click', function () {
 

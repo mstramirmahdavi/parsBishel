@@ -1401,7 +1401,7 @@ body {
           height: 100%;
           transition: all .3s;
           cursor: pointer;
-          box-shadow: inset 1px 4px 2rem #ececec; }
+          box-shadow: inset 2px 4px 2rem #ececec; }
           @media only screen and (max-width: 600px) {
             .container > .row .form-panel .titles .title {
               display: flex;
