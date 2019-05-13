@@ -23,7 +23,7 @@
                 .titles {
                     @include flex(column, center, center, '', '');
                     width: 6%;
-                    background-color: $red;
+                    background-color: $white;
                     align-self: stretch;
                     color: $white;
                     transition: active .3s;
@@ -41,15 +41,14 @@
                         height: 100%;
                         transition: all .3s;
                         cursor: pointer;
-                        box-shadow: inset 0 1px 4px #333;
-
+                        box-shadow: inset 1px 4px 2rem $title-shadow;
                         @include responsive(phone, '') {
                             @include flex(row, '', center, '', '');
                             width: 100%;
                         }
 
                         >p {
-                            color: $white;
+                            color: $red;
                             font-size: 1.5rem;
                             transform: rotate(-90deg);
                             white-space: nowrap;
@@ -64,13 +63,12 @@
                 }
 
                 .active {
-                    background-color: $white;
-                    color: $red;
-                    box-shadow: inset 1px 4px 2rem $title-shadow !important;
-
+                    background-color: $red;
+                    color: $white;
+                    box-shadow: inset 0px 1px 4px #333 !important;
 
                     >p {
-                        color: $red !important;
+                        color: $white !important;
                     }
                 }
 
@@ -186,6 +184,7 @@
                         color: $white;
                         box-shadow: 2px 4px 10px $box-shadow;
                         width: 13rem;
+                        border: none;
                     }
                 }
             }
