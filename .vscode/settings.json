@@ -1,22 +1,8 @@
 {
-    "windowColors.internalSettings": {
-        "BaseColor": "hsl(236,12%, 31%)",
-        "portfolioAndColor": {
-            "portfolio": "Dusty",
-            "coloration": "hsl(236,12%, 31%)"
-        },
-        "useAutomatic": true,
-        "theme": "Default Dark+"
-    },
     "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#484B75",
-        "titleBar.inactiveBackground": "#3C3F62",
-        "titleBar.activeForeground": "#FAFAFC",
-        "titleBar.inactiveForeground": "#ACACB3",
-        "activityBar.background": "#3C3F62",
-        "activityBar.foreground": "#F9FAFC",
-        "statusBar.background": "#323552",
-        "statusBar.foreground": "#ffffff"
+        "activityBar.background": "#14303F",
+        "titleBar.activeBackground": "#1C4458",
+        "titleBar.activeForeground": "#F9FCFD"
     },
-    "workbench.colorTheme": "Default Dark+"
+    "liveServer.settings.port": 5502
 }
