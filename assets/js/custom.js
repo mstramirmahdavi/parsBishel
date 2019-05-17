@@ -181,10 +181,81 @@ $(document).ready(function () {
     });
   });
 
-  $('.container > .row .offersCont .title').on('click', function(){
-    if ($('.container > .row .offersCont').has('active')){
+  $('.container > .row .offersCont .title').on('click', function () {
+    if ($('.container > .row .offersCont').has('active')) {
       $('.container > .row .offersCont ').removeClass('active').addClass('deactive');
     }
     $('.' + $(this).attr('data-src')).removeClass('deactive').addClass('active');
   });
+
+  $(function () {
+    $("#Stores .province path").click(function (e) {
+      e.preventDefault();
+      $('.table').hide(0);
+      $("html, body").animate({
+        scrollTop: $(document).height()
+      }, 1000);
+      $("#state-" + $(this).attr("value")).show();
+    });
+    $("#Stores .province li").click(function (e) {
+      e.preventDefault();
+      $('.table').hide(0);
+      $("html, body").animate({
+        scrollTop: $("#gohere").offset().top
+      }, 1000);
+      $("#" + $(this).attr("value")).show();
+    });
+  });
+
+  $('.S-DCont .toggle .choice').on('click', function () {
+    $('.container .head >.row p').html($(this).attr('value'));
+    $('.S-DCont .toggle #flap .content').html($(this).attr('value'));
+
+    $('#Stores').css({
+      display: 'none'
+    });
+    $('#Deligations').css({
+      display: 'none'
+    });
+    $('#' + $(this).attr('value')).css({
+      display: 'block'
+    });
+  });
+
+  if ($('.S-DCont .toggle .choice').prop('checked')) {
+    $('#Stores').css({
+      display: 'block'
+    });
+    $('#Deligates').css({
+      display: 'none'
+    });
+  }
+
+  $('.container .AFSCont >.row .tabs .tab').on('click', function () {
+
+    if ($('.container .AFSCont >.row .tabs ').has('select')) {
+      $('.container .AFSCont >.row .tabs .tab').removeClass('select');
+      $('.' + $(this).attr('value')).addClass('select');
+    }
+      $('.container .AFSCont >.row .forms .forms-title p').html($(this).attr('value'));
+    $('#Waranty').css({
+      display: 'none'
+    });
+    $('#After-Service-Centers').css({
+      display: 'none'
+    });
+    $('#Replacement').css({
+      display: 'none'
+    });
+    $('#Cunsumer-Service').css({
+      display: 'none'
+    });
+    $('#Service-For-Registered').css({
+      display: 'none'
+    });
+    $('#' + $(this).attr('value')).css({
+      display: 'flex'
+    });
+  });
+
 });

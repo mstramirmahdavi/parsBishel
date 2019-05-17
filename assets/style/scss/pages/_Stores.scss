@@ -1,0 +1,295 @@
+.S-DCont {
+    // margin: 10rem 0 0 0;
+    @include flex('',center,'','','');
+
+    .toggle {
+        position: relative;
+        border: solid .2rem $red;
+        border-radius: 5rem;
+        width: 20%;
+        overflow: hidden;
+
+        &>input[type="radio"] {
+            display: none;
+        }
+
+        &>#choice1:checked~#flap {
+            transform: translateX(-100%);
+            border-top-left-radius: 55px;
+            border-bottom-left-radius: 55px;
+        }
+
+        // &>#choice1:checked~#flap>.content {
+        //     // transform: translateX(-100%);
+        // }
+
+        &>#choice2:checked~#flap {
+            transform: translateX(0%);
+            border-top-right-radius: 55px;
+            border-bottom-right-radius: 55px;
+        }
+
+        &>label {
+            display: inline-block;
+            min-width: 49%;
+            padding: 1rem;
+            font-size: 2rem;
+            text-align: center;
+            color: $red;
+            cursor: pointer;
+        }
+
+        &>label,
+        &>#flap {
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        &>#flap {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            width: 51%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            font-size: 2rem;
+            background-color: $red;
+            transition: all .5s;
+        }
+
+        &>#flap>.content {
+            color: $white;
+            transition: all .5s;            
+        }
+    }
+}
+
+#Stores{
+    display: none;
+}
+
+#Deligations{
+    display: none;
+}
+
+#Stores #IranMap {
+    display: block;
+    position: relative;
+    direction: rtl;
+    text-align: right;
+    padding: 0;
+    font-family: Tahoma;
+    font-size: 11px;
+    width: 90%;
+    margin: 5rem auto;
+
+}
+
+#Stores #IranMap .map {
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
+#Stores #IranMap .show-title {
+    display: block;
+    position: absolute;
+    background-color: $footer_bg;
+    color: $white;
+    margin: 0 !important;
+    padding: 0 5px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    opacity: .8;
+}
+
+#Stores #IranMap .map svg {
+    height: 70rem !important;
+    width: 70rem !important;
+}
+
+#Stores #IranMap .map .province path {
+    fill: $font_color_gray_light;
+    transition: all .3s;
+}
+
+#Stores #IranMap .map .sea path,
+#Stores #IranMap .map .lake path {
+    fill: $sea_lake_color;
+}
+
+#Stores #IranMap .map .sea path,
+#Stores #IranMap .map .lake path {
+    fill: $sea_lake_color;
+}
+
+#Stores #IranMap .map .border path,
+#Stores #IranMap .map .island path {
+    fill: $white;
+    transition: all .3s;
+}
+
+#Stores #IranMap .map .province path:hover,
+#Stores #IranMap .map .island path:hover,
+#Stores #IranMap .map .province path.hover,
+#Stores #IranMap .map .island path.hover {
+    fill: $red !important;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#Stores #IranMap .list {
+    display: block;
+    float: right;
+    width: 50%;
+}
+#Deligations{
+    margin: 5rem 0;
+}
+
+#Deligations .list {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#Stores #IranMap .list>ul {
+    margin-left: 10px;
+}
+
+#Stores #IranMap .list ul:before,
+#Stores #IranMap .list ul:after {
+    display: table;
+    content: " ";
+}
+
+#Stores #IranMap .list li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+#Stores #IranMap .list span {
+    background: $table_header;
+    color: $white;
+    text-align: center;
+    display: block;
+    margin: 0 2px;
+    padding: 0.5rem;
+    line-height: 26px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+#Deligations .list span {
+    background: $table_header;
+    color: $white;
+    text-align: center;
+    display: block;
+    margin: 0 2px;
+    padding: 0.5rem;
+    line-height: 26px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+#Stores #IranMap .list ul,
+#Stores #IranMap .list ul:after {
+    clear: both;
+}
+
+#Deligations .list ul,
+#Deligations .list ul:after {
+    clear: both;
+}
+
+#Stores #IranMap .list li ul li {
+    display: block;
+    float: right;
+    width: 33.33333333333333%;
+}
+
+#Deligations .list li ul li {
+    display: block;
+    float: right;
+    width: 33.33333333333333%;
+}
+
+#Stores #IranMap .list li ul li a {
+    box-shadow: inset 2px 4px 2rem $tabel_a_boxShadow;
+    color: $red;
+    display: block;
+    padding: .5rem;
+    line-height: 26px;
+    margin: 2px 2px;
+    text-decoration: none;
+    transition: all .3s;
+    text-align: center;
+}
+
+#Deligations .list li ul li a {
+    box-shadow: inset 2px 4px 2rem $tabel_a_boxShadow;
+    color: $red;
+    display: block;
+    padding: .5rem;
+    line-height: 26px;
+    margin: 2px 2px;
+    text-decoration: none;
+    transition: all .3s;
+    text-align: center;
+}
+
+#Stores #IranMap .list li ul li a:hover,
+#Stores #IranMap .list li ul li a.hover {
+    background: $red;
+    color: $white;
+    box-shadow: inset 0px 1px 4px $gray_dark;
+    transition: all .3s;
+}
+#Deligations .list li ul li a:hover,
+#Deligations .list li ul li a.hover {
+    background: $red;
+    color: $white;
+    box-shadow: inset 0px .1rem .4rem $gray_dark;
+    transition: all .3s;
+}
+
+#Stores #IranMap .city {
+    clear: both;
+    padding: 1rem 0;
+}
+
+table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: iransans;
+}
+
+td,
+th {
+    text-align: center;
+    border: 1px solid $border-color;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+th {
+    font-size: 1.3rem;
+    background-color: $table_header;
+    color: $white;
+}
+
+td {
+    font-size: 1.3rem;
+}

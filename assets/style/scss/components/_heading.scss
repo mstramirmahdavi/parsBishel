@@ -5,12 +5,13 @@
   background-blend-mode: multiply;
   background-color: $red;
   text-align: left;
-  width: 100vw;
+  width: 100%;
   color: $white;
   font-size: 2.2rem;
   font-weight: bold;
   padding: 8rem;
   margin-top: 7rem;
+  margin-bottom: 2rem;
 
   @include responsive(phone, '') {
     padding: 4rem;

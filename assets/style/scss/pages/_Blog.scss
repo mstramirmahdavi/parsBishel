@@ -1,0 +1,99 @@
+.blogCont {
+    margin: 10rem 0;
+    @include flex('', center, center, '', '');
+
+    .blogs {
+        @include flex(row, space-around, center, '', wrap);
+
+
+        .blog {
+            @include flex(column, space-around, flex-start, '', '');
+            max-width: 28%;
+            box-shadow: .4rem .8rem 3rem $box-shadow;
+            margin-top: 25rem;
+            border-radius: $border_radius;
+            position: relative;
+            transition: all .5s;
+
+            &:before {
+                content: '';
+                width: 35rem;
+                height: 35rem;
+                background-color: transparent;
+                border-radius: 100%;
+                position: absolute;
+                top: -34.5%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                transition: all .5s;
+            }
+
+            // &:after{
+            //     content: '';
+            //     @include flex('',center, center,'','');
+            //     color: $white;
+            //     width: 25rem;
+            //     height: 25rem;
+            //     background-color: transparent;
+            //     border-radius: 100%;
+            //     position: absolute;
+            //     top: -25.5%;
+            //     left: 50%;
+            //     transform: translate(-50%, 0);
+            //     transition: all .5s;
+            // }
+
+            .image {
+                position: absolute;
+                clip-path: circle(18rem);
+                top: -50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                transition: all .5s;
+            }
+
+            .content {
+                padding: 23rem 5rem 5rem 5rem;
+                @include flex(column, space-between, center, '', '');
+                color: $font_color;
+                transition: all .5s;
+
+                .title {
+                    margin-bottom: 2rem;
+                    text-transform: uppercase;
+                    color: $gray_dark;
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+            }
+
+            &:hover {
+            box-shadow: .4rem .8rem 3rem $box-shadow/2;
+                &:before {
+                    background-color: $red;
+                    opacity: 1;
+                }
+
+                &:after{
+                    background-color: $red;
+                    opacity: 0.5;
+                }
+
+                .image {
+                    position: absolute;
+                    clip-path: circle(15rem);
+                    top: -50%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    transition: all .5s;
+                }
+
+                .content {
+                    transform: translateY(-4rem);
+                    transition: all .5s;
+
+                }
+            }
+        }
+    }
+}
