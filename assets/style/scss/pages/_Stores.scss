@@ -1,6 +1,6 @@
 .S-DCont {
     // margin: 10rem 0 0 0;
-    @include flex('',center,'','','');
+    @include flex('', center, '', '', '');
 
     .toggle {
         position: relative;
@@ -18,10 +18,6 @@
             border-top-left-radius: 55px;
             border-bottom-left-radius: 55px;
         }
-
-        // &>#choice1:checked~#flap>.content {
-        //     // transform: translateX(-100%);
-        // }
 
         &>#choice2:checked~#flap {
             transform: translateX(0%);
@@ -61,20 +57,21 @@
 
         &>#flap>.content {
             color: $white;
-            transition: all .5s;            
+            transition: all .5s;
         }
     }
 }
 
-#Stores{
+#Stores {
     display: none;
 }
 
-#Deligations{
+#Deligations {
     display: none;
+    margin: 5rem 0;
 }
 
-#Stores #IranMap {
+#IranMap {
     display: block;
     position: relative;
     direction: rtl;
@@ -87,7 +84,7 @@
 
 }
 
-#Stores #IranMap .map {
+#IranMap .map {
     display: block;
     float: left;
     width: 50%;
@@ -98,7 +95,7 @@
 }
 
 
-#Stores #IranMap .show-title {
+#IranMap .show-title {
     display: block;
     position: absolute;
     background-color: $footer_bg;
@@ -113,72 +110,63 @@
     opacity: .8;
 }
 
-#Stores #IranMap .map svg {
+#IranMap .map svg {
     height: 70rem !important;
     width: 70rem !important;
 }
 
-#Stores #IranMap .map .province path {
+#IranMap .map .province path {
     fill: $font_color_gray_light;
     transition: all .3s;
 }
 
-#Stores #IranMap .map .sea path,
-#Stores #IranMap .map .lake path {
+#IranMap .map .sea path,
+#IranMap .map .lake path {
     fill: $sea_lake_color;
 }
 
-#Stores #IranMap .map .sea path,
-#Stores #IranMap .map .lake path {
+#IranMap .map .sea path,
+#IranMap .map .lake path {
     fill: $sea_lake_color;
 }
 
-#Stores #IranMap .map .border path,
-#Stores #IranMap .map .island path {
+#IranMap .map .border path,
+#IranMap .map .island path {
     fill: $white;
     transition: all .3s;
 }
 
-#Stores #IranMap .map .province path:hover,
-#Stores #IranMap .map .island path:hover,
-#Stores #IranMap .map .province path.hover,
-#Stores #IranMap .map .island path.hover {
+#IranMap .map .province path:hover,
+#IranMap .map .island path:hover,
+#IranMap .map .province path.hover,
+#IranMap .map .island path.hover {
     fill: $red !important;
     cursor: pointer;
     transition: all .3s;
 }
 
-#Stores #IranMap .list {
+#IranMap .list {
     display: block;
     float: right;
     width: 50%;
 }
-#Deligations{
-    margin: 5rem 0;
-}
 
-#Deligations .list {
-    display: block;
-    margin: auto;
-    width: 50%;
-}
-
-#Stores #IranMap .list>ul {
+#IranMap .list>ul {
     margin-left: 10px;
 }
 
-#Stores #IranMap .list ul:before,
-#Stores #IranMap .list ul:after {
+#IranMap .list ul:before,
+#IranMap .list ul:after {
     display: table;
     content: " ";
 }
 
-#Stores #IranMap .list li {
+#IranMap .list li {
     list-style: none;
     font-size: 1.5rem;
 }
 
-#Stores #IranMap .list span {
+#IranMap .list span {
     background: $table_header;
     color: $white;
     text-align: center;
@@ -190,41 +178,18 @@
     margin-bottom: 2px;
 }
 
-#Deligations .list span {
-    background: $table_header;
-    color: $white;
-    text-align: center;
-    display: block;
-    margin: 0 2px;
-    padding: 0.5rem;
-    line-height: 26px;
-    margin-top: 10px;
-    margin-bottom: 2px;
-}
-
-#Stores #IranMap .list ul,
-#Stores #IranMap .list ul:after {
+#IranMap .list ul,
+#IranMap .list ul:after {
     clear: both;
 }
 
-#Deligations .list ul,
-#Deligations .list ul:after {
-    clear: both;
-}
-
-#Stores #IranMap .list li ul li {
+#IranMap .list li ul li {
     display: block;
     float: right;
     width: 33.33333333333333%;
 }
 
-#Deligations .list li ul li {
-    display: block;
-    float: right;
-    width: 33.33333333333333%;
-}
-
-#Stores #IranMap .list li ul li a {
+#IranMap .list li ul li a {
     box-shadow: inset 2px 4px 2rem $tabel_a_boxShadow;
     color: $red;
     display: block;
@@ -236,44 +201,25 @@
     text-align: center;
 }
 
-#Deligations .list li ul li a {
-    box-shadow: inset 2px 4px 2rem $tabel_a_boxShadow;
-    color: $red;
-    display: block;
-    padding: .5rem;
-    line-height: 26px;
-    margin: 2px 2px;
-    text-decoration: none;
-    transition: all .3s;
-    text-align: center;
-}
-
-#Stores #IranMap .list li ul li a:hover,
-#Stores #IranMap .list li ul li a.hover {
+#IranMap .list li ul li a:hover,
+#IranMap .list li ul li a.hover {
     background: $red;
     color: $white;
     box-shadow: inset 0px 1px 4px $gray_dark;
     transition: all .3s;
 }
-#Deligations .list li ul li a:hover,
-#Deligations .list li ul li a.hover {
-    background: $red;
-    color: $white;
-    box-shadow: inset 0px .1rem .4rem $gray_dark;
-    transition: all .3s;
-}
 
-#Stores #IranMap .city {
+
+#IranMap .city {
     clear: both;
     padding: 1rem 0;
 }
 
-table {
+.city div>table {
     display: none;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    font-family: iransans;
 }
 
 td,

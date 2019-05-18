@@ -205,6 +205,24 @@ $(document).ready(function () {
       }, 1000);
       $("#" + $(this).attr("value")).show();
     });
+
+    $("#Deligations .province path").click(function (e) {
+      e.preventDefault();
+      $('.table2').hide(0);
+      $("html, body").animate({
+        scrollTop: $(document).height()
+      }, 1000);
+      $("#dstate-" + $(this).attr("value")).show();
+    });
+
+    $("#Deligations .province li").click(function (e) {
+      e.preventDefault();
+      $('.table2').hide(0);
+      $("html, body").animate({
+        scrollTop: $("#gohere2").offset().top
+      }, 1000);
+      $("#" + $(this).attr("value")).show();
+    });
   });
 
   $('.S-DCont .toggle .choice').on('click', function () {

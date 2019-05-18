@@ -1,0 +1,5 @@
+.container {
+    >.row {
+        @include flex('', '', center, '', '');
+    }
+}
