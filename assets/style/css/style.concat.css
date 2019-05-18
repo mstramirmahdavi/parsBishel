@@ -1762,7 +1762,38 @@ body {
           color: #ffffff;
           box-shadow: 2px 4px 10px #f5f5f5;
           width: 13rem;
-          border: none; }
+          border: 1px solid #ed1c24;
+          background-size: 300%;
+          overflow: hidden;
+          transition: .3s;
+          position: relative;
+          z-index: 0; }
+          .container > .row .form-panel__content button:after {
+            content: '';
+            width: 100%;
+            height: 0%;
+            top: 50%;
+            left: 50%;
+            background: #ffffff;
+            opacity: 0;
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            position: absolute;
+            z-index: -1;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s; }
+          .container > .row .form-panel__content button:hover {
+            color: #d10008;
+            border: 1px solid #d10008; }
+            .container > .row .form-panel__content button:hover:after {
+              height: 160%;
+              opacity: 1; }
+          .container > .row .form-panel__content button:active:after {
+            height: 270%;
+            opacity: 1; }
 
 @keyframes go-out {
   0% {
@@ -2046,9 +2077,10 @@ body {
   display: none; }
 
 #Deligations {
-  display: none; }
+  display: none;
+  margin: 5rem 0; }
 
-#Stores #IranMap {
+#IranMap {
   display: block;
   position: relative;
   direction: rtl;
@@ -2059,7 +2091,7 @@ body {
   width: 90%;
   margin: 5rem auto; }
 
-#Stores #IranMap .map {
+#IranMap .map {
   display: block;
   float: left;
   width: 50%;
@@ -2068,7 +2100,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none; }
 
-#Stores #IranMap .show-title {
+#IranMap .show-title {
   display: block;
   position: absolute;
   background-color: #2c2b2b;
@@ -2082,61 +2114,53 @@ body {
   -webkit-border-radius: 2px;
   opacity: .8; }
 
-#Stores #IranMap .map svg {
+#IranMap .map svg {
   height: 70rem !important;
   width: 70rem !important; }
 
-#Stores #IranMap .map .province path {
+#IranMap .map .province path {
   fill: #9f9f9f;
   transition: all .3s; }
 
-#Stores #IranMap .map .sea path,
-#Stores #IranMap .map .lake path {
+#IranMap .map .sea path,
+#IranMap .map .lake path {
   fill: #6caed8; }
 
-#Stores #IranMap .map .sea path,
-#Stores #IranMap .map .lake path {
+#IranMap .map .sea path,
+#IranMap .map .lake path {
   fill: #6caed8; }
 
-#Stores #IranMap .map .border path,
-#Stores #IranMap .map .island path {
+#IranMap .map .border path,
+#IranMap .map .island path {
   fill: #ffffff;
   transition: all .3s; }
 
-#Stores #IranMap .map .province path:hover,
-#Stores #IranMap .map .island path:hover,
-#Stores #IranMap .map .province path.hover,
-#Stores #IranMap .map .island path.hover {
+#IranMap .map .province path:hover,
+#IranMap .map .island path:hover,
+#IranMap .map .province path.hover,
+#IranMap .map .island path.hover {
   fill: #ed1c24 !important;
   cursor: pointer;
   transition: all .3s; }
 
-#Stores #IranMap .list {
+#IranMap .list {
   display: block;
   float: right;
   width: 50%; }
 
-#Deligations {
-  margin: 5rem 0; }
-
-#Deligations .list {
-  display: block;
-  margin: auto;
-  width: 50%; }
-
-#Stores #IranMap .list > ul {
+#IranMap .list > ul {
   margin-left: 10px; }
 
-#Stores #IranMap .list ul:before,
-#Stores #IranMap .list ul:after {
+#IranMap .list ul:before,
+#IranMap .list ul:after {
   display: table;
   content: " "; }
 
-#Stores #IranMap .list li {
+#IranMap .list li {
   list-style: none;
   font-size: 1.5rem; }
 
-#Stores #IranMap .list span {
+#IranMap .list span {
   background: #231f20;
   color: #ffffff;
   text-align: center;
@@ -2147,36 +2171,16 @@ body {
   margin-top: 10px;
   margin-bottom: 2px; }
 
-#Deligations .list span {
-  background: #231f20;
-  color: #ffffff;
-  text-align: center;
-  display: block;
-  margin: 0 2px;
-  padding: 0.5rem;
-  line-height: 26px;
-  margin-top: 10px;
-  margin-bottom: 2px; }
-
-#Stores #IranMap .list ul,
-#Stores #IranMap .list ul:after {
+#IranMap .list ul,
+#IranMap .list ul:after {
   clear: both; }
 
-#Deligations .list ul,
-#Deligations .list ul:after {
-  clear: both; }
-
-#Stores #IranMap .list li ul li {
+#IranMap .list li ul li {
   display: block;
   float: right;
   width: 33.33333333333333%; }
 
-#Deligations .list li ul li {
-  display: block;
-  float: right;
-  width: 33.33333333333333%; }
-
-#Stores #IranMap .list li ul li a {
+#IranMap .list li ul li a {
   box-shadow: inset 2px 4px 2rem #ececec;
   color: #ed1c24;
   display: block;
@@ -2187,41 +2191,22 @@ body {
   transition: all .3s;
   text-align: center; }
 
-#Deligations .list li ul li a {
-  box-shadow: inset 2px 4px 2rem #ececec;
-  color: #ed1c24;
-  display: block;
-  padding: .5rem;
-  line-height: 26px;
-  margin: 2px 2px;
-  text-decoration: none;
-  transition: all .3s;
-  text-align: center; }
-
-#Stores #IranMap .list li ul li a:hover,
-#Stores #IranMap .list li ul li a.hover {
+#IranMap .list li ul li a:hover,
+#IranMap .list li ul li a.hover {
   background: #ed1c24;
   color: #ffffff;
   box-shadow: inset 0px 1px 4px #5f5f5f;
   transition: all .3s; }
 
-#Deligations .list li ul li a:hover,
-#Deligations .list li ul li a.hover {
-  background: #ed1c24;
-  color: #ffffff;
-  box-shadow: inset 0px 0.1rem 0.4rem #5f5f5f;
-  transition: all .3s; }
-
-#Stores #IranMap .city {
+#IranMap .city {
   clear: both;
   padding: 1rem 0; }
 
-table {
+.city div > table {
   display: none;
   width: 100%;
   border-collapse: collapse;
-  border-spacing: 0;
-  font-family: iransans; }
+  border-spacing: 0; }
 
 td,
 th {
@@ -2349,37 +2334,14 @@ td {
           border-bottom: 1px solid #e8e8e8; }
       .AFSCont > .row .card .forms-content {
         width: 80%;
-        padding-bottom: 4rem; }
-        .AFSCont > .row .card .forms-content .form-group {
-          width: 48%;
-          padding: 2rem 0; }
-          @media only screen and (max-width: 600px) {
-            .AFSCont > .row .card .forms-content .form-group {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              width: 100%; } }
-          .AFSCont > .row .card .forms-content .form-group input {
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid #e8e8e8;
-            font-size: 1.7rem; }
-            .AFSCont > .row .card .forms-content .form-group input:not(:placeholder-shown) + label {
-              transform: translate(0%, 10%);
-              opacity: 1;
-              transition: all .3s; }
-            .AFSCont > .row .card .forms-content .form-group input:focus {
-              outline: none; }
-          .AFSCont > .row .card .forms-content .form-group label {
-            position: absolute;
-            left: 0;
-            top: 0;
-            -webkit-transform: translate(50%, -50%);
-            transform: translate(50%, -50%);
-            opacity: 0;
-            transition: color .2s;
-            color: #9f9f9f;
-            transition: all .3s; }
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .AFSCont > .row .card .forms-content table {
+          width: 100%;
+          border-collapse: collapse;
+          border-spacing: 0; }
       .AFSCont > .row .card .forms #Waranty {
         width: 100%;
         display: flex;
@@ -2419,30 +2381,6 @@ td {
         align-items: center;
         flex-wrap: wrap;
         display: none; }
-      .AFSCont > .row .card .forms-submit {
-        border-top: 1px solid #e8e8e8;
-        width: 90%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center; }
-        .AFSCont > .row .card .forms-submit button {
-          outline: none;
-          cursor: pointer;
-          margin: 2rem 5rem;
-          padding: 1rem;
-          border: 1px solid #ed1c24;
-          border-radius: 30px;
-          font-size: 1.7rem;
-          line-height: 3rem;
-          color: #ed1c24;
-          width: 13rem;
-          background-image: linear-gradient(145deg, transparent 0%, transparent 50%, #ed1c24 50%);
-          background-size: 300%;
-          transition: 0.3s; }
-          .AFSCont > .row .card .forms-submit button:hover {
-            background-position: 100%;
-            color: #ffffff;
-            border: 1px solid #ffffff; }
     .AFSCont > .row .card .tabs {
       display: flex;
       justify-content: center;
