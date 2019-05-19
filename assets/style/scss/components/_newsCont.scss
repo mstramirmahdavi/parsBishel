@@ -1,8 +1,8 @@
-.newsCont {
+.container>.newsCont {
   @include flex(column, '', '', '', '');
 
   &.margin {
-    margin: 1rem 0;
+    margin: .5rem 0;
   }
 
   @include responsive (tablet, '') {}
@@ -10,10 +10,23 @@
   .news {
     @include flex(row, space-between, center, '', '');
     color: $white;
+    margin: .5rem 0;
+
 
     &.reverse {
       flex-direction: row-reverse;
+
+      @include responsive(tablet, '') {
+        @include flex(column, center, center, '', '');
+      }
+
     }
+
+    @include responsive(tablet, '') {
+      @include flex(column, center, center, '', '');
+      padding: 0 4rem;
+    }
+
 
     .right {
       @include flex(column, flex-end, center, '', '');
@@ -27,13 +40,39 @@
       background-repeat: no-repeat;
       border-radius: $border_radius;
 
-      .content {
+      @include responsive(tablet, '') {
+        @include flex(column, flex-end, flex-start, '', '');
+
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      &>.content {
         padding: 1rem;
         background-image: linear-gradient(to bottom,
-          rgba(0, 0, 0, 0) 20%,
-          rgba(0, 0, 0, 1) 100%);
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 1) 100%);
+        background-blend-mode: color-burn;
 
-          background-blend-mode: color-burn;
+
+        @include responsive(tablet, '') {
+          @include flex(column, center, center, 1 0 auto, '');
+          background-image: linear-gradient(to left,
+              transparent 10%,
+              rgba(0, 0, 0, 0.7) 40%,
+              rgba(0, 0, 0, 0.8) 100%);
+          width: 40%;
+          padding: 1rem;
+        }
+
+        @include responsive(phone, '') {
+          @include flex(column, center, center, '', '');
+          background-image: linear-gradient(to bottom,
+              rgba(0, 0, 0, 0) 20%,
+              rgba(0, 0, 0, 1) 100%);
+          width: 100%;
+          padding: 1rem;
+        }
 
         .title {
           font-size: 1.9rem;
@@ -65,6 +104,11 @@
       @include flex(column, '', '', '', '');
       align-self: stretch;
 
+      @include responsive(tablet, '') {
+        width: 100%;
+        margin-top: 1rem;
+      }
+
       >.newsCont {
         @include flex(column, center, '', 1 0 auto, '');
         min-height: 20rem;
@@ -75,6 +119,11 @@
         color: $white;
         position: relative;
         overflow: hidden;
+
+        @include responsive(phone, '') {
+          @include flex(column, center, center, '', '');
+
+        }
 
         &:after {
           content: '';
@@ -102,11 +151,20 @@
         .content {
           @include flex(column, center, center, 1 0 auto, '');
           background-image: linear-gradient(to left,
-            transparent 10%,
-            rgba(0, 0, 0, 0.7) 40%,
-            rgba(0, 0, 0, 0.8) 100%);
+              transparent 10%,
+              rgba(0, 0, 0, 0.7) 40%,
+              rgba(0, 0, 0, 0.8) 100%);
           width: 40%;
           padding: 1rem;
+
+          @include responsive(phone, '') {
+            @include flex(column, center, center, '', '');
+            background-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0) 20%,
+                rgba(0, 0, 0, 1) 100%);
+            width: 100%;
+            padding: 1rem;
+          }
 
           .title {
             text-align: center;
@@ -210,8 +268,8 @@
       .content {
         padding: 1rem;
         background-image: linear-gradient(to bottom,
-          rgba(0, 0, 0, 0) 20%,
-          rgba(0, 0, 0, 1) 100%);
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 1) 100%);
 
         .title {
           font-size: 1.9rem;

@@ -255,7 +255,7 @@ $(document).ready(function () {
       $('.container .AFSCont >.row .tabs .tab').removeClass('select');
       $('.' + $(this).attr('value')).addClass('select');
     }
-      $('.container .AFSCont >.row .forms .forms-title p').html($(this).attr('value'));
+    $('.container .AFSCont >.row .forms .forms-title p').html($(this).attr('data-src'));
     $('#Waranty').css({
       display: 'none'
     });
