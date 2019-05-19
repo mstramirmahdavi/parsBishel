@@ -1132,20 +1132,34 @@ body {
       left: 82.5%;
       transform: translate(-41%, -52%); }
 
-.newsCont {
+.container > .newsCont {
   display: flex;
   flex-direction: column; }
-  .newsCont.margin {
-    margin: 1rem 0; }
-  .newsCont .news {
+  .container > .newsCont.margin {
+    margin: .5rem 0; }
+  .container > .newsCont .news {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    color: #ffffff; }
-    .newsCont .news.reverse {
+    color: #ffffff;
+    margin: .5rem 0; }
+    .container > .newsCont .news.reverse {
       flex-direction: row-reverse; }
-    .newsCont .news .right {
+      @media only screen and (max-width: 1200px) {
+        .container > .newsCont .news.reverse {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; } }
+    @media only screen and (max-width: 1200px) {
+      .container > .newsCont .news {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4rem; } }
+    .container > .newsCont .news .right {
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
@@ -1159,13 +1173,40 @@ body {
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 1rem; }
-      .newsCont .news .right .content {
+      @media only screen and (max-width: 1200px) {
+        .container > .newsCont .news .right {
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          margin-top: 1rem; } }
+      .container > .newsCont .news .right > .content {
         padding: 1rem;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, black 100%);
         background-blend-mode: color-burn; }
-        .newsCont .news .right .content .title {
+        @media only screen and (max-width: 1200px) {
+          .container > .newsCont .news .right > .content {
+            display: flex;
+            flex: 1 0 auto;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to left, transparent 10%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.8) 100%);
+            width: 40%;
+            padding: 1rem; } }
+        @media only screen and (max-width: 600px) {
+          .container > .newsCont .news .right > .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, black 100%);
+            width: 100%;
+            padding: 1rem; } }
+        .container > .newsCont .news .right > .content .title {
           font-size: 1.9rem; }
-      .newsCont .news .right:after {
+      .container > .newsCont .news .right:after {
         content: '';
         background: #ffffff;
         height: 400%;
@@ -1176,14 +1217,18 @@ body {
         transform: rotate(35deg);
         width: 20rem;
         transition: left 3s cubic-bezier(0.19, 1, 0.22, 1); }
-      .newsCont .news .right:hover:after {
+      .container > .newsCont .news .right:hover:after {
         left: 190%; }
-    .newsCont .news .left {
+    .container > .newsCont .news .left {
       width: 67.5%;
       display: flex;
       flex-direction: column;
       align-self: stretch; }
-      .newsCont .news .left > .newsCont {
+      @media only screen and (max-width: 1200px) {
+        .container > .newsCont .news .left {
+          width: 100%;
+          margin-top: 1rem; } }
+      .container > .newsCont .news .left > .newsCont {
         display: flex;
         flex: 1 0 auto;
         justify-content: center;
@@ -1196,7 +1241,13 @@ body {
         color: #ffffff;
         position: relative;
         overflow: hidden; }
-        .newsCont .news .left > .newsCont:after {
+        @media only screen and (max-width: 600px) {
+          .container > .newsCont .news .left > .newsCont {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center; } }
+        .container > .newsCont .news .left > .newsCont:after {
           content: '';
           background: #ffffff;
           height: 100rem;
@@ -1207,11 +1258,11 @@ body {
           transform: rotate(35deg);
           width: 20rem;
           transition: all 3s cubic-bezier(0.19, 1, 0.22, 1); }
-        .newsCont .news .left > .newsCont:hover:after {
+        .container > .newsCont .news .left > .newsCont:hover:after {
           left: 190%; }
-        .newsCont .news .left > .newsCont:not(:last-child) {
+        .container > .newsCont .news .left > .newsCont:not(:last-child) {
           margin-bottom: 1rem; }
-        .newsCont .news .left > .newsCont .content {
+        .container > .newsCont .news .left > .newsCont .content {
           display: flex;
           flex: 1 0 auto;
           justify-content: center;
@@ -1220,19 +1271,28 @@ body {
           background-image: linear-gradient(to left, transparent 10%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.8) 100%);
           width: 40%;
           padding: 1rem; }
-          .newsCont .news .left > .newsCont .content .title {
+          @media only screen and (max-width: 600px) {
+            .container > .newsCont .news .left > .newsCont .content {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+              background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, black 100%);
+              width: 100%;
+              padding: 1rem; } }
+          .container > .newsCont .news .left > .newsCont .content .title {
             text-align: center;
             font-size: 1.9rem; }
-  .newsCont .link {
+  .container > .newsCont .link {
     /* @include flex('', center, center, '', ''); */
     text-align: center;
     padding: 1rem 0;
     font-size: 1.7rem; }
-    .newsCont .link a {
+    .container > .newsCont .link a {
       color: #5f5f5f;
       transition: all 0.3s;
       border: 1px solid transparent; }
-      .newsCont .link a:hover {
+      .container > .newsCont .link a:hover {
         border: 1px solid #ed1c24;
         border-radius: 1rem;
         padding: 0.3rem 1rem;
@@ -2035,6 +2095,14 @@ body {
     border-radius: 5rem;
     width: 20%;
     overflow: hidden; }
+    @media only screen and (max-width: 1200px) {
+      .S-DCont .toggle {
+        width: 50%;
+        margin: 0 2rem; } }
+    @media only screen and (max-width: 600px) {
+      .S-DCont .toggle {
+        width: 100%;
+        margin: 0 2rem; } }
     .S-DCont .toggle > input[type="radio"] {
       display: none; }
     .S-DCont .toggle > #choice1:checked ~ #flap {
@@ -2081,7 +2149,11 @@ body {
   margin: 5rem 0; }
 
 #IranMap {
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: wrap;
   position: relative;
   direction: rtl;
   text-align: right;
@@ -2090,10 +2162,15 @@ body {
   font-size: 11px;
   width: 90%;
   margin: 5rem auto; }
+  @media only screen and (max-width: 1200px) {
+    #IranMap {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; } }
 
 #IranMap .map {
   display: block;
-  float: left;
   width: 50%;
   text-align: left;
   -webkit-user-select: none;
@@ -2115,8 +2192,8 @@ body {
   opacity: .8; }
 
 #IranMap .map svg {
-  height: 70rem !important;
-  width: 70rem !important; }
+  height: 100% !important;
+  width: 100% !important; }
 
 #IranMap .map .province path {
   fill: #9f9f9f;
@@ -2144,9 +2221,11 @@ body {
   transition: all .3s; }
 
 #IranMap .list {
-  display: block;
-  float: right;
   width: 50%; }
+  @media only screen and (max-width: 1200px) {
+    #IranMap .list {
+      width: 100%;
+      margin-bottom: 5rem; } }
 
 #IranMap .list > ul {
   margin-left: 10px; }
@@ -2190,6 +2269,9 @@ body {
   text-decoration: none;
   transition: all .3s;
   text-align: center; }
+  @media only screen and (max-width: 600px) {
+    #IranMap .list li ul li a {
+      font-size: 1.3rem; } }
 
 #IranMap .list li ul li a:hover,
 #IranMap .list li ul li a.hover {
@@ -2199,8 +2281,11 @@ body {
   transition: all .3s; }
 
 #IranMap .city {
-  clear: both;
-  padding: 1rem 0; }
+  width: 100%;
+  padding: 3rem 0; }
+  @media only screen and (max-width: 600px) {
+    #IranMap .city {
+      padding: 3rem 2rem; } }
 
 .city div > table {
   display: none;
@@ -2237,28 +2322,29 @@ td {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 1200px) {
+      .blogCont .blogs {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; } }
     .blogCont .blogs .blog {
       display: flex;
       justify-content: space-around;
       flex-direction: column;
       align-items: flex-start;
-      max-width: 28%;
+      max-width: 30%;
       box-shadow: 0.4rem 0.8rem 3rem #f5f5f5;
       margin-top: 25rem;
       border-radius: 1rem;
       position: relative;
       transition: all .5s; }
-      .blogCont .blogs .blog:before {
-        content: '';
-        width: 35rem;
-        height: 35rem;
-        background-color: transparent;
-        border-radius: 100%;
-        position: absolute;
-        top: -34.5%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        transition: all .5s; }
+      @media only screen and (max-width: 1200px) {
+        .blogCont .blogs .blog {
+          max-width: 60%; } }
+      @media only screen and (max-width: 1200px) {
+        .blogCont .blogs .blog {
+          max-width: 90%; } }
       .blogCont .blogs .blog .image {
         position: absolute;
         clip-path: circle(18rem);
@@ -2266,6 +2352,14 @@ td {
         left: 50%;
         transform: translate(-50%, 0);
         transition: all .5s; }
+        @media only screen and (max-width: 1200px) {
+          .blogCont .blogs .blog .image {
+            clip-path: circle(22rem);
+            top: -70%; } }
+        @media only screen and (max-width: 600px) {
+          .blogCont .blogs .blog .image {
+            clip-path: circle(16rem);
+            top: -70%; } }
       .blogCont .blogs .blog .content {
         padding: 23rem 5rem 5rem 5rem;
         display: flex;
@@ -2274,6 +2368,12 @@ td {
         align-items: center;
         color: #5f5f5f;
         transition: all .5s; }
+        @media only screen and (max-width: 1200px) {
+          .blogCont .blogs .blog .content {
+            width: 100%; } }
+        @media only screen and (max-width: 600px) {
+          .blogCont .blogs .blog .content {
+            padding: 15rem 5rem 5rem 5rem; } }
         .blogCont .blogs .blog .content .title {
           margin-bottom: 2rem;
           text-transform: uppercase;
@@ -2282,22 +2382,27 @@ td {
           font-size: 2rem; }
       .blogCont .blogs .blog:hover {
         box-shadow: 0.4rem 0.8rem 3rem #7b7b7b; }
-        .blogCont .blogs .blog:hover:before {
-          background-color: #ed1c24;
-          opacity: 1; }
-        .blogCont .blogs .blog:hover:after {
-          background-color: #ed1c24;
-          opacity: 0.5; }
         .blogCont .blogs .blog:hover .image {
           position: absolute;
-          clip-path: circle(15rem);
+          clip-path: circle(17rem);
           top: -50%;
           left: 50%;
           transform: translate(-50%, 0);
           transition: all .5s; }
+          @media only screen and (max-width: 1200px) {
+            .blogCont .blogs .blog:hover .image {
+              top: -70%;
+              clip-path: circle(20rem); } }
+          @media only screen and (max-width: 600px) {
+            .blogCont .blogs .blog:hover .image {
+              clip-path: circle(15rem);
+              top: -70%; } }
         .blogCont .blogs .blog:hover .content {
-          transform: translateY(-4rem);
+          transform: translateY(-3rem);
           transition: all .5s; }
+          @media only screen and (max-width: 1200px) {
+            .blogCont .blogs .blog:hover .content {
+              transform: translateY(-1rem); } }
 
 .AFSCont > .row {
   display: flex;
@@ -2305,6 +2410,9 @@ td {
   flex-direction: row;
   align-items: center;
   width: 70%; }
+  @media only screen and (max-width: 1200px) {
+    .AFSCont > .row {
+      width: 90%; } }
   .AFSCont > .row .card {
     display: flex;
     justify-content: center;
@@ -2313,11 +2421,22 @@ td {
     background-color: #ed1c24;
     box-shadow: 0.4rem 0.8rem 2rem #f5f5f5;
     width: 84%;
-    border-radius: 2rem;
-    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
     margin: 7rem 0; }
+    @media only screen and (max-width: 1200px) {
+      .AFSCont > .row .card {
+        width: 100%;
+        height: 100%; } }
+    @media only screen and (max-width: 600px) {
+      .AFSCont > .row .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        width: 100%;
+        height: 100%; } }
     .AFSCont > .row .card .forms {
-      overflow: hidden;
       align-self: stretch;
       width: 68%;
       display: flex;
@@ -2325,6 +2444,10 @@ td {
       align-items: center;
       border-radius: 1rem;
       background-color: #ffffff; }
+      @media only screen and (max-width: 600px) {
+        .AFSCont > .row .card .forms {
+          width: 100%;
+          height: 100%; } }
       .AFSCont > .row .card .forms-title {
         width: 90%;
         padding: 2rem; }
@@ -2390,6 +2513,22 @@ td {
       color: #ffffff;
       border-radius: 1rem;
       padding: 2rem 0; }
+      @media only screen and (max-width: 1200px) {
+        .AFSCont > .row .card .tabs {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          font-size: 1rem; } }
+      @media only screen and (max-width: 600px) {
+        .AFSCont > .row .card .tabs {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          font-size: 1.2rem;
+          width: 100%;
+          height: 100%; } }
       .AFSCont > .row .card .tabs .select {
         width: 100%;
         background-color: #d10008; }
@@ -2401,5 +2540,8 @@ td {
         padding: 1rem 2rem;
         cursor: pointer;
         transition: .3s; }
+        @media only screen and (max-width: 600px) {
+          .AFSCont > .row .card .tabs .tab {
+            font-size: 1.7rem; } }
         .AFSCont > .row .card .tabs .tab:hover {
           background-color: #d10008; }
