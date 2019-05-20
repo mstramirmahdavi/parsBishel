@@ -1,16 +1,15 @@
 .container {
     .row {
-        >.blogsCont {
+        >.newsCont {
             @include flex(column, '', '', '', '');
             width: 100%;
-
             &.margin {
                 margin: 1rem 0;
             }
 
             @include responsive (tablet, '') {}
 
-            .blogs {
+            .news {
                 @include flex(row-reverse, space-between, center, '', '');
                 color: $white;
 
@@ -80,7 +79,7 @@
                         width: 100%;
                     }
 
-                    .blogsCont {
+                    .newsCont {
                         @include flex(column, center, flex-end, 1 0 auto, '');
                         background-position: center;
                         background-size: cover;
@@ -161,7 +160,7 @@
             }
         }
 
-        .blogCont {
+        .newCont {
             @include flex('', space-between, '', '', '');
             margin: 1rem 0;
 
@@ -192,7 +191,7 @@
                     }
                 }
 
-                >.blogContent {
+                >.newContent {
                     padding: 1rem 3rem;
                     background-color: $white;
                     border-top: 1rem solid $secondary-red;
@@ -209,13 +208,13 @@
                 }
             }
 
-            .moreblogs {
+            .moreNews {
                 width: 31.6%;
                 align-self: flex-start;
                 position: sticky;
                 top: 1rem;
 
-                .blogsCont {
+                .newsCont {
                     @include flex(column, flex-end, center, '', '');
                     height: 30rem;
                     color: $white;
@@ -240,8 +239,9 @@
                         .title {
                             font-size: 1.9rem;
                         }
+                        
                         p{
-                            color: $white;
+                            color:$white;
                         }
                     }
 

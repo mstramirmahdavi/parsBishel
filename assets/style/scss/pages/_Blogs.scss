@@ -1,0 +1,105 @@
+.blogCont {
+    margin: 10rem 0;
+    @include flex('', center, center, '', '');
+
+    .blogs {
+        @include flex(row, space-around, center, '', wrap);
+
+        @include responsive (tablet, '') {
+            @include flex(column, center, center, '', '');
+        }
+
+
+        .blog {
+            @include flex(column, space-around, flex-start, '', '');
+            max-width: 30%;
+            box-shadow: .4rem .8rem 3rem $box-shadow;
+            margin-top: 25rem;
+            border-radius: $border_radius;
+            position: relative;
+            transition: all .5s;
+
+            @include responsive (tablet, '') {
+                max-width: 60%;
+            }
+
+            @include responsive (tablet, '') {
+                max-width: 90%;
+            }
+
+            .image {
+                position: absolute;
+                clip-path: circle(18rem);
+                top: -50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                transition: all .5s;
+
+                @include responsive (tablet, '') {
+                    clip-path: circle(22rem);
+                    top: -70%;
+                }
+
+                @include responsive (phone, '') {
+                    clip-path: circle(16rem);
+                    top: -70%;
+                }
+            }
+
+            .content {
+                padding: 23rem 5rem 5rem 5rem;
+                @include flex(column, space-between, center, '', '');
+                color: $font_color;
+                transition: all .5s;
+
+                @include responsive (tablet, '') {
+                    width: 100%;
+                }
+
+                @include responsive (phone, '') {
+                    padding: 15rem 5rem 5rem 5rem;
+
+                }
+
+                .title {
+                    margin-bottom: 2rem;
+                    text-transform: uppercase;
+                    color: $gray_dark;
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: .4rem .8rem 3rem $box-shadow/2;
+
+                .image {
+                    position: absolute;
+                    clip-path: circle(17rem);
+                    top: -50%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    transition: all .5s;
+
+                    @include responsive (tablet, '') {
+                        top: -70%;
+                        clip-path: circle(20rem);
+                    }
+                    @include responsive (phone, '') {
+                        clip-path: circle(15rem);
+                        top: -70%;
+                    }
+                }
+
+                .content {
+                    transform: translateY(-3rem);
+                    transition: all .5s;
+
+                    @include responsive (tablet, '') {
+                        transform: translateY(-1rem);
+                    }
+                }
+            }
+        }
+    }
+}
