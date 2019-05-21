@@ -169,13 +169,14 @@
                 width: 67.5%;
 
                 .title {
-                    @include flex('', space-between, center, '', '');
-                    padding: 1rem 0;
+                    @include flex('', space-between, '', '', '');
                     color: $font_color;
 
                     .name {
                         color: $red;
-                        font-size: 2rem;
+                        line-height: 3rem;
+                        font-size: 3.2rem;
+                        padding-left: 3rem;
                     }
 
                     .details {
@@ -240,7 +241,8 @@
                         .title {
                             font-size: 1.9rem;
                         }
-                        p{
+
+                        p {
                             color: $white;
                         }
                     }

@@ -92,19 +92,19 @@
                         &:after {
                             content: '';
                             background: $white;
-                            height: 100rem;
+                            height: 300%;
                             left: -30rem;
                             opacity: 0.2;
                             position: absolute;
                             top: -50rem;
                             transform: rotate(35deg);
                             width: 20rem;
-                            transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+                            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
                         }
 
                         &:hover {
                             &:after {
-                                left: 190%;
+                                left: 200%;
                             }
                         }
 
@@ -118,7 +118,7 @@
                                     transparent 10%,
                                     rgba(0, 0, 0, 0.7) 40%,
                                     rgba(0, 0, 0, 0.8) 100%);
-                            width: 40%;
+                            width: 50%;
                             padding: 1rem;
 
                             @include responsive(phone, '') {

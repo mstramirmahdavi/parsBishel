@@ -113,7 +113,7 @@
 #IranMap .show-title {
     display: block;
     position: absolute;
-    background-color: $footer_bg;
+    background-color: $red;
     color: $white;
     margin: 0 !important;
     padding: 0 5px;
@@ -185,7 +185,7 @@
 }
 
 #IranMap .list span {
-    background: $table_header;
+    background: $red;
     color: $white;
     text-align: center;
     display: block;
@@ -258,7 +258,7 @@ th {
 
 th {
     font-size: 1.3rem;
-    background-color: $table_header;
+    background-color: $red;
     color: $white;
 }
 
