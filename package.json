@@ -1,14 +1,14 @@
 {
-  "name": "marvasti",
+  "name": "Parsbishel",
   "version": "1.0.0",
   "description": "E-Commmerce for tire",
   "main": "index.js",
   "scripts": {
-    "watch:scss": "node-sass assets/style/scss/style.scss assets/style/css/style.css -w",
-    "compile:scss": "node-sass assets/style/scss/style.scss assets/style/css/style.comp.css",
-    "concat:css": "concat -o assets/style/css/style.concat.css assets/style/css/owl.carousel.min.css assets/style/css/owl.theme.default.min.css assets/style/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/style/css/style.concat.css -o assets/style/css/style.prefix.css",
-    "compress:css": "node-sass assets/style/css/style.prefix.css assets/style/css/style.css --output-style compressed",
+    "watch:scss": "node-sass /temp-web/assets/style/scss/style.scss /temp-web/assets/style/css/style.css -w",
+    "compile:scss": "node-sass /temp-web/assets/style/scss/style.scss /temp-web/assets/style/css/style.comp.css",
+    "concat:css": "concat -o assets/style/css/style.concat.css assets/style/css/owl.carousel.min.css temp-web/assets/style/css/owl.theme.default.min.css /temp-web/assets/style/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" /temp-web/assets/style/css/style.concat.css -o /temp-web//temp-web/assets/style/css/style.prefix.css",
+    "compress:css": "node-sass /temp-web/assets/style/css/style.prefix.css /temp-web/assets/style/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:scss concat:css prefix:css compress:css"
   },
   "browserslist": [
@@ -17,7 +17,7 @@
     "maintained node versions",
     "not dead"
   ],
-  "author": "Seyed Amir Mahdavi",
+  "author": "Seyed Amir Mahdavi && Mehrzad Rezvani",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.5.0",
